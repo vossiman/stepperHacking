@@ -18,7 +18,7 @@ METRES_HELP = ("Changing this moves your marker on the map, because progress is 
                "recomputed from your lifetime steps.")
 IDLE_HELP = "Applies from the next walk."
 MAC_HELP = "Takes effect after a restart."
-MAC_ERROR = "Enter the MAC as six pairs of hex digits, like 18:7A:93:0B:7C:87."
+MAC_ERROR = "Enter the MAC as six pairs of hex digits, like AA:BB:CC:DD:EE:FF."
 
 
 def _help(text: str) -> QLabel:
