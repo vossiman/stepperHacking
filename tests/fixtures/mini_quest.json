@@ -1,0 +1,34 @@
+{
+  "id": "mini",
+  "title": "Mini Quest",
+  "ratios": {"foot": 1, "horse": 3, "boat": 4, "carried": 1},
+  "volumes": [
+    {
+      "title": "Volume One",
+      "parts": [
+        {
+          "title": "Part One",
+          "chapters": [
+            {
+              "title": "Chapter A",
+              "leg": "Bag End to Bucklebury",
+              "waypoints": [
+                {"id": "bag-end", "name": "Bag End", "road_miles": 0, "mode": "foot", "story": "Start."},
+                {"id": "hobbiton", "name": "Hobbiton", "road_miles": 10, "mode": "foot", "story": "Down the hill."},
+                {"id": "bucklebury", "name": "Bucklebury", "road_miles": 20, "mode": "foot", "story": "At the ferry."}
+              ]
+            },
+            {
+              "title": "Chapter B",
+              "leg": "Down the river to Bree",
+              "waypoints": [
+                {"id": "far-bank", "name": "Far Bank", "road_miles": 60, "mode": "boat", "story": "Down the river."},
+                {"id": "bree", "name": "Bree", "road_miles": 80, "mode": "foot", "story": "The Prancing Pony."}
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

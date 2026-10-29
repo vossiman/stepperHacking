@@ -1,0 +1,4547 @@
+{
+ "id": "frodo",
+ "title": "Frodo's Road",
+ "ratios": {
+  "foot": 1,
+  "horse": 3,
+  "boat": 4,
+  "carried": 1
+ },
+ "volumes": [
+  {
+   "title": "The Fellowship of the Ring",
+   "parts": [
+    {
+     "title": "Part 1",
+     "chapters": [
+      {
+       "title": "Three is Company",
+       "leg": "Bag End to the Woody End",
+       "waypoints": [
+        {
+         "id": "bag-end",
+         "name": "Bag End",
+         "road_miles": 0,
+         "mode": "foot",
+         "story": "Frodo, Sam and Pippin slip out of Bag End after dark, round the west end of the hill and over the hedge."
+        },
+        {
+         "id": "the-lane-gate",
+         "name": "The lane gate",
+         "road_miles": 1,
+         "mode": "foot",
+         "story": "A gate lets them into a lane, and they turn west, away from the lights of home."
+        },
+        {
+         "id": "the-hedgerows",
+         "name": "The hedgerows",
+         "road_miles": 2,
+         "mode": "foot",
+         "story": "They leave the lane and follow the hedgerows south across the fields."
+        },
+        {
+         "id": "plank-bridge-over-the-water",
+         "name": "Plank bridge over the Water",
+         "road_miles": 3,
+         "mode": "foot",
+         "story": "A narrow plank bridge carries them over the Water in the dark."
+        },
+        {
+         "id": "crossing-the-east-road",
+         "name": "Crossing the East Road",
+         "road_miles": 5,
+         "mode": "foot",
+         "story": "They cross the Great Road that runs to the Brandywine Bridge and step into the Tookland."
+        },
+        {
+         "id": "last-sight-of-hobbiton",
+         "name": "Last sight of Hobbiton",
+         "road_miles": 7.5,
+         "mode": "foot",
+         "story": "From the first slopes of the Green Hill Country Frodo turns and looks back at the lamps of Hobbiton, and says a quiet goodbye."
+        },
+        {
+         "id": "green-hill-country",
+         "name": "Green Hill Country",
+         "road_miles": 9,
+         "mode": "foot",
+         "story": "The slopes rise and fall and Hobbiton drops out of sight behind them."
+        },
+        {
+         "id": "a-frugal-supper",
+         "name": "A frugal supper",
+         "road_miles": 11,
+         "mode": "foot",
+         "story": "About three hours out they stop for a small supper under the stars."
+        },
+        {
+         "id": "the-stock-road",
+         "name": "The Stock road",
+         "road_miles": 14.5,
+         "mode": "foot",
+         "story": "They reach the road that runs east toward Stock and follow it through the night."
+        },
+        {
+         "id": "the-deep-cloven-track",
+         "name": "The deep cloven track",
+         "road_miles": 15.5,
+         "mode": "foot",
+         "story": "Between tall trees in a sunken track they start to sing an old walking song of Bilbo's."
+        },
+        {
+         "id": "the-steep-slope",
+         "name": "The steep slope",
+         "road_miles": 17.5,
+         "mode": "foot",
+         "story": "A steep climb, and Pippin yawns that it must be nearly midnight."
+        },
+        {
+         "id": "the-firwood-camp",
+         "name": "The firwood camp",
+         "road_miles": 18,
+         "mode": "foot",
+         "story": "They sleep among the roots of a big fir just over the hill, and a passing fox stops to wonder at hobbits sleeping out of doors."
+        },
+        {
+         "id": "the-little-waterfall",
+         "name": "The little waterfall",
+         "road_miles": 19,
+         "mode": "foot",
+         "story": "Breakfast is late, with water fetched from a stream that tumbles over a ledge of grey stone at the foot of the hill."
+        },
+        {
+         "id": "the-rolling-road",
+         "name": "The rolling road",
+         "road_miles": 22.5,
+         "mode": "foot",
+         "story": "Through the late morning the road rolls up and down across the Green Hill Country."
+        },
+        {
+         "id": "green-hill-fields",
+         "name": "Green hill fields",
+         "road_miles": 25.5,
+         "mode": "foot",
+         "story": "Fields and copses slide past as they walk on in no great hurry."
+        },
+        {
+         "id": "the-steep-bank",
+         "name": "The steep bank",
+         "road_miles": 29,
+         "mode": "foot",
+         "story": "The road zigzags up a steep bank, and from the top they see the Woody End and the river valley beyond. They stop for a long meal and a longer rest."
+        },
+        {
+         "id": "the-first-black-rider",
+         "name": "The first Black Rider",
+         "road_miles": 32,
+         "mode": "foot",
+         "story": "Hoofbeats behind them: a black-cloaked rider stops and sniffs the air while Frodo hides behind a tree, fighting a strange urge to put on the Ring."
+        },
+        {
+         "id": "beside-the-road",
+         "name": "Beside the road",
+         "road_miles": 35,
+         "mode": "foot",
+         "story": "Uneasy now, they keep a stone's throw off to the left of the road, which makes for slower going."
+        },
+        {
+         "id": "the-road-to-stock",
+         "name": "The road to Stock",
+         "road_miles": 37,
+         "mode": "foot",
+         "story": "The road splits and the hobbits leave it, taking a lane to the right that winds through a wood of ancient oaks."
+        },
+        {
+         "id": "the-hollow-tree",
+         "name": "The hollow tree",
+         "road_miles": 38,
+         "mode": "foot",
+         "story": "They creep inside a huge hollow tree to eat and rest, then walk on into the twilight singing."
+        },
+        {
+         "id": "gildors-elves",
+         "name": "Gildor's Elves",
+         "road_miles": 41,
+         "mode": "foot",
+         "story": "A rider comes sniffing again, but elven singing drives it off, and Gildor's company takes the hobbits along with them."
+        },
+        {
+         "id": "fold-of-the-hills",
+         "name": "Fold of the hills",
+         "road_miles": 43,
+         "mode": "foot",
+         "story": "The lane runs low in a fold of the hills with hazel on the slopes, and Pippin can hardly keep his eyes open."
+        },
+        {
+         "id": "the-green-ride",
+         "name": "The green ride",
+         "road_miles": 45,
+         "mode": "foot",
+         "story": "The Elves turn off the path along a green ride through the thickets."
+        },
+        {
+         "id": "elven-hall-in-the-woody-end",
+         "name": "Elven hall in the Woody End",
+         "road_miles": 46,
+         "mode": "foot",
+         "story": "They camp on a green floor under the boughs, with the lights of Woodhall below, and Frodo talks late with Gildor."
+        }
+       ]
+      },
+      {
+       "title": "A Short Cut to Mushrooms",
+       "leg": "Woody End to Bucklebury Ferry",
+       "waypoints": [
+        {
+         "id": "the-deep-banked-stream",
+         "name": "The deep-banked stream",
+         "road_miles": 47,
+         "mode": "foot",
+         "story": "Cutting straight for the Ferry, they meet a deep stream and look back to see a Black Rider on the hill where they slept."
+        },
+        {
+         "id": "the-stock-brook",
+         "name": "The Stock-brook",
+         "road_miles": 48,
+         "mode": "foot",
+         "story": "Pippin knows the stream now as the Stock-brook, and they cross where the banks are low into wet, reedy land."
+        },
+        {
+         "id": "belt-of-oaks",
+         "name": "Belt of oaks",
+         "road_miles": 50,
+         "mode": "foot",
+         "story": "They push into a belt of oaks, elms and ash as the first drops of rain begin to fall."
+        },
+        {
+         "id": "too-far-south",
+         "name": "Too far south",
+         "road_miles": 52,
+         "mode": "foot",
+         "story": "Still among the trees, Pippin realises the short cut has bent too far south."
+        },
+        {
+         "id": "lunch-in-the-wood",
+         "name": "Lunch in the wood",
+         "road_miles": 54,
+         "mode": "foot",
+         "story": "They stop for lunch and a cheerful drinking song, until a long wailing cry from a Rider sends them on again."
+        },
+        {
+         "id": "edge-of-the-wood",
+         "name": "Edge of the wood",
+         "road_miles": 55,
+         "mode": "foot",
+         "story": "The wood ends, the land grows tame and the sun comes out."
+        },
+        {
+         "id": "the-marish-fields",
+         "name": "The Marish fields",
+         "road_miles": 56,
+         "mode": "foot",
+         "story": "Now there are meadows, hedges, gates and drainage dikes: the well-farmed lowlands of the Marish."
+        },
+        {
+         "id": "marish-lowlands",
+         "name": "Marish lowlands",
+         "road_miles": 58.5,
+         "mode": "foot",
+         "story": "They pick their way east between hedges and ditches over flat, damp farmland."
+        },
+        {
+         "id": "maggots-fields",
+         "name": "Maggot's fields",
+         "road_miles": 61,
+         "mode": "foot",
+         "story": "Frodo recognises the fields of Farmer Maggot, whose dogs gave him a fright as a boy when he was caught taking mushrooms."
+        },
+        {
+         "id": "the-turnip-field-gate",
+         "name": "The turnip field gate",
+         "road_miles": 62,
+         "mode": "foot",
+         "story": "Past a turnip field, a stout gate opens onto a rutted lane between hedges."
+        },
+        {
+         "id": "farmer-maggots-house",
+         "name": "Farmer Maggot's house",
+         "road_miles": 63,
+         "mode": "foot",
+         "story": "Farmer Maggot greets them warmly, tells them of a strange rider asking for Baggins, and feeds them well."
+        },
+        {
+         "id": "the-causeway",
+         "name": "The Causeway",
+         "road_miles": 65,
+         "mode": "foot",
+         "story": "Maggot's lane meets the Causeway and the farmer drives them on toward the Ferry in his wagon."
+        },
+        {
+         "id": "merry-on-the-causeway",
+         "name": "Merry on the Causeway",
+         "road_miles": 67.5,
+         "mode": "foot",
+         "story": "Hoofbeats in the fog turn out to be Merry, come out to look for them."
+        },
+        {
+         "id": "bucklebury-ferry",
+         "name": "Bucklebury Ferry",
+         "road_miles": 70,
+         "mode": "foot",
+         "story": "They pole across the Brandywine on the ferry, and from the far side see a dark shape stooping on the landing they just left."
+        }
+       ]
+      },
+      {
+       "title": "A Conspiracy Unmasked",
+       "leg": "Bucklebury Ferry to Crickhollow",
+       "waypoints": [
+        {
+         "id": "under-buck-hill",
+         "name": "Under Buck Hill",
+         "road_miles": 70.5,
+         "mode": "foot",
+         "story": "North from the landing with Buck Hill on the left, then up a lane into the country."
+        },
+        {
+         "id": "crickhollow",
+         "name": "Crickhollow",
+         "road_miles": 73,
+         "mode": "foot",
+         "story": "At the little house in Crickhollow, Merry, Pippin and Sam reveal that they have known his secret all along and will not let him go alone."
+        }
+       ]
+      },
+      {
+       "title": "The Old Forest",
+       "leg": "Crickhollow to Old Man Willow",
+       "waypoints": [
+        {
+         "id": "tunnel-under-the-hedge",
+         "name": "Tunnel under the Hedge",
+         "road_miles": 75,
+         "mode": "foot",
+         "story": "At first light they lead their ponies through a tunnel under the High Hay and into the Old Forest."
+        },
+        {
+         "id": "the-bonfire-glade",
+         "name": "The Bonfire Glade",
+         "road_miles": 78,
+         "mode": "foot",
+         "story": "They come to the Bonfire Glade, where Bucklanders once burned back the trees, and find a path beyond it."
+        },
+        {
+         "id": "watchful-trees",
+         "name": "Watchful trees",
+         "road_miles": 80,
+         "mode": "foot",
+         "story": "The trees seem to lean in and the path keeps bending away from where they want to go."
+        },
+        {
+         "id": "climbing-the-forest-path",
+         "name": "Climbing the forest path",
+         "road_miles": 82.5,
+         "mode": "foot",
+         "story": "The path climbs gently through the grey trunks, hot and airless."
+        },
+        {
+         "id": "pippins-shout",
+         "name": "Pippin's shout",
+         "road_miles": 85,
+         "mode": "foot",
+         "story": "Pippin shouts at the trees to let them through, and the silence afterward is worse."
+        },
+        {
+         "id": "the-bald-knoll",
+         "name": "The bald knoll",
+         "road_miles": 87,
+         "mode": "foot",
+         "story": "On top of a bare knoll they rest and eat, and look over the haze to the line of the Withywindle valley."
+        },
+        {
+         "id": "leaving-the-path",
+         "name": "Leaving the path",
+         "road_miles": 88,
+         "mode": "foot",
+         "story": "The path bends southeast; they leave it and try to force their way north."
+        },
+        {
+         "id": "the-deep-folds",
+         "name": "The deep folds",
+         "road_miles": 89.5,
+         "mode": "foot",
+         "story": "One deep fold after another runs across their way, always turning them east and down."
+        },
+        {
+         "id": "the-fold-to-the-river",
+         "name": "The fold to the river",
+         "road_miles": 91,
+         "mode": "foot",
+         "story": "A fold too deep to climb out of carries them down toward the Withywindle in the late afternoon."
+        },
+        {
+         "id": "withywindle-bank-path",
+         "name": "Withywindle bank path",
+         "road_miles": 93,
+         "mode": "foot",
+         "story": "Merry finds a path along the river bank, and they follow it east through soft ground."
+        },
+        {
+         "id": "old-man-willow",
+         "name": "Old Man Willow",
+         "road_miles": 95,
+         "mode": "foot",
+         "story": "Drowsy under a great old willow, Merry and Pippin are swallowed by its cracks until Tom Bombadil comes singing down the path and sets them free."
+        }
+       ]
+      },
+      {
+       "title": "In the House of Tom Bombadil",
+       "leg": "Old Man Willow to Tom's house",
+       "waypoints": [
+        {
+         "id": "following-tom",
+         "name": "Following Tom",
+         "road_miles": 96.5,
+         "mode": "foot",
+         "story": "They trot after Tom up the river in the dusk, his song drifting back to them."
+        },
+        {
+         "id": "tom-bombadils-house",
+         "name": "Tom Bombadil's house",
+         "road_miles": 98,
+         "mode": "foot",
+         "story": "Goldberry welcomes them at the house under the hill, and they stay a rainy day listening to Tom's tales."
+        }
+       ]
+      },
+      {
+       "title": "Fog on the Barrow-downs",
+       "leg": "Tom's house to the East Road",
+       "waypoints": [
+        {
+         "id": "brow-of-the-downs",
+         "name": "Brow of the downs",
+         "road_miles": 99,
+         "mode": "foot",
+         "story": "Tom's zigzag path takes them up to the brow of the Barrow-downs on a bright morning."
+        },
+        {
+         "id": "green-downs",
+         "name": "Green downs",
+         "road_miles": 101.5,
+         "mode": "foot",
+         "story": "The ponies climb steep green slopes and run down long limbs of the hills; there are no trees and no water."
+        },
+        {
+         "id": "barrow-mounds",
+         "name": "Barrow mounds",
+         "road_miles": 104,
+         "mode": "foot",
+         "story": "Green mounds crowned with standing stones sit on some of the hilltops like teeth in old gums."
+        },
+        {
+         "id": "a-dark-line-to-the-north",
+         "name": "A dark line to the north",
+         "road_miles": 107,
+         "mode": "foot",
+         "story": "Far off they glimpse a dark line they take to be the trees along the Road."
+        },
+        {
+         "id": "drifting-east",
+         "name": "Drifting east",
+         "road_miles": 109.5,
+         "mode": "foot",
+         "story": "Without meaning to, they keep turning more east than they intend."
+        },
+        {
+         "id": "the-standing-stone-hollow",
+         "name": "The standing stone hollow",
+         "road_miles": 112,
+         "mode": "foot",
+         "story": "They eat and doze in a hollow beside a tall standing stone, and wake to find thick fog all around and the sun sinking."
+        },
+        {
+         "id": "the-barrow-wight",
+         "name": "The Barrow-wight",
+         "road_miles": 115,
+         "mode": "foot",
+         "story": "Lost and separated in the fog, Frodo is taken by a Barrow-wight. He calls Tom with the song he was taught, and Tom breaks the barrow open in the morning."
+        },
+        {
+         "id": "the-northern-gap",
+         "name": "The northern gap",
+         "road_miles": 118,
+         "mode": "foot",
+         "story": "With Tom leading, the ponies ride north through a gap in the downs."
+        },
+        {
+         "id": "the-downs-fall-away",
+         "name": "The downs fall away",
+         "road_miles": 120.5,
+         "mode": "foot",
+         "story": "The hills grow lower and the fog of yesterday seems a bad dream."
+        },
+        {
+         "id": "the-old-dike",
+         "name": "The old dike",
+         "road_miles": 123,
+         "mode": "foot",
+         "story": "A dike and hedge mark the long-forgotten border of the North Kingdom."
+        },
+        {
+         "id": "beyond-the-dike",
+         "name": "Beyond the dike",
+         "road_miles": 125.5,
+         "mode": "foot",
+         "story": "They ride on over falling ground in the bright afternoon."
+        },
+        {
+         "id": "trees-of-the-road",
+         "name": "Trees of the Road",
+         "road_miles": 128.5,
+         "mode": "foot",
+         "story": "A line of trees ahead marks the Great East Road at last."
+        },
+        {
+         "id": "back-on-the-east-road",
+         "name": "Back on the East Road",
+         "road_miles": 131,
+         "mode": "foot",
+         "story": "They reach the Road toward evening and Tom bids them farewell. Unseen, a Ranger watches them pass."
+        }
+       ]
+      },
+      {
+       "title": "At the Sign of the Prancing Pony",
+       "leg": "The East Road to Bree",
+       "waypoints": [
+        {
+         "id": "bree-hill",
+         "name": "Bree-hill",
+         "road_miles": 133,
+         "mode": "foot",
+         "story": "The dark bulk of Bree-hill rises ahead as night falls, with lit windows on its western side."
+        },
+        {
+         "id": "the-prancing-pony",
+         "name": "The Prancing Pony",
+         "road_miles": 135,
+         "mode": "foot",
+         "story": "Barliman Butterbur takes them in. In the common room the Ring slips onto Frodo's finger, and a weathered Ranger called Strider asks for a word."
+        }
+       ]
+      },
+      {
+       "title": "A Knife in the Dark",
+       "leg": "Bree to Weathertop",
+       "waypoints": [
+        {
+         "id": "bill-fernys-house",
+         "name": "Bill Ferny's house",
+         "road_miles": 136,
+         "mode": "foot",
+         "story": "They leave Bree late with a thin pony bought from Bill Ferny, who jeers until Sam throws an apple at him."
+        },
+        {
+         "id": "the-road-east-of-bree",
+         "name": "The road east of Bree",
+         "road_miles": 138,
+         "mode": "foot",
+         "story": "Strider leads them along the Road for a while in plain sight to fool any watchers."
+        },
+        {
+         "id": "into-the-chetwood",
+         "name": "Into the Chetwood",
+         "road_miles": 140,
+         "mode": "foot",
+         "story": "They turn off the Road and north into the Chetwood, where no living thing stirs all day."
+        },
+        {
+         "id": "striders-hidden-paths",
+         "name": "Strider's hidden paths",
+         "road_miles": 142.5,
+         "mode": "foot",
+         "story": "Strider follows paths no hobbit could find, winding between the trees."
+        },
+        {
+         "id": "skirting-archet",
+         "name": "Skirting Archet",
+         "road_miles": 144.5,
+         "mode": "foot",
+         "story": "They pass to the east of Archet, the last village of the Bree-land."
+        },
+        {
+         "id": "camp-east-of-archet",
+         "name": "Camp east of Archet",
+         "road_miles": 147,
+         "mode": "foot",
+         "story": "First camp out of Bree, under the trees of the Chetwood."
+        },
+        {
+         "id": "quiet-woods",
+         "name": "Quiet woods",
+         "road_miles": 150,
+         "mode": "foot",
+         "story": "The ground drops slowly eastward; the woods are quiet and peaceful."
+        },
+        {
+         "id": "dappled-glades",
+         "name": "Dappled glades",
+         "road_miles": 153.5,
+         "mode": "foot",
+         "story": "Sun falls through the leaves and for a day it is almost easy going."
+        },
+        {
+         "id": "wandering-trail",
+         "name": "Wandering trail",
+         "road_miles": 156.5,
+         "mode": "foot",
+         "story": "Strider doubles and turns to leave no clear trail behind them."
+        },
+        {
+         "id": "eastern-chetwood",
+         "name": "Eastern Chetwood",
+         "road_miles": 160,
+         "mode": "foot",
+         "story": "Strider sings softly at the evening halt, and the hobbits begin to trust him."
+        },
+        {
+         "id": "eastern-chetwood-camp",
+         "name": "Eastern Chetwood camp",
+         "road_miles": 163,
+         "mode": "foot",
+         "story": "They camp near the eastern edge of the wood."
+        },
+        {
+         "id": "out-of-the-chetwood",
+         "name": "Out of the Chetwood",
+         "road_miles": 165,
+         "mode": "foot",
+         "story": "The trees thin out and they come into open country."
+        },
+        {
+         "id": "open-lands",
+         "name": "Open lands",
+         "road_miles": 167.5,
+         "mode": "foot",
+         "story": "Low rolling land, and the hobbits miss the cover of the trees."
+        },
+        {
+         "id": "damp-ground",
+         "name": "Damp ground",
+         "road_miles": 170.5,
+         "mode": "foot",
+         "story": "The ground grows soft and wet underfoot."
+        },
+        {
+         "id": "midgewater-marshes",
+         "name": "Midgewater Marshes",
+         "road_miles": 173,
+         "mode": "foot",
+         "story": "They enter the western edge of the Midgewater Marshes, where every step finds a bog."
+        },
+        {
+         "id": "midges-by-the-thousand",
+         "name": "Midges by the thousand",
+         "road_miles": 176,
+         "mode": "foot",
+         "story": "Midges swarm up from the reeds, and Sam wonders what they live on when they cannot get hobbit."
+        },
+        {
+         "id": "first-marsh-camp",
+         "name": "First marsh camp",
+         "road_miles": 179,
+         "mode": "foot",
+         "story": "A miserable damp camp in the western part of the marshes."
+        },
+        {
+         "id": "neekerbreekers",
+         "name": "Neekerbreekers",
+         "road_miles": 182,
+         "mode": "foot",
+         "story": "Some horrible cricket-like insect squeaks all night; Sam names them neekerbreekers."
+        },
+        {
+         "id": "reeds-and-tussocks",
+         "name": "Reeds and tussocks",
+         "road_miles": 185,
+         "mode": "foot",
+         "story": "They hop from tussock to tussock through rushes higher than their heads."
+        },
+        {
+         "id": "treacherous-mire",
+         "name": "Treacherous mire",
+         "road_miles": 188,
+         "mode": "foot",
+         "story": "Pools of mud wait to swallow a careless step, and the pony struggles."
+        },
+        {
+         "id": "pools-and-sedge",
+         "name": "Pools and sedge",
+         "road_miles": 191,
+         "mode": "foot",
+         "story": "Still more water and sedge, and the eastern edge never seems closer."
+        },
+        {
+         "id": "lights-on-weathertop",
+         "name": "Lights on Weathertop",
+         "road_miles": 194,
+         "mode": "foot",
+         "story": "In the eastern marshes they watch flashes of light far off on the hills during the night."
+        },
+        {
+         "id": "drier-ground",
+         "name": "Drier ground",
+         "road_miles": 196,
+         "mode": "foot",
+         "story": "The ground begins to firm up and the midges give out."
+        },
+        {
+         "id": "eastern-edge-of-the-marshes",
+         "name": "Eastern edge of the marshes",
+         "road_miles": 198,
+         "mode": "foot",
+         "story": "Out of the marshes at last, they see the Weather Hills ahead."
+        },
+        {
+         "id": "rising-land",
+         "name": "Rising land",
+         "road_miles": 201,
+         "mode": "foot",
+         "story": "The land starts to rise, dry and very barren, with only a few birds."
+        },
+        {
+         "id": "barren-stretches",
+         "name": "Barren stretches",
+         "road_miles": 204.5,
+         "mode": "foot",
+         "story": "Wide empty stretches of scrub, with nothing to break the wind."
+        },
+        {
+         "id": "weather-hills-in-view",
+         "name": "Weather Hills in view",
+         "road_miles": 208,
+         "mode": "foot",
+         "story": "The line of the Weather Hills grows clearer with every mile."
+        },
+        {
+         "id": "alder-camp",
+         "name": "Alder camp",
+         "road_miles": 211,
+         "mode": "foot",
+         "story": "They camp by a small stream under stunted alders while the moon waxes."
+        },
+        {
+         "id": "morning-frost",
+         "name": "Morning frost",
+         "road_miles": 214,
+         "mode": "foot",
+         "story": "A hard frost and a very clear sky; on the hills ahead they can see crumbling ruins."
+        },
+        {
+         "id": "the-long-approach",
+         "name": "The long approach",
+         "road_miles": 217,
+         "mode": "foot",
+         "story": "Strider sets a steady pace toward the hills."
+        },
+        {
+         "id": "stony-slopes",
+         "name": "Stony slopes",
+         "road_miles": 220,
+         "mode": "foot",
+         "story": "The ground turns stony and the hobbits' feet ache."
+        },
+        {
+         "id": "old-walls-on-the-heights",
+         "name": "Old walls on the heights",
+         "road_miles": 223,
+         "mode": "foot",
+         "story": "Strider speaks of the watchtower that once stood on Weathertop."
+        },
+        {
+         "id": "shadow-of-the-hills",
+         "name": "Shadow of the hills",
+         "road_miles": 226,
+         "mode": "foot",
+         "story": "The hills loom closer in the afternoon light."
+        },
+        {
+         "id": "foot-of-the-weather-hills",
+         "name": "Foot of the Weather Hills",
+         "road_miles": 229,
+         "mode": "foot",
+         "story": "They camp at the foot of the hills."
+        },
+        {
+         "id": "the-hidden-path",
+         "name": "The hidden path",
+         "road_miles": 231.5,
+         "mode": "foot",
+         "story": "A cunningly hidden path runs south along the hills, edged with stones where the land is open."
+        },
+        {
+         "id": "gil-galads-song",
+         "name": "Gil-galad's song",
+         "road_miles": 234,
+         "mode": "foot",
+         "story": "Sam recites part of the old poem of Gil-galad, which he learned from Bilbo."
+        },
+        {
+         "id": "the-stone-edged-path",
+         "name": "The stone-edged path",
+         "road_miles": 236.5,
+         "mode": "foot",
+         "story": "The path keeps to hollows and folds, made long ago to be unseen."
+        },
+        {
+         "id": "the-dell-under-weathertop",
+         "name": "The dell under Weathertop",
+         "road_miles": 239,
+         "mode": "foot",
+         "story": "At midday they reach a dell at the western foot of the hill."
+        },
+        {
+         "id": "summit-of-weathertop",
+         "name": "Summit of Weathertop",
+         "road_miles": 240,
+         "mode": "foot",
+         "story": "On the summit Strider finds a scratched mark that may be Gandalf's, and they spy dark figures on the Road below."
+        },
+        {
+         "id": "night-attack-in-the-dell",
+         "name": "Night attack in the dell",
+         "road_miles": 241,
+         "mode": "foot",
+         "story": "Five Riders come in the dark. Frodo puts on the Ring and is stabbed by the Witch-king's blade before Strider drives them off with fire."
+        }
+       ]
+      },
+      {
+       "title": "Flight to the Ford",
+       "leg": "Weathertop to the Ford of Bruinen",
+       "waypoints": [
+        {
+         "id": "frodo-on-the-pony",
+         "name": "Frodo on the pony",
+         "road_miles": 243.5,
+         "mode": "foot",
+         "story": "Wounded and cold, Frodo rides Bill the pony while the others walk south from the dell."
+        },
+        {
+         "id": "away-from-the-road",
+         "name": "Away from the Road",
+         "road_miles": 246,
+         "mode": "foot",
+         "story": "Strider leads them south and away, through broken country."
+        },
+        {
+         "id": "hiding-from-the-riders",
+         "name": "Hiding from the Riders",
+         "road_miles": 248.5,
+         "mode": "foot",
+         "story": "Every sound in the brush makes them freeze, but the Riders do not follow yet."
+        },
+        {
+         "id": "crossing-the-road-again",
+         "name": "Crossing the Road again",
+         "road_miles": 251,
+         "mode": "foot",
+         "story": "They cross the Great East Road quickly and plunge into thickets on its south side."
+        },
+        {
+         "id": "thickets-south-of-the-road",
+         "name": "Thickets south of the Road",
+         "road_miles": 254,
+         "mode": "foot",
+         "story": "Thorny thickets and the land sloping south."
+        },
+        {
+         "id": "southward-slopes",
+         "name": "Southward slopes",
+         "road_miles": 257,
+         "mode": "foot",
+         "story": "Strider keeps them moving under cover of the scrub."
+        },
+        {
+         "id": "first-thicket-camp",
+         "name": "First thicket camp",
+         "road_miles": 260,
+         "mode": "foot",
+         "story": "They camp hidden in the thickets, and Strider tends Frodo's wound with athelas."
+        },
+        {
+         "id": "frodos-cold-arm",
+         "name": "Frodo's cold arm",
+         "road_miles": 263,
+         "mode": "foot",
+         "story": "The cold creeps from Frodo's shoulder into his arm."
+        },
+        {
+         "id": "wild-lone-lands",
+         "name": "Wild lone-lands",
+         "road_miles": 266.5,
+         "mode": "foot",
+         "story": "The Lone-lands stretch empty around them with no sign of house or road."
+        },
+        {
+         "id": "dry-gullies",
+         "name": "Dry gullies",
+         "road_miles": 269.5,
+         "mode": "foot",
+         "story": "They pick their way through dry gullies to stay out of sight."
+        },
+        {
+         "id": "a-wandering-course",
+         "name": "A wandering course",
+         "road_miles": 272.5,
+         "mode": "foot",
+         "story": "Strider bends their course to throw off pursuit."
+        },
+        {
+         "id": "scrub-and-stone",
+         "name": "Scrub and stone",
+         "road_miles": 276,
+         "mode": "foot",
+         "story": "Endless scrub, stone and grey sky."
+        },
+        {
+         "id": "second-camp-from-weathertop",
+         "name": "Second camp from Weathertop",
+         "road_miles": 279,
+         "mode": "foot",
+         "story": "Another cold camp, with Merry and Sam taking turns at watch."
+        },
+        {
+         "id": "a-wide-shallow-valley",
+         "name": "A wide shallow valley",
+         "road_miles": 282,
+         "mode": "foot",
+         "story": "They find a wide shallow valley curving away to the east and follow it."
+        },
+        {
+         "id": "following-the-valley",
+         "name": "Following the valley",
+         "road_miles": 285.5,
+         "mode": "foot",
+         "story": "The valley floor gives easier walking for the pony."
+        },
+        {
+         "id": "grey-weather",
+         "name": "Grey weather",
+         "road_miles": 288.5,
+         "mode": "foot",
+         "story": "The sky stays grey and heavy and there is little talk."
+        },
+        {
+         "id": "strider-scouting",
+         "name": "Strider scouting",
+         "road_miles": 291.5,
+         "mode": "foot",
+         "story": "Strider ranges ahead and comes back with no news, which is good news."
+        },
+        {
+         "id": "valley-bend",
+         "name": "Valley bend",
+         "road_miles": 295,
+         "mode": "foot",
+         "story": "The valley swings around and they follow it."
+        },
+        {
+         "id": "third-camp-from-weathertop",
+         "name": "Third camp from Weathertop",
+         "road_miles": 298,
+         "mode": "foot",
+         "story": "They camp in the curving valley, the Riders nowhere seen."
+        },
+        {
+         "id": "valley-walls",
+         "name": "Valley walls",
+         "road_miles": 301,
+         "mode": "foot",
+         "story": "Low slopes rise on either hand as they go on down the valley."
+        },
+        {
+         "id": "frodos-shadows",
+         "name": "Frodo's shadows",
+         "road_miles": 304.5,
+         "mode": "foot",
+         "story": "Frodo sees things grey and faint, as if a shadow lay on his eyes."
+        },
+        {
+         "id": "long-valley-miles",
+         "name": "Long valley miles",
+         "road_miles": 307.5,
+         "mode": "foot",
+         "story": "The hobbits trudge on in silence, mile after mile."
+        },
+        {
+         "id": "water-at-last",
+         "name": "Water at last",
+         "road_miles": 310.5,
+         "mode": "foot",
+         "story": "A thin stream gives them fresh water."
+        },
+        {
+         "id": "valley-evening",
+         "name": "Valley evening",
+         "road_miles": 314,
+         "mode": "foot",
+         "story": "Evening falls early under the clouds."
+        },
+        {
+         "id": "fourth-camp-from-weathertop",
+         "name": "Fourth camp from Weathertop",
+         "road_miles": 317,
+         "mode": "foot",
+         "story": "Another camp in the valley; Frodo hardly sleeps."
+        },
+        {
+         "id": "rising-land-again",
+         "name": "Rising land again",
+         "road_miles": 320,
+         "mode": "foot",
+         "story": "The land starts to rise ahead of them."
+        },
+        {
+         "id": "huddle-of-hills",
+         "name": "Huddle of hills",
+         "road_miles": 323.5,
+         "mode": "foot",
+         "story": "A huddle of hills appears ahead in the east."
+        },
+        {
+         "id": "striders-worry",
+         "name": "Strider's worry",
+         "road_miles": 326.5,
+         "mode": "foot",
+         "story": "Strider fears the Riders may be watching the bridge ahead."
+        },
+        {
+         "id": "toward-the-hills",
+         "name": "Toward the hills",
+         "road_miles": 329.5,
+         "mode": "foot",
+         "story": "They climb slowly toward the hills."
+        },
+        {
+         "id": "thin-rations",
+         "name": "Thin rations",
+         "road_miles": 333,
+         "mode": "foot",
+         "story": "Food is running low and Sam rations it carefully."
+        },
+        {
+         "id": "fifth-camp-from-weathertop",
+         "name": "Fifth camp from Weathertop",
+         "road_miles": 336,
+         "mode": "foot",
+         "story": "They camp with the hills now close."
+        },
+        {
+         "id": "high-ground",
+         "name": "High ground",
+         "road_miles": 339,
+         "mode": "foot",
+         "story": "From a height they see far ahead to the east."
+        },
+        {
+         "id": "a-glint-of-water",
+         "name": "A glint of water",
+         "road_miles": 342.5,
+         "mode": "foot",
+         "story": "Far off there is a glint of water in the valley ahead."
+        },
+        {
+         "id": "down-toward-the-river",
+         "name": "Down toward the river",
+         "road_miles": 345.5,
+         "mode": "foot",
+         "story": "They work down slopes toward the river lands."
+        },
+        {
+         "id": "near-the-bridge",
+         "name": "Near the bridge",
+         "road_miles": 348.5,
+         "mode": "foot",
+         "story": "Strider brings them toward the Road where it meets the river."
+        },
+        {
+         "id": "hidden-hollow",
+         "name": "Hidden hollow",
+         "road_miles": 352,
+         "mode": "foot",
+         "story": "They pick a hidden hollow for the night."
+        },
+        {
+         "id": "camp-above-the-hoarwell",
+         "name": "Camp above the Hoarwell",
+         "road_miles": 355,
+         "mode": "foot",
+         "story": "Their camp is high enough for Merry to see the Hoarwell gleaming far off."
+        },
+        {
+         "id": "back-to-the-road",
+         "name": "Back to the Road",
+         "road_miles": 356,
+         "mode": "foot",
+         "story": "They return to the Great East Road for the crossing."
+        },
+        {
+         "id": "the-last-bridge",
+         "name": "The Last Bridge",
+         "road_miles": 358,
+         "mode": "foot",
+         "story": "On the Last Bridge over the Hoarwell, Strider finds a pale green elf-stone, a sign that friends have passed this way."
+        },
+        {
+         "id": "north-into-the-trollshaws",
+         "name": "North into the Trollshaws",
+         "road_miles": 359,
+         "mode": "foot",
+         "story": "They turn north off the Road into steep lands with ruined walls and towers on the hills."
+        },
+        {
+         "id": "trollshaws-camp",
+         "name": "Trollshaws camp",
+         "road_miles": 362,
+         "mode": "foot",
+         "story": "The hills shut them in quickly and the going is hard."
+        },
+        {
+         "id": "steep-hill-paths",
+         "name": "Steep hill paths",
+         "road_miles": 365,
+         "mode": "foot",
+         "story": "Up and down steep slopes, with no straight way anywhere."
+        },
+        {
+         "id": "more-climbing",
+         "name": "More climbing",
+         "road_miles": 368,
+         "mode": "foot",
+         "story": "Another day of climbing and another cold camp."
+        },
+        {
+         "id": "turning-wet",
+         "name": "Turning wet",
+         "road_miles": 371,
+         "mode": "foot",
+         "story": "The weather turns wet and the slopes grow slippery."
+        },
+        {
+         "id": "rain-in-the-hills",
+         "name": "Rain in the hills",
+         "road_miles": 374,
+         "mode": "foot",
+         "story": "Rain all day, and every hollow runs with water."
+        },
+        {
+         "id": "forced-north",
+         "name": "Forced north",
+         "road_miles": 377,
+         "mode": "foot",
+         "story": "The hills grow higher and steeper and force them north out of their way."
+        },
+        {
+         "id": "shelf-by-the-cave",
+         "name": "Shelf by the cave",
+         "road_miles": 380,
+         "mode": "foot",
+         "story": "They camp on a stony shelf by a shallow cave while the rain goes on."
+        },
+        {
+         "id": "rocky-ground",
+         "name": "Rocky ground",
+         "road_miles": 383,
+         "mode": "foot",
+         "story": "The rain stops; Strider scouts and they scramble southeast over rocks."
+        },
+        {
+         "id": "saddle-on-the-ridge",
+         "name": "Saddle on the ridge",
+         "road_miles": 386,
+         "mode": "foot",
+         "story": "They camp in a saddle at the top of a ridge, cold, with a fire under a gnarled pine."
+        },
+        {
+         "id": "the-easier-slope",
+         "name": "The easier slope",
+         "road_miles": 387,
+         "mode": "foot",
+         "story": "Beyond the ridge the slope is easy and the day bright; they see the river in the distance."
+        },
+        {
+         "id": "the-old-trail",
+         "name": "The old trail",
+         "road_miles": 389,
+         "mode": "foot",
+         "story": "They come upon a trail running through the woods."
+        },
+        {
+         "id": "the-troll-hole",
+         "name": "The troll-hole",
+         "road_miles": 392,
+         "mode": "foot",
+         "story": "They find the trolls' cave from Bilbo's adventure, with its door ajar."
+        },
+        {
+         "id": "the-stone-trolls",
+         "name": "The Stone Trolls",
+         "road_miles": 393,
+         "mode": "foot",
+         "story": "In a clearing stand the three trolls, turned to stone long ago. Sam makes up a song about a troll and a boot."
+        },
+        {
+         "id": "through-the-woods",
+         "name": "Through the woods",
+         "road_miles": 395.5,
+         "mode": "foot",
+         "story": "A level path through the woods in the afternoon."
+        },
+        {
+         "id": "toward-the-road",
+         "name": "Toward the Road",
+         "road_miles": 397.5,
+         "mode": "foot",
+         "story": "The path heads back down toward the Road."
+        },
+        {
+         "id": "return-to-the-road",
+         "name": "Return to the Road",
+         "road_miles": 400,
+         "mode": "foot",
+         "story": "They come back to the Road in the evening."
+        },
+        {
+         "id": "searching-for-a-camp",
+         "name": "Searching for a camp",
+         "road_miles": 402.5,
+         "mode": "foot",
+         "story": "They walk on as the light fails, looking for a place to rest."
+        },
+        {
+         "id": "glorfindel",
+         "name": "Glorfindel",
+         "road_miles": 405,
+         "mode": "foot",
+         "story": "Bells and hoofbeats on the Road bring Glorfindel of Rivendell, sent to find them."
+        },
+        {
+         "id": "frodo-on-asfaloth",
+         "name": "Frodo on Asfaloth",
+         "road_miles": 408,
+         "mode": "foot",
+         "story": "Glorfindel sets Frodo on his white horse and they march on through the night."
+        },
+        {
+         "id": "night-march",
+         "name": "Night march",
+         "road_miles": 411,
+         "mode": "foot",
+         "story": "The hobbits stumble on, half asleep, while Glorfindel keeps watch behind."
+        },
+        {
+         "id": "elf-light",
+         "name": "Elf-light",
+         "road_miles": 414,
+         "mode": "foot",
+         "story": "Glorfindel's presence seems to lighten the dark around them."
+        },
+        {
+         "id": "toward-dawn",
+         "name": "Toward dawn",
+         "road_miles": 417,
+         "mode": "foot",
+         "story": "The eastern sky pales at last."
+        },
+        {
+         "id": "dawn-camp-by-the-road",
+         "name": "Dawn camp by the Road",
+         "road_miles": 420,
+         "mode": "foot",
+         "story": "They rest beside the Road for less than five hours."
+        },
+        {
+         "id": "on-the-road-again",
+         "name": "On the Road again",
+         "road_miles": 422.5,
+         "mode": "foot",
+         "story": "Back on the Road with tired feet."
+        },
+        {
+         "id": "hurrying-east",
+         "name": "Hurrying east",
+         "road_miles": 424.5,
+         "mode": "foot",
+         "story": "Glorfindel urges them on; the Riders are behind."
+        },
+        {
+         "id": "first-rest-on-the-road",
+         "name": "First rest on the Road",
+         "road_miles": 427,
+         "mode": "foot",
+         "story": "A short halt, then on again."
+        },
+        {
+         "id": "footsore-miles",
+         "name": "Footsore miles",
+         "road_miles": 429.5,
+         "mode": "foot",
+         "story": "Merry and Pippin limp along without complaint."
+        },
+        {
+         "id": "second-rest-on-the-road",
+         "name": "Second rest on the Road",
+         "road_miles": 432,
+         "mode": "foot",
+         "story": "Another short halt by the roadside."
+        },
+        {
+         "id": "hills-to-the-north",
+         "name": "Hills to the north",
+         "road_miles": 434.5,
+         "mode": "foot",
+         "story": "The road runs on with hills rising to the north."
+        },
+        {
+         "id": "late-afternoon",
+         "name": "Late afternoon",
+         "road_miles": 437.5,
+         "mode": "foot",
+         "story": "The light lengthens and still they march."
+        },
+        {
+         "id": "bend-toward-the-bruinen",
+         "name": "Bend toward the Bruinen",
+         "road_miles": 440,
+         "mode": "foot",
+         "story": "They camp where the Road bends right to run down toward the river."
+        },
+        {
+         "id": "early-start",
+         "name": "Early start",
+         "road_miles": 443,
+         "mode": "foot",
+         "story": "Off in the grey morning, hobbling downhill."
+        },
+        {
+         "id": "grassy-roadsides",
+         "name": "Grassy roadsides",
+         "road_miles": 446,
+         "mode": "foot",
+         "story": "The road runs on downhill with grass along both edges."
+        },
+        {
+         "id": "the-red-stone-cutting",
+         "name": "The red-stone cutting",
+         "road_miles": 449,
+         "mode": "foot",
+         "story": "The road plunges through a cutting of red stone among tall pines, and Glorfindel cries to Frodo to ride."
+        },
+        {
+         "id": "ford-of-bruinen",
+         "name": "Ford of Bruinen",
+         "road_miles": 450,
+         "mode": "horse",
+         "story": "Asfaloth outruns the Nine across the flat. Frodo reaches the far bank and turns to defy the Riders. The river rises in a flood of white horses and sweeps them away, and Frodo falls."
+        },
+        {
+         "id": "elves-bear-frodo",
+         "name": "Elves bear Frodo",
+         "road_miles": 452.5,
+         "mode": "foot",
+         "story": "Glorfindel and the Elves lift Frodo and carry him on."
+        },
+        {
+         "id": "the-hidden-valley-path",
+         "name": "The hidden valley path",
+         "road_miles": 455.5,
+         "mode": "foot",
+         "story": "The others follow the path down into the hidden valley."
+        },
+        {
+         "id": "rivendell",
+         "name": "Rivendell",
+         "road_miles": 458,
+         "mode": "foot",
+         "story": "Frodo wakes in Elrond's house, healed, with Gandalf at his bedside."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Part 2",
+     "chapters": [
+      {
+       "title": "The Ring Goes South",
+       "leg": "Rivendell to the Redhorn Gate",
+       "waypoints": [
+        {
+         "id": "setting-out-at-dusk",
+         "name": "Setting out at dusk",
+         "road_miles": 460.5,
+         "mode": "foot",
+         "story": "The Fellowship of nine leaves Rivendell at dusk on a cold December evening."
+        },
+        {
+         "id": "down-the-valley-road",
+         "name": "Down the valley road",
+         "road_miles": 463.5,
+         "mode": "foot",
+         "story": "They walk the valley road in the dark, Sam leading Bill the pony."
+        },
+        {
+         "id": "south-from-the-ford",
+         "name": "South from the Ford",
+         "road_miles": 466,
+         "mode": "foot",
+         "story": "At the Ford of Bruinen they turn south onto narrow paths among folded lands."
+        },
+        {
+         "id": "folded-lands",
+         "name": "Folded lands",
+         "road_miles": 469,
+         "mode": "foot",
+         "story": "Narrow paths wind up and down through tumbled country."
+        },
+        {
+         "id": "marching-by-night",
+         "name": "Marching by night",
+         "road_miles": 471.5,
+         "mode": "foot",
+         "story": "They march by night to avoid the eyes of the Enemy."
+        },
+        {
+         "id": "aragorns-way",
+         "name": "Aragorn's way",
+         "road_miles": 474.5,
+         "mode": "foot",
+         "story": "Aragorn knows these lands and picks the path without a pause."
+        },
+        {
+         "id": "grey-before-dawn",
+         "name": "Grey before dawn",
+         "road_miles": 477,
+         "mode": "foot",
+         "story": "The sky greys and they look for shelter."
+        },
+        {
+         "id": "first-day-camp",
+         "name": "First day camp",
+         "road_miles": 480,
+         "mode": "foot",
+         "story": "They walk until dawn and sleep through the day."
+        },
+        {
+         "id": "empty-country",
+         "name": "Empty country",
+         "road_miles": 483,
+         "mode": "foot",
+         "story": "Empty country, rough and barren, under a cold sky."
+        },
+        {
+         "id": "stony-ridges",
+         "name": "Stony ridges",
+         "road_miles": 486,
+         "mode": "foot",
+         "story": "Low stony ridges to cross one after another."
+        },
+        {
+         "id": "gimlis-silence",
+         "name": "Gimli's silence",
+         "road_miles": 489,
+         "mode": "foot",
+         "story": "Gimli walks with his eyes on the mountains, silent."
+        },
+        {
+         "id": "east-wind",
+         "name": "East wind",
+         "road_miles": 492,
+         "mode": "foot",
+         "story": "A bitter wind blows from the east all night."
+        },
+        {
+         "id": "camp-in-a-hollow",
+         "name": "Camp in a hollow",
+         "road_miles": 495,
+         "mode": "foot",
+         "story": "They camp in a hollow out of the wind."
+        },
+        {
+         "id": "cold-and-windy",
+         "name": "Cold and windy",
+         "road_miles": 498,
+         "mode": "foot",
+         "story": "Cold and windy, and the hobbits pull their cloaks tight."
+        },
+        {
+         "id": "pippins-grumbling",
+         "name": "Pippin's grumbling",
+         "road_miles": 501,
+         "mode": "foot",
+         "story": "Pippin grumbles about walking all night and sleeping all day."
+        },
+        {
+         "id": "starlit-hills",
+         "name": "Starlit hills",
+         "road_miles": 504,
+         "mode": "foot",
+         "story": "Hills stand black against the stars."
+        },
+        {
+         "id": "thin-frost",
+         "name": "Thin frost",
+         "road_miles": 507,
+         "mode": "foot",
+         "story": "Frost silvers the grass toward morning."
+        },
+        {
+         "id": "third-day-camp",
+         "name": "Third day camp",
+         "road_miles": 510,
+         "mode": "foot",
+         "story": "Another cold camp as dawn comes."
+        },
+        {
+         "id": "few-paths",
+         "name": "Few paths",
+         "road_miles": 513,
+         "mode": "foot",
+         "story": "Paths are few and winding."
+        },
+        {
+         "id": "bills-patience",
+         "name": "Bill's patience",
+         "road_miles": 516,
+         "mode": "foot",
+         "story": "Bill the pony plods on, cheerful under his load."
+        },
+        {
+         "id": "lonely-land",
+         "name": "Lonely land",
+         "road_miles": 519,
+         "mode": "foot",
+         "story": "Not a house nor a fire anywhere."
+        },
+        {
+         "id": "mountains-to-the-east",
+         "name": "Mountains to the east",
+         "road_miles": 522,
+         "mode": "foot",
+         "story": "The Misty Mountains march along the eastern sky."
+        },
+        {
+         "id": "fourth-day-camp",
+         "name": "Fourth day camp",
+         "road_miles": 525,
+         "mode": "foot",
+         "story": "They lie up for the day among rocks."
+        },
+        {
+         "id": "winding-ways",
+         "name": "Winding ways",
+         "road_miles": 528,
+         "mode": "foot",
+         "story": "The way twists through rough country."
+        },
+        {
+         "id": "legolas-sings",
+         "name": "Legolas sings",
+         "road_miles": 531,
+         "mode": "foot",
+         "story": "Legolas sings softly of the stars as they walk."
+        },
+        {
+         "id": "hidden-hollows",
+         "name": "Hidden hollows",
+         "road_miles": 534,
+         "mode": "foot",
+         "story": "They keep to hollows where they can."
+        },
+        {
+         "id": "thorny-thickets",
+         "name": "Thorny thickets",
+         "road_miles": 537,
+         "mode": "foot",
+         "story": "Bushes of thorn grow thicker as they go."
+        },
+        {
+         "id": "thornbush-camp",
+         "name": "Thornbush camp",
+         "road_miles": 540,
+         "mode": "foot",
+         "story": "They camp in a thicket of thorn bushes."
+        },
+        {
+         "id": "toward-the-cliff",
+         "name": "Toward the cliff",
+         "road_miles": 544,
+         "mode": "foot",
+         "story": "Strange broken country ahead in the dark."
+        },
+        {
+         "id": "the-cliff-top-path",
+         "name": "The cliff-top path",
+         "road_miles": 548,
+         "mode": "foot",
+         "story": "The path comes to a steep drop, and they walk along the cliff top for a while."
+        },
+        {
+         "id": "away-from-the-edge",
+         "name": "Away from the edge",
+         "road_miles": 550.5,
+         "mode": "foot",
+         "story": "They leave the cliff edge and turn south again."
+        },
+        {
+         "id": "yule-night",
+         "name": "Yule night",
+         "road_miles": 552.5,
+         "mode": "foot",
+         "story": "It is Yule, and they spend it walking."
+        },
+        {
+         "id": "yule-camp",
+         "name": "Yule camp",
+         "road_miles": 555,
+         "mode": "foot",
+         "story": "They sleep through the first day of Yule."
+        },
+        {
+         "id": "barren-slopes",
+         "name": "Barren slopes",
+         "road_miles": 558,
+         "mode": "foot",
+         "story": "Barren slopes, and the wind never stops."
+        },
+        {
+         "id": "long-night",
+         "name": "Long night",
+         "road_miles": 561,
+         "mode": "foot",
+         "story": "A long night's march under clouds."
+        },
+        {
+         "id": "sams-thoughts-of-home",
+         "name": "Sam's thoughts of home",
+         "road_miles": 564,
+         "mode": "foot",
+         "story": "Sam thinks of the Green Dragon and the warm fires of Hobbiton."
+        },
+        {
+         "id": "cold-feet",
+         "name": "Cold feet",
+         "road_miles": 567,
+         "mode": "foot",
+         "story": "The hobbits' feet are cold and sore."
+        },
+        {
+         "id": "second-yule-camp",
+         "name": "Second Yule camp",
+         "road_miles": 570,
+         "mode": "foot",
+         "story": "They lie up through the second day of Yule."
+        },
+        {
+         "id": "grey-country",
+         "name": "Grey country",
+         "road_miles": 573,
+         "mode": "foot",
+         "story": "The country stays grey and featureless."
+        },
+        {
+         "id": "boromirs-horn",
+         "name": "Boromir's horn",
+         "road_miles": 576,
+         "mode": "foot",
+         "story": "Boromir carries his great horn, silent now, at his belt."
+        },
+        {
+         "id": "new-years-night",
+         "name": "New Year's night",
+         "road_miles": 579,
+         "mode": "foot",
+         "story": "The year turns while they walk."
+        },
+        {
+         "id": "darkness-before-dawn",
+         "name": "Darkness before dawn",
+         "road_miles": 582,
+         "mode": "foot",
+         "story": "They walk on through the darkest hours."
+        },
+        {
+         "id": "new-year-camp",
+         "name": "New Year camp",
+         "road_miles": 585,
+         "mode": "foot",
+         "story": "They camp through the first day of January."
+        },
+        {
+         "id": "swamp-to-the-west",
+         "name": "Swamp to the west",
+         "road_miles": 588,
+         "mode": "foot",
+         "story": "Off to the west the path passes a swamp."
+        },
+        {
+         "id": "cold-grey-and-windy",
+         "name": "Cold, grey and windy",
+         "road_miles": 591,
+         "mode": "foot",
+         "story": "Still cold, grey and windy."
+        },
+        {
+         "id": "steady-miles",
+         "name": "Steady miles",
+         "road_miles": 594,
+         "mode": "foot",
+         "story": "Steady miles under Aragorn's lead."
+        },
+        {
+         "id": "wind-bent-grass",
+         "name": "Wind-bent grass",
+         "road_miles": 597,
+         "mode": "foot",
+         "story": "Long grass bends flat in the wind."
+        },
+        {
+         "id": "tenth-day-camp",
+         "name": "Tenth day camp",
+         "road_miles": 600,
+         "mode": "foot",
+         "story": "Another day spent hidden from the sky."
+        },
+        {
+         "id": "dull-skies",
+         "name": "Dull skies",
+         "road_miles": 603,
+         "mode": "foot",
+         "story": "Dull skies and a dull road."
+        },
+        {
+         "id": "hills-in-the-dark",
+         "name": "Hills in the dark",
+         "road_miles": 606,
+         "mode": "foot",
+         "story": "Shapes of hills loom out of the night."
+        },
+        {
+         "id": "hard-ground",
+         "name": "Hard ground",
+         "road_miles": 609,
+         "mode": "foot",
+         "story": "Frozen ground rings under their boots."
+        },
+        {
+         "id": "chill-before-morning",
+         "name": "Chill before morning",
+         "road_miles": 612,
+         "mode": "foot",
+         "story": "The chill deepens before morning."
+        },
+        {
+         "id": "eleventh-day-camp",
+         "name": "Eleventh day camp",
+         "road_miles": 615,
+         "mode": "foot",
+         "story": "They make camp at dawn."
+        },
+        {
+         "id": "rough-going",
+         "name": "Rough going",
+         "road_miles": 618,
+         "mode": "foot",
+         "story": "Rough going over stones and heather."
+        },
+        {
+         "id": "moonless-night",
+         "name": "Moonless night",
+         "road_miles": 621,
+         "mode": "foot",
+         "story": "No moon, and they walk by starlight."
+        },
+        {
+         "id": "aragorn-watchful",
+         "name": "Aragorn watchful",
+         "road_miles": 624,
+         "mode": "foot",
+         "story": "Aragorn stops often to listen."
+        },
+        {
+         "id": "weary-legs",
+         "name": "Weary legs",
+         "road_miles": 627,
+         "mode": "foot",
+         "story": "Weary legs, and still they go on."
+        },
+        {
+         "id": "twelfth-day-camp",
+         "name": "Twelfth day camp",
+         "road_miles": 630,
+         "mode": "foot",
+         "story": "They sleep through another grey day."
+        },
+        {
+         "id": "endless-south",
+         "name": "Endless south",
+         "road_miles": 633,
+         "mode": "foot",
+         "story": "The road south seems endless."
+        },
+        {
+         "id": "silent-company",
+         "name": "Silent company",
+         "road_miles": 636,
+         "mode": "foot",
+         "story": "Few words pass between them now."
+        },
+        {
+         "id": "hollows-and-ridges",
+         "name": "Hollows and ridges",
+         "road_miles": 639,
+         "mode": "foot",
+         "story": "Hollow and ridge, ridge and hollow."
+        },
+        {
+         "id": "night-wind",
+         "name": "Night wind",
+         "road_miles": 642,
+         "mode": "foot",
+         "story": "The night wind sighs over the land."
+        },
+        {
+         "id": "thirteenth-day-camp",
+         "name": "Thirteenth day camp",
+         "road_miles": 645,
+         "mode": "foot",
+         "story": "They camp in the lee of a hill."
+        },
+        {
+         "id": "cold-miles",
+         "name": "Cold miles",
+         "road_miles": 648,
+         "mode": "foot",
+         "story": "Cold miles go by in the dark."
+        },
+        {
+         "id": "mountains-closer",
+         "name": "Mountains closer",
+         "road_miles": 651,
+         "mode": "foot",
+         "story": "The mountains are a little closer each night."
+        },
+        {
+         "id": "heather-slopes",
+         "name": "Heather slopes",
+         "road_miles": 654,
+         "mode": "foot",
+         "story": "They cross wide slopes of brown heather."
+        },
+        {
+         "id": "faint-dawn",
+         "name": "Faint dawn",
+         "road_miles": 657,
+         "mode": "foot",
+         "story": "A faint dawn comes up grey."
+        },
+        {
+         "id": "fourteenth-day-camp",
+         "name": "Fourteenth day camp",
+         "road_miles": 660,
+         "mode": "foot",
+         "story": "Another day hidden and resting."
+        },
+        {
+         "id": "last-cold-night",
+         "name": "Last cold night",
+         "road_miles": 663,
+         "mode": "foot",
+         "story": "The last of the cold weather follows them."
+        },
+        {
+         "id": "wide-moors",
+         "name": "Wide moors",
+         "road_miles": 666,
+         "mode": "foot",
+         "story": "Wide moors under a heavy sky."
+        },
+        {
+         "id": "gandalfs-pace",
+         "name": "Gandalf's pace",
+         "road_miles": 669,
+         "mode": "foot",
+         "story": "Gandalf walks on, never seeming to tire."
+        },
+        {
+         "id": "end-of-the-grey",
+         "name": "End of the grey",
+         "road_miles": 672,
+         "mode": "foot",
+         "story": "Toward morning the clouds begin to break."
+        },
+        {
+         "id": "fifteenth-day-camp",
+         "name": "Fifteenth day camp",
+         "road_miles": 675,
+         "mode": "foot",
+         "story": "They camp as the weather begins to change."
+        },
+        {
+         "id": "mountains-of-moria",
+         "name": "Mountains of Moria",
+         "road_miles": 678,
+         "mode": "foot",
+         "story": "The air is warmer and the sky clear, and far ahead stand the three peaks of Moria. The land is eerily quiet."
+        },
+        {
+         "id": "into-hollin",
+         "name": "Into Hollin",
+         "road_miles": 681,
+         "mode": "foot",
+         "story": "They enter the old country of Eregion, once home to Elves."
+        },
+        {
+         "id": "silent-land",
+         "name": "Silent land",
+         "road_miles": 684,
+         "mode": "foot",
+         "story": "No birds sing; even Legolas finds the silence strange."
+        },
+        {
+         "id": "holly-trees-ahead",
+         "name": "Holly trees ahead",
+         "road_miles": 687,
+         "mode": "foot",
+         "story": "Great holly trees mark the ridge ahead."
+        },
+        {
+         "id": "hollin-ridge",
+         "name": "Hollin Ridge",
+         "road_miles": 690,
+         "mode": "foot",
+         "story": "They camp among the hollies on Hollin Ridge until flocks of crebain fly over spying, and they leave at dusk."
+        },
+        {
+         "id": "the-stone-lined-path",
+         "name": "The stone-lined path",
+         "road_miles": 691,
+         "mode": "foot",
+         "story": "They soon strike a good path, lined with stones, running southeast toward the pass under a full moon."
+        },
+        {
+         "id": "ruins-of-eregion",
+         "name": "Ruins of Eregion",
+         "road_miles": 694,
+         "mode": "foot",
+         "story": "Broken stones of old Elvish work lie in the grass."
+        },
+        {
+         "id": "full-moon",
+         "name": "Full moon",
+         "road_miles": 697,
+         "mode": "foot",
+         "story": "The full moon lights their way but makes them feel exposed."
+        },
+        {
+         "id": "southeast-toward-the-pass",
+         "name": "Southeast toward the pass",
+         "road_miles": 700,
+         "mode": "foot",
+         "story": "The path holds its course toward the mountains."
+        },
+        {
+         "id": "fading-stars",
+         "name": "Fading stars",
+         "road_miles": 703,
+         "mode": "foot",
+         "story": "The stars fade toward dawn."
+        },
+        {
+         "id": "shadow-over-the-stars",
+         "name": "Shadow over the stars",
+         "road_miles": 706,
+         "mode": "foot",
+         "story": "Just before dawn Frodo and Gandalf feel something pass across the stars."
+        },
+        {
+         "id": "ninth-of-january-camp",
+         "name": "Ninth of January camp",
+         "road_miles": 708,
+         "mode": "foot",
+         "story": "They camp through a sunny but colder day."
+        },
+        {
+         "id": "climbing-road",
+         "name": "Climbing road",
+         "road_miles": 710,
+         "mode": "foot",
+         "story": "The road begins to climb as it winds into the hills."
+        },
+        {
+         "id": "into-the-foothills",
+         "name": "Into the foothills",
+         "road_miles": 713,
+         "mode": "foot",
+         "story": "Foothills close about them as the road goes up."
+        },
+        {
+         "id": "steeper-slopes",
+         "name": "Steeper slopes",
+         "road_miles": 716,
+         "mode": "foot",
+         "story": "The slopes steepen and the air grows thin and cold."
+        },
+        {
+         "id": "caradhras-looms",
+         "name": "Caradhras looms",
+         "road_miles": 719,
+         "mode": "foot",
+         "story": "The red peak of Caradhras towers over them."
+        },
+        {
+         "id": "mountain-shadow",
+         "name": "Mountain shadow",
+         "road_miles": 722,
+         "mode": "foot",
+         "story": "They walk in the shadow of the mountains."
+        },
+        {
+         "id": "foothill-camp",
+         "name": "Foothill camp",
+         "road_miles": 725,
+         "mode": "foot",
+         "story": "They camp in the foothills through the day."
+        },
+        {
+         "id": "up-and-up",
+         "name": "Up and up",
+         "road_miles": 727.5,
+         "mode": "foot",
+         "story": "The road climbs on into the hills."
+        },
+        {
+         "id": "mountain-wind",
+         "name": "Mountain wind",
+         "road_miles": 730.5,
+         "mode": "foot",
+         "story": "A cold wind pours down from the heights."
+        },
+        {
+         "id": "higher-still",
+         "name": "Higher still",
+         "road_miles": 733,
+         "mode": "foot",
+         "story": "The road climbs still higher toward the Redhorn."
+        },
+        {
+         "id": "gandalf-and-aragorn-debate",
+         "name": "Gandalf and Aragorn debate",
+         "road_miles": 736,
+         "mode": "foot",
+         "story": "Gandalf and Aragorn argue over the way; Aragorn fears the pass less than the other road."
+        },
+        {
+         "id": "black-clouds",
+         "name": "Black clouds",
+         "road_miles": 739,
+         "mode": "foot",
+         "story": "The wind swings northwest and black clouds gather."
+        },
+        {
+         "id": "feet-of-the-redhorn",
+         "name": "Feet of the Redhorn",
+         "road_miles": 742,
+         "mode": "foot",
+         "story": "They camp almost at the feet of the Redhorn and each carries a faggot of wood against snow."
+        },
+        {
+         "id": "smooth-path-upward",
+         "name": "Smooth path upward",
+         "road_miles": 744,
+         "mode": "foot",
+         "story": "The path is fairly smooth at first and they make good time."
+        },
+        {
+         "id": "fallen-stones",
+         "name": "Fallen stones",
+         "road_miles": 746,
+         "mode": "foot",
+         "story": "The path grows steep and strewn with fallen stones."
+        },
+        {
+         "id": "the-snowy-shelf",
+         "name": "The snowy shelf",
+         "road_miles": 748,
+         "mode": "foot",
+         "story": "Cliff on the left, drop on the right; it begins to snow as they reach a shelf at the top of the slope."
+        },
+        {
+         "id": "thickening-snow",
+         "name": "Thickening snow",
+         "road_miles": 749,
+         "mode": "foot",
+         "story": "The snow falls more thickly and the wind rises."
+        },
+        {
+         "id": "a-brief-halt",
+         "name": "A brief halt",
+         "road_miles": 749.5,
+         "mode": "foot",
+         "story": "They stop while the wind slackens, then struggle on."
+        },
+        {
+         "id": "redhorn-pass",
+         "name": "Redhorn Pass",
+         "road_miles": 750,
+         "mode": "foot",
+         "story": "The storm overwhelms them. They huddle against the cliff and Gandalf kindles fire with his staff to keep them alive till dawn."
+        },
+        {
+         "id": "the-great-drift",
+         "name": "The great drift",
+         "road_miles": 750.5,
+         "mode": "foot",
+         "story": "Aragorn and Boromir plough a path through a great drift while Legolas runs lightly over the snow."
+        },
+        {
+         "id": "shallower-snow",
+         "name": "Shallower snow",
+         "road_miles": 751,
+         "mode": "foot",
+         "story": "The snow grows steadily shallower as they go down."
+        },
+        {
+         "id": "clear-of-the-snow",
+         "name": "Clear of the snow",
+         "road_miles": 752,
+         "mode": "foot",
+         "story": "They are back on the shelf of stone and out of the snow by midmorning. Caradhras has defeated them."
+        }
+       ]
+      },
+      {
+       "title": "A Journey in the Dark",
+       "leg": "Caradhras to the Chamber of Mazarbul",
+       "waypoints": [
+        {
+         "id": "turning-west",
+         "name": "Turning west",
+         "road_miles": 754,
+         "mode": "foot",
+         "story": "They turn west from the pass road as the crebain return."
+        },
+        {
+         "id": "weary-retreat",
+         "name": "Weary retreat",
+         "road_miles": 757.5,
+         "mode": "foot",
+         "story": "A weary march down from the mountain."
+        },
+        {
+         "id": "western-foothills",
+         "name": "Western foothills",
+         "road_miles": 761,
+         "mode": "foot",
+         "story": "They trudge along the western foothills."
+        },
+        {
+         "id": "gandalfs-choice",
+         "name": "Gandalf's choice",
+         "road_miles": 764.5,
+         "mode": "foot",
+         "story": "Gandalf speaks of the dark road under the mountains."
+        },
+        {
+         "id": "round-the-silvertine",
+         "name": "Round the Silvertine",
+         "road_miles": 768,
+         "mode": "foot",
+         "story": "They bend southwest around the foothills of the Silvertine."
+        },
+        {
+         "id": "grey-evening",
+         "name": "Grey evening",
+         "road_miles": 771.5,
+         "mode": "foot",
+         "story": "Evening falls grey and cold."
+        },
+        {
+         "id": "wolf-howls",
+         "name": "Wolf-howls",
+         "road_miles": 774.5,
+         "mode": "foot",
+         "story": "Far off they hear the howling of wolves."
+        },
+        {
+         "id": "ring-of-stones",
+         "name": "Ring of stones",
+         "road_miles": 778,
+         "mode": "foot",
+         "story": "On a hilltop within a ring of stones they hold off the Wargs through the night, Gandalf blazing like fire."
+        },
+        {
+         "id": "no-bodies-at-dawn",
+         "name": "No bodies at dawn",
+         "road_miles": 780.5,
+         "mode": "foot",
+         "story": "At dawn there are no bodies, only arrows on the ground."
+        },
+        {
+         "id": "red-stone-country",
+         "name": "Red stone country",
+         "road_miles": 783,
+         "mode": "foot",
+         "story": "They cross a barren country of red stones heading south-southeast."
+        },
+        {
+         "id": "searching-for-the-stream",
+         "name": "Searching for the stream",
+         "road_miles": 785.5,
+         "mode": "foot",
+         "story": "Gandalf seeks the old road beside the stream."
+        },
+        {
+         "id": "the-sirannon",
+         "name": "The Sirannon",
+         "road_miles": 788,
+         "mode": "foot",
+         "story": "They reach the Gate-stream, almost dry, and follow it east."
+        },
+        {
+         "id": "the-deep-trough",
+         "name": "The deep trough",
+         "road_miles": 790,
+         "mode": "foot",
+         "story": "The path runs in a deep winding trough."
+        },
+        {
+         "id": "a-hasty-meal",
+         "name": "A hasty meal",
+         "road_miles": 792,
+         "mode": "foot",
+         "story": "They eat quickly and go on."
+        },
+        {
+         "id": "old-road",
+         "name": "Old road",
+         "road_miles": 794,
+         "mode": "foot",
+         "story": "Gandalf picks out traces of the old road under the stones."
+        },
+        {
+         "id": "stair-falls",
+         "name": "Stair Falls",
+         "road_miles": 796.5,
+         "mode": "foot",
+         "story": "At the dry falls of the Sirannon, Frodo, Gimli and Gandalf climb the stairs to the valley above."
+        },
+        {
+         "id": "the-dark-lake",
+         "name": "The dark lake",
+         "road_miles": 797,
+         "mode": "foot",
+         "story": "A curving road leads to a valley mostly filled with a dark, still lake."
+        },
+        {
+         "id": "wading-the-creek",
+         "name": "Wading the creek",
+         "road_miles": 797.3,
+         "mode": "foot",
+         "story": "They wade an evil-smelling stream at the north end of the lake."
+        },
+        {
+         "id": "doors-of-durin",
+         "name": "Doors of Durin",
+         "road_miles": 798,
+         "mode": "foot",
+         "story": "Gandalf reads the riddle on the doors, Sam sends Bill away, and the Watcher in the Water seizes Frodo as they flee inside."
+        },
+        {
+         "id": "gollums-footsteps",
+         "name": "Gollum's footsteps",
+         "road_miles": 801,
+         "mode": "foot",
+         "story": "Inside Moria, Frodo begins to hear soft footsteps pattering behind them."
+        },
+        {
+         "id": "choice-of-paths",
+         "name": "Choice of paths",
+         "road_miles": 804,
+         "mode": "foot",
+         "story": "Gandalf halts to choose between ways in the dark."
+        },
+        {
+         "id": "dark-passages",
+         "name": "Dark passages",
+         "road_miles": 806,
+         "mode": "foot",
+         "story": "Passage after passage in the light of Gandalf's staff."
+        },
+        {
+         "id": "narrow-fissure",
+         "name": "Narrow fissure",
+         "road_miles": 808,
+         "mode": "foot",
+         "story": "They leap a narrow fissure in the floor."
+        },
+        {
+         "id": "the-wide-chasm",
+         "name": "The wide chasm",
+         "road_miles": 811,
+         "mode": "foot",
+         "story": "A wider chasm, seven feet across; Sam jumps it with his pack."
+        },
+        {
+         "id": "ancient-halls",
+         "name": "Ancient halls",
+         "road_miles": 813.5,
+         "mode": "foot",
+         "story": "Great halls and stairways open and close around them."
+        },
+        {
+         "id": "echoing-dark",
+         "name": "Echoing dark",
+         "road_miles": 815.5,
+         "mode": "foot",
+         "story": "Their footsteps echo in the endless dark."
+        },
+        {
+         "id": "the-guardroom",
+         "name": "The Guardroom",
+         "road_miles": 818,
+         "mode": "foot",
+         "story": "They camp in a guardroom; Pippin drops a stone down a well and a hammering answers from the deep."
+        },
+        {
+         "id": "right-hand-passage",
+         "name": "Right-hand passage",
+         "road_miles": 820.5,
+         "mode": "foot",
+         "story": "In the morning they take the right-hand passage."
+        },
+        {
+         "id": "mounting-curves",
+         "name": "Mounting curves",
+         "road_miles": 823,
+         "mode": "foot",
+         "story": "The road climbs in great curves with no side ways."
+        },
+        {
+         "id": "smooth-road",
+         "name": "Smooth road",
+         "road_miles": 825.5,
+         "mode": "foot",
+         "story": "A smooth road climbs on through the dark."
+        },
+        {
+         "id": "midday-halt",
+         "name": "Midday halt",
+         "road_miles": 828,
+         "mode": "foot",
+         "story": "A rest and a meal in the darkness."
+        },
+        {
+         "id": "dwarf-work",
+         "name": "Dwarf-work",
+         "road_miles": 830.5,
+         "mode": "foot",
+         "story": "Gimli marvels at the carving of the walls."
+        },
+        {
+         "id": "still-climbing",
+         "name": "Still climbing",
+         "road_miles": 833,
+         "mode": "foot",
+         "story": "Still the road goes up."
+        },
+        {
+         "id": "moria-silver",
+         "name": "Moria-silver",
+         "road_miles": 835.5,
+         "mode": "foot",
+         "story": "Gandalf tells of mithril, the wealth and bane of Moria."
+        },
+        {
+         "id": "twenty-first-hall",
+         "name": "Twenty-first Hall",
+         "road_miles": 838,
+         "mode": "foot",
+         "story": "They sleep in a great hall of the North End. In the morning grey light falls from a high window."
+        }
+       ]
+      },
+      {
+       "title": "The Bridge of Khazad-dum",
+       "leg": "Mazarbul to the Dimrill Gate",
+       "waypoints": [
+        {
+         "id": "chamber-of-mazarbul",
+         "name": "Chamber of Mazarbul",
+         "road_miles": 838.2,
+         "mode": "foot",
+         "story": "They find Balin's tomb and the last pages of a dwarf book. Drums sound in the deep; orcs and a cave-troll attack."
+        },
+        {
+         "id": "seven-flights-down",
+         "name": "Seven flights down",
+         "road_miles": 839,
+         "mode": "foot",
+         "story": "They escape by the east door and flee down seven flights of stairs."
+        },
+        {
+         "id": "bridge-of-khazad-dum",
+         "name": "Bridge of Khazad-dum",
+         "road_miles": 839.3,
+         "mode": "foot",
+         "story": "On the narrow bridge Gandalf turns to face the Balrog. The bridge breaks and both fall into the abyss."
+        },
+        {
+         "id": "the-dimrill-gate",
+         "name": "The Dimrill Gate",
+         "road_miles": 839.5,
+         "mode": "foot",
+         "story": "The company runs up the last stairs and out through the Great Gates into the light."
+        }
+       ]
+      },
+      {
+       "title": "Lothlorien",
+       "leg": "Dimrill Dale to Cerin Amroth",
+       "waypoints": [
+        {
+         "id": "below-the-dimrill-gate",
+         "name": "Below the Dimrill Gate",
+         "road_miles": 840,
+         "mode": "foot",
+         "story": "Outside the gate they stop and give way to grief."
+        },
+        {
+         "id": "mirrormere",
+         "name": "Mirrormere",
+         "road_miles": 841.5,
+         "mode": "foot",
+         "story": "Gimli leads Frodo and Sam to Durin's Stone and the still Mirrormere, where the crown of stars glints in the water."
+        },
+        {
+         "id": "spring-of-the-silverlode",
+         "name": "Spring of the Silverlode",
+         "road_miles": 842,
+         "mode": "foot",
+         "story": "They pause at the icy spring where the Silverlode begins."
+        },
+        {
+         "id": "down-the-dimrill-road",
+         "name": "Down the Dimrill road",
+         "road_miles": 845,
+         "mode": "foot",
+         "story": "The road runs south down the dale."
+        },
+        {
+         "id": "the-dell-of-rest",
+         "name": "The dell of rest",
+         "road_miles": 848,
+         "mode": "foot",
+         "story": "Frodo and Sam lag behind, so Aragorn and Boromir carry them to a dell where Aragorn tends their wounds and Frodo's mithril coat is revealed."
+        },
+        {
+         "id": "dusk-on-the-road",
+         "name": "Dusk on the road",
+         "road_miles": 851,
+         "mode": "foot",
+         "story": "Dusk falls as they hurry on."
+        },
+        {
+         "id": "glowing-eyes",
+         "name": "Glowing eyes",
+         "road_miles": 854,
+         "mode": "foot",
+         "story": "Frodo hears the soft feet again and sees two pale eyes behind."
+        },
+        {
+         "id": "edge-of-the-golden-wood",
+         "name": "Edge of the Golden Wood",
+         "road_miles": 855,
+         "mode": "foot",
+         "story": "They pass under the eaves of Lothlorien."
+        },
+        {
+         "id": "the-nimrodel",
+         "name": "The Nimrodel",
+         "road_miles": 856,
+         "mode": "foot",
+         "story": "They wade the Nimrodel while Legolas sings its tale. Haldir's Elves take them up into a flet for the night as orcs pass below."
+        },
+        {
+         "id": "beside-the-silverlode",
+         "name": "Beside the Silverlode",
+         "road_miles": 858.5,
+         "mode": "foot",
+         "story": "In the morning they follow a path south beside the Silverlode."
+        },
+        {
+         "id": "rope-bridge",
+         "name": "Rope bridge",
+         "road_miles": 861,
+         "mode": "foot",
+         "story": "They cross the Silverlode on ropes and are blindfolded, Gimli last of all after much argument."
+        },
+        {
+         "id": "the-naith-of-lorien",
+         "name": "The Naith of Lorien",
+         "road_miles": 864,
+         "mode": "foot",
+         "story": "Blindfolded, they walk the smooth paths of the Naith between the rivers."
+        },
+        {
+         "id": "scent-of-the-trees",
+         "name": "Scent of the trees",
+         "road_miles": 866.5,
+         "mode": "foot",
+         "story": "Frodo smells the trees and grass and hears the leaves above."
+        },
+        {
+         "id": "haldirs-guidance",
+         "name": "Haldir's guidance",
+         "road_miles": 869.5,
+         "mode": "foot",
+         "story": "Haldir leads them by hidden paths."
+        },
+        {
+         "id": "grass-underfoot",
+         "name": "Grass underfoot",
+         "road_miles": 872.5,
+         "mode": "foot",
+         "story": "Soft grass replaces stone under their feet."
+        },
+        {
+         "id": "elven-voices",
+         "name": "Elven voices",
+         "road_miles": 875.5,
+         "mode": "foot",
+         "story": "Voices sing in the trees as they pass."
+        },
+        {
+         "id": "deep-in-the-naith",
+         "name": "Deep in the Naith",
+         "road_miles": 878,
+         "mode": "foot",
+         "story": "On they walk, trusting their guides."
+        },
+        {
+         "id": "the-open-glade",
+         "name": "The open glade",
+         "road_miles": 881,
+         "mode": "foot",
+         "story": "They feel open sky above as they cross a glade."
+        },
+        {
+         "id": "afternoon-path",
+         "name": "Afternoon path",
+         "road_miles": 883.5,
+         "mode": "foot",
+         "story": "The path runs on through the trees."
+        },
+        {
+         "id": "evening-falls",
+         "name": "Evening falls",
+         "road_miles": 885.5,
+         "mode": "foot",
+         "story": "The light fades and they halt."
+        },
+        {
+         "id": "sleeping-on-the-ground",
+         "name": "Sleeping on the ground",
+         "road_miles": 888,
+         "mode": "foot",
+         "story": "They sleep on the ground, still blindfolded."
+        },
+        {
+         "id": "second-blindfolded-day",
+         "name": "Second blindfolded day",
+         "road_miles": 891,
+         "mode": "foot",
+         "story": "Another day of walking blind."
+        },
+        {
+         "id": "wind-in-the-mallorns",
+         "name": "Wind in the mallorns",
+         "road_miles": 894,
+         "mode": "foot",
+         "story": "Wind stirs the golden leaves high above."
+        },
+        {
+         "id": "news-from-the-borders",
+         "name": "News from the borders",
+         "road_miles": 897,
+         "mode": "foot",
+         "story": "Elves bring word that the orcs were destroyed."
+        },
+        {
+         "id": "smooth-paths",
+         "name": "Smooth paths",
+         "road_miles": 900,
+         "mode": "foot",
+         "story": "The paths grow wider and smoother."
+        },
+        {
+         "id": "near-the-heart",
+         "name": "Near the heart",
+         "road_miles": 903,
+         "mode": "foot",
+         "story": "They draw near the heart of the wood."
+        },
+        {
+         "id": "cerin-amroth",
+         "name": "Cerin Amroth",
+         "road_miles": 906,
+         "mode": "foot",
+         "story": "Blindfolds removed, they climb the green mound of Cerin Amroth, bright with golden elanor, and Aragorn stands lost in memory."
+        }
+       ]
+      },
+      {
+       "title": "The Mirror of Galadriel",
+       "leg": "Cerin Amroth to Caras Galadhon",
+       "waypoints": [
+        {
+         "id": "down-from-the-hill",
+         "name": "Down from the hill",
+         "road_miles": 908.5,
+         "mode": "foot",
+         "story": "They walk on through the golden afternoon."
+        },
+        {
+         "id": "the-city-road",
+         "name": "The city road",
+         "road_miles": 911.5,
+         "mode": "foot",
+         "story": "A wide road leads on toward the city of the trees."
+        },
+        {
+         "id": "lanterns-lit",
+         "name": "Lanterns lit",
+         "road_miles": 914,
+         "mode": "foot",
+         "story": "Elves light lanterns as evening falls."
+        },
+        {
+         "id": "walls-of-caras-galadhon",
+         "name": "Walls of Caras Galadhon",
+         "road_miles": 916,
+         "mode": "foot",
+         "story": "They reach the north side of a great green wall with a deep fosse, and tall trees rising within."
+        },
+        {
+         "id": "the-white-bridge",
+         "name": "The white bridge",
+         "road_miles": 918,
+         "mode": "foot",
+         "story": "They walk around the walls to the white bridge and the great gates on the south side."
+        },
+        {
+         "id": "caras-galadhon",
+         "name": "Caras Galadhon",
+         "road_miles": 920,
+         "mode": "foot",
+         "story": "They climb to meet Celeborn and Galadriel, and stay a month. Frodo and Sam look into Galadriel's Mirror."
+        }
+       ]
+      },
+      {
+       "title": "Farewell to Lorien",
+       "leg": "Caras Galadhon to the Anduin",
+       "waypoints": [
+        {
+         "id": "south-through-the-woods",
+         "name": "South through the woods",
+         "road_miles": 922.5,
+         "mode": "foot",
+         "story": "Haldir leads them south and east through rolling woods."
+        },
+        {
+         "id": "falling-land",
+         "name": "Falling land",
+         "road_miles": 925,
+         "mode": "foot",
+         "story": "The land falls away toward the rivers."
+        },
+        {
+         "id": "near-the-anduin",
+         "name": "Near the Anduin",
+         "road_miles": 927.5,
+         "mode": "foot",
+         "story": "They come near the meeting of the waters."
+        },
+        {
+         "id": "the-silverlode-lawn",
+         "name": "The Silverlode lawn",
+         "road_miles": 930,
+         "mode": "foot",
+         "story": "On a lawn by the river the Lady gives her gifts: a phial of starlight for Frodo, a box of earth for Sam, three golden hairs for Gimli."
+        },
+        {
+         "id": "meeting-of-the-silverlode-and-anduin",
+         "name": "Meeting of the Silverlode and Anduin",
+         "road_miles": 934,
+         "mode": "boat",
+         "story": "The boats slip out of the Silverlode onto the Great River, and soon the high banks hide the light of Lorien."
+        }
+       ]
+      },
+      {
+       "title": "The Great River",
+       "leg": "Lorien to Parth Galen",
+       "waypoints": [
+        {
+         "id": "first-night-on-the-river",
+         "name": "First night on the river",
+         "road_miles": 962.5,
+         "mode": "boat",
+         "story": "They draw the boats up under the west bank for the night, with the grey woods of Lorien already far behind."
+        },
+        {
+         "id": "long-day-on-the-water",
+         "name": "A long day on the water",
+         "road_miles": 991.5,
+         "mode": "boat",
+         "story": "Day after day of paddling on cold grey water; the trees thin and the banks grow bare and lonely."
+        },
+        {
+         "id": "edge-of-the-brown-lands",
+         "name": "Edge of the Brown Lands",
+         "road_miles": 1020,
+         "mode": "boat",
+         "story": "Trees give way to withered downs on the east bank, the edge of the Brown Lands."
+        },
+        {
+         "id": "field-of-celebrant",
+         "name": "Field of Celebrant",
+         "road_miles": 1023,
+         "mode": "boat",
+         "story": "They camp on the flats north of the Field of Celebrant."
+        },
+        {
+         "id": "north-undeep",
+         "name": "North Undeep",
+         "road_miles": 1063,
+         "mode": "boat",
+         "story": "Stony beaches and gravel shoals at the North Undeep force them to go carefully."
+        },
+        {
+         "id": "mouth-of-the-limlight",
+         "name": "Mouth of the Limlight",
+         "road_miles": 1070,
+         "mode": "boat",
+         "story": "The Limlight flows in from the west."
+        },
+        {
+         "id": "the-wold",
+         "name": "The Wold",
+         "road_miles": 1083,
+         "mode": "boat",
+         "story": "Along the Wold of Rohan Sam spots a log with pale eyes paddling after them, and that night Gollum creeps close to the camp during Frodo's watch."
+        },
+        {
+         "id": "travelling-by-night",
+         "name": "Travelling by night",
+         "road_miles": 1112.5,
+         "mode": "boat",
+         "story": "Wary of eyes on the east shore, they now hide under the bank by day and let the river carry them through the dark."
+        },
+        {
+         "id": "south-undeep",
+         "name": "South Undeep",
+         "road_miles": 1142,
+         "mode": "boat",
+         "story": "In the dark they pass the western loop of the South Undeep."
+        },
+        {
+         "id": "gollum-following-on-the-log",
+         "name": "Gollum following on the log",
+         "road_miles": 1172.5,
+         "mode": "boat",
+         "story": "Night after night the log drifts behind them, and Aragorn tells Frodo he has known since Moria that Gollum is on their trail."
+        },
+        {
+         "id": "lowlands-before-the-emyn-muil",
+         "name": "Lowlands before the Emyn Muil",
+         "road_miles": 1203.5,
+         "mode": "boat",
+         "story": "The flat lands on either bank start to rise and the river quickens as the first rough hills of the Emyn Muil come into view."
+        },
+        {
+         "id": "the-emyn-muil",
+         "name": "The Emyn Muil",
+         "road_miles": 1234,
+         "mode": "boat",
+         "story": "Low cliffs and grey chimneys rise as the river enters the higher Emyn Muil."
+        },
+        {
+         "id": "sarn-gebir",
+         "name": "Sarn Gebir",
+         "road_miles": 1267,
+         "mode": "boat",
+         "story": "At midnight the current drags them toward the rapids of Sarn Gebir. Orcs attack from the east bank and Legolas shoots down a winged shadow."
+        },
+        {
+         "id": "portage-path",
+         "name": "Portage path",
+         "road_miles": 1269,
+         "mode": "foot",
+         "story": "In the fog they carry boats and packs down an old portage path to the foot of the rapids."
+        },
+        {
+         "id": "the-argonath",
+         "name": "The Argonath",
+         "road_miles": 1288,
+         "mode": "boat",
+         "story": "The boats are swept between the two great stone kings, the Pillars of the Kings."
+        },
+        {
+         "id": "nen-hithoel",
+         "name": "Nen Hithoel",
+         "road_miles": 1290,
+         "mode": "boat",
+         "story": "They pass out of the chasm onto the wide lake of Nen Hithoel."
+        },
+        {
+         "id": "parth-galen",
+         "name": "Parth Galen",
+         "road_miles": 1309,
+         "mode": "boat",
+         "story": "They land on the green lawn of Parth Galen below Amon Hen, with the roar of Rauros in their ears."
+        }
+       ]
+      },
+      {
+       "title": "The Breaking of the Fellowship",
+       "leg": "Parth Galen to the Emyn Muil",
+       "waypoints": [
+        {
+         "id": "across-nen-hithoel",
+         "name": "Across Nen Hithoel",
+         "road_miles": 1309.25,
+         "mode": "boat",
+         "story": "Frodo slips away in a boat after Boromir's attempt on the Ring. Sam splashes after him and is hauled in, and they paddle across the lake toward the eastern shore."
+        },
+        {
+         "id": "shore-under-amon-lhaw",
+         "name": "Shore under Amon Lhaw",
+         "road_miles": 1309.5,
+         "mode": "boat",
+         "story": "They land on the eastern shore under Amon Lhaw and hide the boat."
+        },
+        {
+         "id": "into-the-eastern-emyn-muil",
+         "name": "Into the eastern Emyn Muil",
+         "road_miles": 1310,
+         "mode": "foot",
+         "story": "Together, Frodo and Sam head southeast into the twisted knot of hills."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Two Towers",
+   "parts": [
+    {
+     "title": "Part 2 (Frodo and Sam)",
+     "chapters": [
+      {
+       "title": "The Taming of Smeagol",
+       "leg": "The Emyn Muil to the gully",
+       "waypoints": [
+        {
+         "id": "cliff-above-the-wetwang",
+         "name": "Cliff above the Wetwang",
+         "road_miles": 1311,
+         "mode": "foot",
+         "story": "They reach a sheer cliff overlooking the marshes of the Wetwang."
+        },
+        {
+         "id": "turning-north",
+         "name": "Turning north",
+         "road_miles": 1312,
+         "mode": "foot",
+         "story": "No way down; they turn north along the cliff."
+        },
+        {
+         "id": "round-a-ravine",
+         "name": "Round a ravine",
+         "road_miles": 1314,
+         "mode": "foot",
+         "story": "They wind around a ravine."
+        },
+        {
+         "id": "down-the-inner-hills",
+         "name": "Down the inner hills",
+         "road_miles": 1317,
+         "mode": "foot",
+         "story": "They climb down the steep east face of the inner hills."
+        },
+        {
+         "id": "boulder-camp",
+         "name": "Boulder camp",
+         "road_miles": 1319,
+         "mode": "foot",
+         "story": "At dusk they hide behind boulders near the cliff and see the glint of Gollum's eyes behind them."
+        },
+        {
+         "id": "the-gully",
+         "name": "The gully",
+         "road_miles": 1323,
+         "mode": "foot",
+         "story": "They climb into a gully and out, forced more to the north."
+        },
+        {
+         "id": "northward-detour",
+         "name": "Northward detour",
+         "road_miles": 1326,
+         "mode": "foot",
+         "story": "Ravines turn them north again and again."
+        },
+        {
+         "id": "midday-by-the-cliff",
+         "name": "Midday by the cliff",
+         "road_miles": 1329,
+         "mode": "foot",
+         "story": "Keeping close to the cliff, they stop to eat."
+        },
+        {
+         "id": "grey-rock",
+         "name": "Grey rock",
+         "road_miles": 1331,
+         "mode": "foot",
+         "story": "Grey rock and grey sky; nothing grows."
+        },
+        {
+         "id": "cliff-curves-east",
+         "name": "Cliff curves east",
+         "road_miles": 1333,
+         "mode": "foot",
+         "story": "The cliff bends more to the east."
+        },
+        {
+         "id": "another-ravine",
+         "name": "Another ravine",
+         "road_miles": 1335,
+         "mode": "foot",
+         "story": "Another ravine, and the cliff is still too high to descend."
+        },
+        {
+         "id": "rough-scramble",
+         "name": "Rough scramble",
+         "road_miles": 1337,
+         "mode": "foot",
+         "story": "They scramble through jagged rocks."
+        },
+        {
+         "id": "ravine-camp",
+         "name": "Ravine camp",
+         "road_miles": 1339,
+         "mode": "foot",
+         "story": "They climb into one more ravine and camp at dusk."
+        },
+        {
+         "id": "cliff-bends-north",
+         "name": "Cliff bends north",
+         "road_miles": 1341,
+         "mode": "foot",
+         "story": "The cliff curves sharply north while the Wetwang falls away south."
+        },
+        {
+         "id": "third-day-ravine",
+         "name": "Third-day ravine",
+         "road_miles": 1344,
+         "mode": "foot",
+         "story": "Yet another ravine to cross."
+        },
+        {
+         "id": "forced-back",
+         "name": "Forced back",
+         "road_miles": 1346,
+         "mode": "foot",
+         "story": "Rough ground forces them back from the edge."
+        },
+        {
+         "id": "barren-hills",
+         "name": "Barren hills",
+         "road_miles": 1349,
+         "mode": "foot",
+         "story": "Bare rugged hills without even grass; they stop to eat."
+        },
+        {
+         "id": "first-sight-of-the-dead-marshes",
+         "name": "First sight of the Dead Marshes",
+         "road_miles": 1352,
+         "mode": "foot",
+         "story": "From a ravine they see the southern edge of the Dead Marshes below the tumbled lands."
+        },
+        {
+         "id": "lost-in-a-ravine",
+         "name": "Lost in a ravine",
+         "road_miles": 1354,
+         "mode": "foot",
+         "story": "They follow a ravine down and lose their bearings."
+        },
+        {
+         "id": "going-in-circles",
+         "name": "Going in circles",
+         "road_miles": 1356,
+         "mode": "foot",
+         "story": "They realise they are going in circles."
+        },
+        {
+         "id": "smell-of-the-marshes",
+         "name": "Smell of the marshes",
+         "road_miles": 1357.5,
+         "mode": "foot",
+         "story": "A foul smell drifts up from the marshes below."
+        },
+        {
+         "id": "stony-hollow-camp",
+         "name": "Stony hollow camp",
+         "road_miles": 1359,
+         "mode": "foot",
+         "story": "They camp in a cold stony hollow ringed by jagged pinnacles."
+        },
+        {
+         "id": "close-to-the-cliff",
+         "name": "Close to the cliff",
+         "road_miles": 1361,
+         "mode": "foot",
+         "story": "They keep close to the cliff, hoping for a way down."
+        },
+        {
+         "id": "listening-for-gollum",
+         "name": "Listening for Gollum",
+         "road_miles": 1362,
+         "mode": "foot",
+         "story": "Forced far back, they stop to listen for the creature following them."
+        },
+        {
+         "id": "scored-rock",
+         "name": "Scored rock",
+         "road_miles": 1363,
+         "mode": "foot",
+         "story": "Scored and weathered rock forces them away from the edge."
+        },
+        {
+         "id": "lower-cliffs",
+         "name": "Lower cliffs",
+         "road_miles": 1365,
+         "mode": "foot",
+         "story": "Unknown to them, the cliff is growing lower."
+        },
+        {
+         "id": "the-deep-cleft",
+         "name": "The deep cleft",
+         "road_miles": 1367,
+         "mode": "foot",
+         "story": "They scramble into a deep cleft and out again."
+        },
+        {
+         "id": "weary-hobbits",
+         "name": "Weary hobbits",
+         "road_miles": 1368.5,
+         "mode": "foot",
+         "story": "Hungry and tired, they go on."
+        },
+        {
+         "id": "a-brief-meal",
+         "name": "A brief meal",
+         "road_miles": 1370,
+         "mode": "foot",
+         "story": "A short halt to eat."
+        },
+        {
+         "id": "another-cleft",
+         "name": "Another cleft",
+         "road_miles": 1372,
+         "mode": "foot",
+         "story": "Another cleft to cross."
+        },
+        {
+         "id": "scrambling-on",
+         "name": "Scrambling on",
+         "road_miles": 1374,
+         "mode": "foot",
+         "story": "Still scrambling along back from the ridge."
+        },
+        {
+         "id": "back-from-the-edge",
+         "name": "Back from the edge",
+         "road_miles": 1376,
+         "mode": "foot",
+         "story": "They keep back from the edge where the going is a little easier."
+        },
+        {
+         "id": "approaching-storm",
+         "name": "Approaching storm",
+         "road_miles": 1377.5,
+         "mode": "foot",
+         "story": "Clouds pile up in the west."
+        },
+        {
+         "id": "the-rope-descent",
+         "name": "The rope descent",
+         "road_miles": 1379,
+         "mode": "foot",
+         "story": "In a storm Frodo slips down the cliff; Sam remembers the elven rope from Lorien, hauls him up, and they use it to climb down. Afterward the rope comes loose by itself."
+        },
+        {
+         "id": "wet-boulders",
+         "name": "Wet boulders",
+         "road_miles": 1380,
+         "mode": "foot",
+         "story": "At the foot of the cliff they pick their way east through wet boulders."
+        },
+        {
+         "id": "the-great-fissure",
+         "name": "The great fissure",
+         "road_miles": 1382,
+         "mode": "foot",
+         "story": "A great fissure with a stream bars their way."
+        },
+        {
+         "id": "gollum-caught",
+         "name": "Gollum caught",
+         "road_miles": 1383,
+         "mode": "foot",
+         "story": "Gollum creeps down the cliff after them and they catch him. He swears by the Precious to serve the master of the Ring."
+        },
+        {
+         "id": "gollum-leads-north",
+         "name": "Gollum leads north",
+         "road_miles": 1384,
+         "mode": "foot",
+         "story": "In the small hours Gollum leads them back north."
+        },
+        {
+         "id": "down-into-the-rift",
+         "name": "Down into the rift",
+         "road_miles": 1387,
+         "mode": "foot",
+         "story": "They climb down into a rift and follow a stony stream south while Gollum mutters a riddle about fish."
+        },
+        {
+         "id": "following-the-stream",
+         "name": "Following the stream",
+         "road_miles": 1389.5,
+         "mode": "foot",
+         "story": "The rift runs on south beside the stream."
+        },
+        {
+         "id": "gully-turns-east",
+         "name": "Gully turns east",
+         "road_miles": 1392,
+         "mode": "foot",
+         "story": "The gully turns east and grows wide and shallow."
+        },
+        {
+         "id": "shelf-of-stone-camp",
+         "name": "Shelf of stone camp",
+         "road_miles": 1393,
+         "mode": "foot",
+         "story": "They camp at dawn on a flat shelf of stone; both mean to watch, and both sleep."
+        }
+       ]
+      },
+      {
+       "title": "The Passage of the Marshes",
+       "leg": "The gully to the slag-hills of the Morannon",
+       "waypoints": [
+        {
+         "id": "shallowing-gully",
+         "name": "Shallowing gully",
+         "road_miles": 1397,
+         "mode": "foot",
+         "story": "Setting out at dark, they follow the gully as it grows shallower."
+        },
+        {
+         "id": "muddier-ground",
+         "name": "Muddier ground",
+         "road_miles": 1401,
+         "mode": "foot",
+         "story": "The gully floor becomes less rocky."
+        },
+        {
+         "id": "northern-creek",
+         "name": "Northern creek",
+         "road_miles": 1403,
+         "mode": "foot",
+         "story": "A creek joins from the north and they stop to eat."
+        },
+        {
+         "id": "mossy-banks",
+         "name": "Mossy banks",
+         "road_miles": 1405,
+         "mode": "foot",
+         "story": "The sides dwindle to mere banks."
+        },
+        {
+         "id": "winding-stream",
+         "name": "Winding stream",
+         "road_miles": 1407,
+         "mode": "foot",
+         "story": "The stream begins to wind and the sky clouds over."
+        },
+        {
+         "id": "mossy-mounds",
+         "name": "Mossy mounds",
+         "road_miles": 1409,
+         "mode": "foot",
+         "story": "The banks shrink to mossy mounds."
+        },
+        {
+         "id": "edge-of-the-dead-marshes",
+         "name": "Edge of the Dead Marshes",
+         "road_miles": 1411,
+         "mode": "foot",
+         "story": "The stream slips over a ledge into the bog; mists rise ahead, and far off the mountains of Mordor catch the dawn."
+        },
+        {
+         "id": "gollums-path",
+         "name": "Gollum's path",
+         "road_miles": 1413,
+         "mode": "foot",
+         "story": "Gollum's path winds through the mist between pools and soft mires. No birds call."
+        },
+        {
+         "id": "through-the-mists",
+         "name": "Through the mists",
+         "road_miles": 1415.5,
+         "mode": "foot",
+         "story": "They follow Gollum through the grey fog."
+        },
+        {
+         "id": "reed-thicket-camp",
+         "name": "Reed-thicket camp",
+         "road_miles": 1418,
+         "mode": "foot",
+         "story": "As the mists lift they hide for the day in a reed thicket."
+        },
+        {
+         "id": "heart-of-the-dead-marshes",
+         "name": "Heart of the Dead Marshes",
+         "road_miles": 1421,
+         "mode": "foot",
+         "story": "They enter the heart of the marshes in the late afternoon."
+        },
+        {
+         "id": "the-stagnant-mere",
+         "name": "The stagnant mere",
+         "road_miles": 1424,
+         "mode": "foot",
+         "story": "They go round a wide stagnant mere where the air is black and heavy."
+        },
+        {
+         "id": "candles-of-corpses",
+         "name": "Candles of corpses",
+         "road_miles": 1426,
+         "mode": "foot",
+         "story": "Pale lights flicker over the water like candles."
+        },
+        {
+         "id": "faces-in-the-water",
+         "name": "Faces in the water",
+         "road_miles": 1427,
+         "mode": "foot",
+         "story": "Sam stumbles and sees dead faces deep in the pools, the fallen of an ancient battle."
+        },
+        {
+         "id": "foundering-in-the-mire",
+         "name": "Foundering in the mire",
+         "road_miles": 1428,
+         "mode": "foot",
+         "story": "They almost crawl through the treacherous mire."
+        },
+        {
+         "id": "firmer-ground",
+         "name": "Firmer ground",
+         "road_miles": 1429,
+         "mode": "foot",
+         "story": "Before dawn they reach firmer ground in a lane between high reeds."
+        },
+        {
+         "id": "wings-over-the-marsh",
+         "name": "Wings over the marsh",
+         "road_miles": 1430,
+         "mode": "foot",
+         "story": "A Nazgul passes overhead and the marsh lights go out; Gollum cowers and will not move."
+        },
+        {
+         "id": "the-black-stone",
+         "name": "The black stone",
+         "road_miles": 1433,
+         "mode": "foot",
+         "story": "At the end of the marshes they hide under a black stone through a grey day."
+        },
+        {
+         "id": "dry-peat-flats",
+         "name": "Dry peat flats",
+         "road_miles": 1434,
+         "mode": "foot",
+         "story": "They cross dry peat and cracked mud flats; the Ring grows heavier."
+        },
+        {
+         "id": "sloping-east",
+         "name": "Sloping east",
+         "road_miles": 1436,
+         "mode": "foot",
+         "story": "The land slopes slowly up to the east."
+        },
+        {
+         "id": "long-shallow-slope",
+         "name": "Long shallow slope",
+         "road_miles": 1438,
+         "mode": "foot",
+         "story": "They climb a long shallow slope."
+        },
+        {
+         "id": "parched-air",
+         "name": "Parched air",
+         "road_miles": 1440.5,
+         "mode": "foot",
+         "story": "The air is bitter and dry."
+        },
+        {
+         "id": "gully-curving-away",
+         "name": "Gully curving away",
+         "road_miles": 1443,
+         "mode": "foot",
+         "story": "A gully curves away north and west back to the marshes."
+        },
+        {
+         "id": "wasteland",
+         "name": "Wasteland",
+         "road_miles": 1445.5,
+         "mode": "foot",
+         "story": "Nothing but waste and stone ahead."
+        },
+        {
+         "id": "second-day-hide",
+         "name": "Second day hide",
+         "road_miles": 1448,
+         "mode": "foot",
+         "story": "They hide again through the day."
+        },
+        {
+         "id": "the-noman-lands",
+         "name": "The Noman-lands",
+         "road_miles": 1450,
+         "mode": "foot",
+         "story": "The land rises onto the arid moors of the Noman-lands."
+        },
+        {
+         "id": "steep-hill-face",
+         "name": "Steep hill face",
+         "road_miles": 1452,
+         "mode": "foot",
+         "story": "They go down a steeper hill face."
+        },
+        {
+         "id": "dead-moors",
+         "name": "Dead moors",
+         "road_miles": 1454,
+         "mode": "foot",
+         "story": "Dead grass and stones under a grey sky."
+        },
+        {
+         "id": "climbing-slope",
+         "name": "Climbing slope",
+         "road_miles": 1456,
+         "mode": "foot",
+         "story": "Another long slow climb."
+        },
+        {
+         "id": "still-on-the-moors",
+         "name": "Still on the moors",
+         "road_miles": 1459,
+         "mode": "foot",
+         "story": "Still the moors go on."
+        },
+        {
+         "id": "last-of-the-moors",
+         "name": "Last of the moors",
+         "road_miles": 1461,
+         "mode": "foot",
+         "story": "The moors fall away toward the Gate."
+        },
+        {
+         "id": "the-slag-pit",
+         "name": "The slag pit",
+         "road_miles": 1463,
+         "mode": "foot",
+         "story": "In the Desolation before the Morannon they hide in a pit of oily ooze, and Sam overhears Gollum and Smeagol arguing about a mysterious 'she'."
+        }
+       ]
+      },
+      {
+       "title": "The Black Gate is Closed",
+       "leg": "The slag pit to the Black Gate",
+       "waypoints": [
+        {
+         "id": "nazgul-overhead",
+         "name": "Nazgul overhead",
+         "road_miles": 1465,
+         "mode": "foot",
+         "story": "A Nazgul passes over and they lie flat."
+        },
+        {
+         "id": "creeping-on",
+         "name": "Creeping on",
+         "road_miles": 1467,
+         "mode": "foot",
+         "story": "They creep on through the dark."
+        },
+        {
+         "id": "midnight-wings",
+         "name": "Midnight wings",
+         "road_miles": 1469,
+         "mode": "foot",
+         "story": "At midnight the winged shadow passes again, high up; Gollum refuses to go until Frodo commands him."
+        },
+        {
+         "id": "toward-the-gate",
+         "name": "Toward the Gate",
+         "road_miles": 1472,
+         "mode": "foot",
+         "story": "The towers of the Gate rise ahead."
+        },
+        {
+         "id": "hollow-before-the-black-gate",
+         "name": "Hollow before the Black Gate",
+         "road_miles": 1475,
+         "mode": "foot",
+         "story": "From a hollow they watch armies enter the Black Gate. Gollum offers a secret way south, and Frodo decides to trust him."
+        }
+       ]
+      },
+      {
+       "title": "Of Herbs and Stewed Rabbit",
+       "leg": "The Black Gate to the Ithilien pool",
+       "waypoints": [
+        {
+         "id": "west-of-the-road",
+         "name": "West of the road",
+         "road_miles": 1477,
+         "mode": "foot",
+         "story": "They walk southwest beside the newly repaired road between mountains and moors."
+        },
+        {
+         "id": "trench-like-valley",
+         "name": "Trench-like valley",
+         "road_miles": 1480.5,
+         "mode": "foot",
+         "story": "The road runs in a trench along the foot of the mountains."
+        },
+        {
+         "id": "end-of-the-slag-heaps",
+         "name": "End of the slag heaps",
+         "road_miles": 1484,
+         "mode": "foot",
+         "story": "The slag heaps end; at midnight the moon rises almost full."
+        },
+        {
+         "id": "moonlit-road",
+         "name": "Moonlit road",
+         "road_miles": 1486.5,
+         "mode": "foot",
+         "story": "They hurry on under the moon."
+        },
+        {
+         "id": "watching-towers",
+         "name": "Watching towers",
+         "road_miles": 1488.5,
+         "mode": "foot",
+         "story": "The Towers of the Teeth keep their watch behind."
+        },
+        {
+         "id": "red-light-in-the-towers",
+         "name": "Red light in the Towers",
+         "road_miles": 1491,
+         "mode": "foot",
+         "story": "They can still see a red light in one of the Towers of the Teeth."
+        },
+        {
+         "id": "turning-south",
+         "name": "Turning south",
+         "road_miles": 1494,
+         "mode": "foot",
+         "story": "Their way bends slowly south."
+        },
+        {
+         "id": "tower-light-hidden",
+         "name": "Tower light hidden",
+         "road_miles": 1497,
+         "mode": "foot",
+         "story": "Finally they turn far enough south to hide the light."
+        },
+        {
+         "id": "northern-ithilien",
+         "name": "Northern Ithilien",
+         "road_miles": 1499,
+         "mode": "foot",
+         "story": "At dawn they reach Ithilien: heather, pine and fresh, sweet air."
+        },
+        {
+         "id": "onto-the-road",
+         "name": "Onto the road",
+         "road_miles": 1500,
+         "mode": "foot",
+         "story": "Gollum leads them onto the road, straight and level."
+        },
+        {
+         "id": "valley-road",
+         "name": "Valley road",
+         "road_miles": 1502,
+         "mode": "foot",
+         "story": "The road runs between the mountains and steep western slopes."
+        },
+        {
+         "id": "woods-to-the-west",
+         "name": "Woods to the west",
+         "road_miles": 1505,
+         "mode": "foot",
+         "story": "Woods appear to the west and green things grow beside the road."
+        },
+        {
+         "id": "arched-bridge",
+         "name": "Arched bridge",
+         "road_miles": 1508,
+         "mode": "foot",
+         "story": "The road crosses a stream on an arched stone bridge."
+        },
+        {
+         "id": "spring-in-ithilien",
+         "name": "Spring in Ithilien",
+         "road_miles": 1510.5,
+         "mode": "foot",
+         "story": "Herbs and flowers scent the air."
+        },
+        {
+         "id": "overgrown-road",
+         "name": "Overgrown road",
+         "road_miles": 1513,
+         "mode": "foot",
+         "story": "The road grows more and more overgrown."
+        },
+        {
+         "id": "wild-garden",
+         "name": "Wild garden",
+         "road_miles": 1515,
+         "mode": "foot",
+         "story": "Ithilien is like a garden run wild."
+        },
+        {
+         "id": "second-bridge",
+         "name": "Second bridge",
+         "road_miles": 1517,
+         "mode": "foot",
+         "story": "Another stream is bridged."
+        },
+        {
+         "id": "the-long-cutting",
+         "name": "The long cutting",
+         "road_miles": 1519,
+         "mode": "foot",
+         "story": "They reach a long straight cutting through a stony ridge."
+        },
+        {
+         "id": "the-clear-pool",
+         "name": "The clear pool",
+         "road_miles": 1522,
+         "mode": "foot",
+         "story": "They climb the bank and bathe in a clear pool, and Sam finds an orc fire-ring."
+        },
+        {
+         "id": "stewed-rabbit",
+         "name": "Stewed rabbit",
+         "road_miles": 1523,
+         "mode": "foot",
+         "story": "Gollum brings coneys and Sam stews them with herbs. Then men of Gondor find them, and Sam glimpses an oliphaunt in the fighting."
+        }
+       ]
+      },
+      {
+       "title": "The Window on the West",
+       "leg": "The pool to Henneth Annun",
+       "waypoints": [
+        {
+         "id": "stream-below-the-pool",
+         "name": "Stream below the pool",
+         "road_miles": 1524,
+         "mode": "foot",
+         "story": "Faramir questions Frodo, then leads them west across the stream."
+        },
+        {
+         "id": "steep-slope",
+         "name": "Steep slope",
+         "road_miles": 1527,
+         "mode": "foot",
+         "story": "Faramir and Frodo talk as they climb down a steep slope."
+        },
+        {
+         "id": "woodland-path",
+         "name": "Woodland path",
+         "road_miles": 1529,
+         "mode": "foot",
+         "story": "They thread their way through the woods."
+        },
+        {
+         "id": "the-narrow-gorge",
+         "name": "The narrow gorge",
+         "road_miles": 1532,
+         "mode": "foot",
+         "story": "They come to a small river in a narrow gorge."
+        },
+        {
+         "id": "henneth-annun",
+         "name": "Henneth Annun",
+         "road_miles": 1533,
+         "mode": "foot",
+         "story": "Blindfolded, they are led behind a waterfall to the Window on the West, glowing with sunset. That night Faramir spares Gollum at the forbidden pool."
+        }
+       ]
+      },
+      {
+       "title": "Journey to the Cross-roads",
+       "leg": "Henneth Annun to the Cross-roads",
+       "waypoints": [
+        {
+         "id": "faramirs-farewell",
+         "name": "Faramir's farewell",
+         "road_miles": 1534,
+         "mode": "foot",
+         "story": "Faramir removes the blindfolds and sends them on with food and advice."
+        },
+        {
+         "id": "upper-edge-of-the-slopes",
+         "name": "Upper edge of the slopes",
+         "road_miles": 1537,
+         "mode": "foot",
+         "story": "They follow the upper edge of the steep lands westward."
+        },
+        {
+         "id": "fast-stream",
+         "name": "Fast stream",
+         "road_miles": 1540,
+         "mode": "foot",
+         "story": "They cross a fast stream and rest to eat."
+        },
+        {
+         "id": "through-the-trees",
+         "name": "Through the trees",
+         "road_miles": 1542.5,
+         "mode": "foot",
+         "story": "They walk on through woods of Ithilien."
+        },
+        {
+         "id": "quiet-afternoon",
+         "name": "Quiet afternoon",
+         "road_miles": 1544.5,
+         "mode": "foot",
+         "story": "Birds sing, but Gollum is uneasy."
+        },
+        {
+         "id": "brief-rest",
+         "name": "Brief rest",
+         "road_miles": 1547,
+         "mode": "foot",
+         "story": "A short halt under the trees."
+        },
+        {
+         "id": "thinning-sun",
+         "name": "Thinning sun",
+         "road_miles": 1549,
+         "mode": "foot",
+         "story": "The light grows dim."
+        },
+        {
+         "id": "tumbling-stream",
+         "name": "Tumbling stream",
+         "road_miles": 1551,
+         "mode": "foot",
+         "story": "They cross a tumbling stream."
+        },
+        {
+         "id": "evening-woods",
+         "name": "Evening woods",
+         "road_miles": 1553,
+         "mode": "foot",
+         "story": "Evening falls in the woods."
+        },
+        {
+         "id": "ancient-tree",
+         "name": "Ancient tree",
+         "road_miles": 1555,
+         "mode": "foot",
+         "story": "They sleep under a great old tree; Sam is restless."
+        },
+        {
+         "id": "first-light",
+         "name": "First light",
+         "road_miles": 1557.5,
+         "mode": "foot",
+         "story": "They leave at first light."
+        },
+        {
+         "id": "heavy-air",
+         "name": "Heavy air",
+         "road_miles": 1560.5,
+         "mode": "foot",
+         "story": "The air grows heavy and still."
+        },
+        {
+         "id": "thicker-trees",
+         "name": "Thicker trees",
+         "road_miles": 1563,
+         "mode": "foot",
+         "story": "The trees thicken and Gollum urges them on."
+        },
+        {
+         "id": "darkening-sky",
+         "name": "Darkening sky",
+         "road_miles": 1566,
+         "mode": "foot",
+         "story": "Darkness gathers in the east."
+        },
+        {
+         "id": "small-stream",
+         "name": "Small stream",
+         "road_miles": 1569,
+         "mode": "foot",
+         "story": "They cross a small stream."
+        },
+        {
+         "id": "ash-and-oak",
+         "name": "Ash and oak",
+         "road_miles": 1571,
+         "mode": "foot",
+         "story": "They reach open woods of great ash and oak; Gollum grows afraid."
+        },
+        {
+         "id": "fading-light",
+         "name": "Fading light",
+         "road_miles": 1574,
+         "mode": "foot",
+         "story": "Dusk comes early."
+        },
+        {
+         "id": "edge-of-the-morgul-vale",
+         "name": "Edge of the Morgul Vale",
+         "road_miles": 1577,
+         "mode": "foot",
+         "story": "At the forest's end they see the vale of Morgul. They rest in an oak until midnight."
+        },
+        {
+         "id": "deep-cleft",
+         "name": "Deep cleft",
+         "road_miles": 1579,
+         "mode": "foot",
+         "story": "They cross a deep cleft in the dark."
+        },
+        {
+         "id": "dark-pit",
+         "name": "Dark pit",
+         "road_miles": 1581,
+         "mode": "foot",
+         "story": "They skirt a dark pit."
+        },
+        {
+         "id": "down-and-up",
+         "name": "Down and up",
+         "road_miles": 1583,
+         "mode": "foot",
+         "story": "Down a little, then up a long steep slope."
+        },
+        {
+         "id": "spreading-darkness",
+         "name": "Spreading darkness",
+         "road_miles": 1585,
+         "mode": "foot",
+         "story": "Darkness spreads over the sky behind them."
+        },
+        {
+         "id": "thorn-hollow",
+         "name": "Thorn hollow",
+         "road_miles": 1587,
+         "mode": "foot",
+         "story": "Halfway down a cliff they crawl into a hollow under a knot of thorns and sleep."
+        },
+        {
+         "id": "broken-slope",
+         "name": "Broken slope",
+         "road_miles": 1589,
+         "mode": "foot",
+         "story": "There is no dawn. Gollum leads them south across a broken slope."
+        },
+        {
+         "id": "the-cross-roads",
+         "name": "The Cross-roads",
+         "road_miles": 1590,
+         "mode": "foot",
+         "story": "In a ring of trees the setting sun lights the fallen head of an old king's statue, crowned with flowers."
+        }
+       ]
+      },
+      {
+       "title": "The Stairs of Cirith Ungol",
+       "leg": "The Cross-roads to the top of the stairs",
+       "waypoints": [
+        {
+         "id": "the-morgul-road",
+         "name": "The Morgul road",
+         "road_miles": 1591,
+         "mode": "foot",
+         "story": "They follow the straight road east as it climbs."
+        },
+        {
+         "id": "the-flatiron",
+         "name": "The flatiron",
+         "road_miles": 1592,
+         "mode": "foot",
+         "story": "The road curves around a great shoulder of rock."
+        },
+        {
+         "id": "morgulduin-ravine",
+         "name": "Morgulduin ravine",
+         "road_miles": 1593,
+         "mode": "foot",
+         "story": "Frodo looks across the vale and sees Minas Morgul glowing with a sick light."
+        },
+        {
+         "id": "bridge-before-minas-morgul",
+         "name": "Bridge before Minas Morgul",
+         "road_miles": 1593.5,
+         "mode": "foot",
+         "story": "At the bridge Frodo stumbles toward the city gate before Sam stops him."
+        },
+        {
+         "id": "shelf-above-minas-morgul",
+         "name": "Shelf above Minas Morgul",
+         "road_miles": 1594.5,
+         "mode": "foot",
+         "story": "From a ledge they watch the Witch-king lead his host out of the city."
+        },
+        {
+         "id": "straight-stair",
+         "name": "Straight Stair",
+         "road_miles": 1595,
+         "mode": "foot",
+         "story": "They begin the Straight Stair, steep as a ladder."
+        },
+        {
+         "id": "winding-path",
+         "name": "Winding path",
+         "road_miles": 1595.5,
+         "mode": "foot",
+         "story": "A winding path climbs on above the stair."
+        },
+        {
+         "id": "wide-shelf",
+         "name": "Wide shelf",
+         "road_miles": 1597,
+         "mode": "foot",
+         "story": "A wide shelf with a cliff on one side and a chasm on the other."
+        },
+        {
+         "id": "winding-stair",
+         "name": "Winding Stair",
+         "road_miles": 1598.5,
+         "mode": "foot",
+         "story": "The Winding Stair zigzags up the cliff."
+        },
+        {
+         "id": "top-of-the-stairs",
+         "name": "Top of the stairs",
+         "road_miles": 1599,
+         "mode": "foot",
+         "story": "At the top they rest between pinnacles, and Sam wonders what tale they have fallen into."
+        }
+       ]
+      },
+      {
+       "title": "Shelob's Lair",
+       "leg": "The stairs through Torech Ungol",
+       "waypoints": [
+        {
+         "id": "torech-ungol",
+         "name": "Torech Ungol",
+         "road_miles": 1600,
+         "mode": "foot",
+         "story": "Gollum leads them into a tunnel too wide to touch both walls."
+        },
+        {
+         "id": "first-opening",
+         "name": "First opening",
+         "road_miles": 1601,
+         "mode": "foot",
+         "story": "Sam feels an opening on the right."
+        },
+        {
+         "id": "second-opening",
+         "name": "Second opening",
+         "road_miles": 1602,
+         "mode": "foot",
+         "story": "Another opening on the right."
+        },
+        {
+         "id": "opening-on-the-left",
+         "name": "Opening on the left",
+         "road_miles": 1603,
+         "mode": "foot",
+         "story": "Frodo feels an opening on the left."
+        },
+        {
+         "id": "hanging-things",
+         "name": "Hanging things",
+         "road_miles": 1604,
+         "mode": "foot",
+         "story": "Their senses go numb as things brush against them in the dark."
+        },
+        {
+         "id": "holding-together",
+         "name": "Holding together",
+         "road_miles": 1605,
+         "mode": "foot",
+         "story": "Sam leaves the wall and holds on to Frodo."
+        },
+        {
+         "id": "stench-of-the-lair",
+         "name": "Stench of the lair",
+         "road_miles": 1608,
+         "mode": "foot",
+         "story": "A choking stench fills the tunnel."
+        },
+        {
+         "id": "shelobs-pit",
+         "name": "Shelob's pit",
+         "road_miles": 1611.5,
+         "mode": "foot",
+         "story": "Frodo finds the opening to the main pit."
+        },
+        {
+         "id": "phial-of-galadriel",
+         "name": "Phial of Galadriel",
+         "road_miles": 1611.75,
+         "mode": "foot",
+         "story": "Gollum is gone. Shelob comes, and Frodo drives her back with the starglass and cuts through the web with Sting."
+        },
+        {
+         "id": "shelob-strikes",
+         "name": "Shelob strikes",
+         "road_miles": 1612,
+         "mode": "foot",
+         "story": "Frodo runs ahead and Shelob stings him. Sam fights off Gollum and drives Shelob away."
+        }
+       ]
+      },
+      {
+       "title": "The Choices of Master Samwise",
+       "leg": "Shelob's Lair to the cleft",
+       "waypoints": [
+        {
+         "id": "sam-takes-the-ring",
+         "name": "Sam takes the Ring",
+         "road_miles": 1612.5,
+         "mode": "foot",
+         "story": "Believing Frodo dead, Sam takes the Ring and goes on alone."
+        },
+        {
+         "id": "the-cleft-of-the-pass",
+         "name": "The cleft of the pass",
+         "road_miles": 1613,
+         "mode": "foot",
+         "story": "At the cleft Sam hears orcs and learns that Frodo is only stung and alive."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Return of the King",
+   "parts": [
+    {
+     "title": "Part 2 (Frodo and Sam)",
+     "chapters": [
+      {
+       "title": "The Tower of Cirith Ungol",
+       "leg": "The cleft to the Tower gate",
+       "waypoints": [
+        {
+         "id": "tower-of-cirith-ungol",
+         "name": "Tower of Cirith Ungol",
+         "road_miles": 1613,
+         "mode": "foot",
+         "story": "Sam climbs the tower, rescues Frodo, and returns the Ring. Before dawn they pass the silent Watchers at the gate and run."
+        }
+       ]
+      },
+      {
+       "title": "The Land of Shadow",
+       "leg": "Cirith Ungol to the Isenmouthe",
+       "waypoints": [
+        {
+         "id": "the-leap-from-the-bridge",
+         "name": "The leap from the bridge",
+         "road_miles": 1614,
+         "mode": "foot",
+         "story": "Where the road meets the Morgul road they jump from a bridge into a thorn thicket below."
+        },
+        {
+         "id": "floor-of-the-valley",
+         "name": "Floor of the valley",
+         "road_miles": 1615,
+         "mode": "foot",
+         "story": "They climb down to the bottom of a north-running valley."
+        },
+        {
+         "id": "frodo-sheds-the-mail",
+         "name": "Frodo sheds the mail",
+         "road_miles": 1616,
+         "mode": "foot",
+         "story": "Frodo casts off his heavy orc-mail; Sam wishes for light and water."
+        },
+        {
+         "id": "winged-messenger",
+         "name": "Winged messenger",
+         "road_miles": 1617,
+         "mode": "foot",
+         "story": "A Nazgul streaks overhead toward the Dark Tower with ill news from the west."
+        },
+        {
+         "id": "path-by-the-dry-stream",
+         "name": "Path by the dry stream",
+         "road_miles": 1618,
+         "mode": "foot",
+         "story": "They cross to a path west of a dry stream bed as the valley rises north."
+        },
+        {
+         "id": "trickling-water",
+         "name": "Trickling water",
+         "road_miles": 1621,
+         "mode": "foot",
+         "story": "They hear water trickling from a gully and drink at last."
+        },
+        {
+         "id": "northward-valley",
+         "name": "Northward valley",
+         "road_miles": 1624,
+         "mode": "foot",
+         "story": "The valley climbs slowly north."
+        },
+        {
+         "id": "orc-hold-wall",
+         "name": "Orc-hold wall",
+         "road_miles": 1627,
+         "mode": "foot",
+         "story": "The track widens beside a rough wall near an orc-hold; midges bite among scrubby trees."
+        },
+        {
+         "id": "bramble-ravine",
+         "name": "Bramble ravine",
+         "road_miles": 1628,
+         "mode": "foot",
+         "story": "They hide in brambles. Sam sees a star through the murk and feels hope."
+        },
+        {
+         "id": "ridge-above-gorgoroth",
+         "name": "Ridge above Gorgoroth",
+         "road_miles": 1630,
+         "mode": "foot",
+         "story": "From the ridge they see the plain crawling with enemies and Mount Doom far away."
+        },
+        {
+         "id": "back-to-the-valley-floor",
+         "name": "Back to the valley floor",
+         "road_miles": 1632,
+         "mode": "foot",
+         "story": "They cannot go north along the ridge and climb back down."
+        },
+        {
+         "id": "orc-hold-by-the-path",
+         "name": "Orc hold by the path",
+         "road_miles": 1633,
+         "mode": "foot",
+         "story": "An orc hold stands by the path to the west."
+        },
+        {
+         "id": "orc-trackers",
+         "name": "Orc trackers",
+         "road_miles": 1635,
+         "mode": "foot",
+         "story": "Hidden behind a bush they overhear two orcs quarrel and learn Gollum is loose."
+        },
+        {
+         "id": "dark-valley",
+         "name": "Dark valley",
+         "road_miles": 1637,
+         "mode": "foot",
+         "story": "They creep on in the dark."
+        },
+        {
+         "id": "eastern-edge-of-the-valley",
+         "name": "Eastern edge of the valley",
+         "road_miles": 1639,
+         "mode": "foot",
+         "story": "They keep to the eastern edge of the valley."
+        },
+        {
+         "id": "silent-miles",
+         "name": "Silent miles",
+         "road_miles": 1642,
+         "mode": "foot",
+         "story": "Silent miles in the dark."
+        },
+        {
+         "id": "rocks-and-thorns",
+         "name": "Rocks and thorns",
+         "road_miles": 1645,
+         "mode": "foot",
+         "story": "Thorns tear at their cloaks."
+        },
+        {
+         "id": "endless-night",
+         "name": "Endless night",
+         "road_miles": 1648,
+         "mode": "foot",
+         "story": "The night seems to have no end."
+        },
+        {
+         "id": "stagnant-pool",
+         "name": "Stagnant pool",
+         "road_miles": 1651,
+         "mode": "foot",
+         "story": "They pass a stagnant pool unseen in the dark."
+        },
+        {
+         "id": "before-grey-light",
+         "name": "Before grey light",
+         "road_miles": 1653,
+         "mode": "foot",
+         "story": "Weariness drags at every step."
+        },
+        {
+         "id": "grey-light-hide",
+         "name": "Grey light hide",
+         "road_miles": 1655,
+         "mode": "foot",
+         "story": "In the grey light they hide and sleep."
+        },
+        {
+         "id": "faramirs-food",
+         "name": "Faramir's food",
+         "road_miles": 1658,
+         "mode": "foot",
+         "story": "They eat the last of Faramir's food and start again in the dark."
+        },
+        {
+         "id": "first-halt",
+         "name": "First halt",
+         "road_miles": 1661,
+         "mode": "foot",
+         "story": "A brief halt."
+        },
+        {
+         "id": "northward-again",
+         "name": "Northward again",
+         "road_miles": 1664,
+         "mode": "foot",
+         "story": "On north along the valley."
+        },
+        {
+         "id": "second-halt",
+         "name": "Second halt",
+         "road_miles": 1667,
+         "mode": "foot",
+         "story": "Another short halt."
+        },
+        {
+         "id": "cold-stones",
+         "name": "Cold stones",
+         "road_miles": 1670,
+         "mode": "foot",
+         "story": "The stones are cold and sharp."
+        },
+        {
+         "id": "third-halt",
+         "name": "Third halt",
+         "road_miles": 1673,
+         "mode": "foot",
+         "story": "One more halt before dawn."
+        },
+        {
+         "id": "climbing-valley",
+         "name": "Climbing valley",
+         "road_miles": 1675.5,
+         "mode": "foot",
+         "story": "The valley climbs toward the inner ridge."
+        },
+        {
+         "id": "broken-steps",
+         "name": "Broken steps",
+         "road_miles": 1677.5,
+         "mode": "foot",
+         "story": "The watercourse ends in broken steps of rock."
+        },
+        {
+         "id": "overhanging-stone",
+         "name": "Overhanging stone",
+         "road_miles": 1680,
+         "mode": "foot",
+         "story": "They hide under an overhanging stone. Sam finds water and glimpses Gollum."
+        },
+        {
+         "id": "up-to-the-road",
+         "name": "Up to the road",
+         "road_miles": 1680.5,
+         "mode": "foot",
+         "story": "At dusk they climb warily onto the road."
+        },
+        {
+         "id": "durthang-road",
+         "name": "Durthang road",
+         "road_miles": 1683.5,
+         "mode": "foot",
+         "story": "The road runs on from the old castle of Durthang."
+        },
+        {
+         "id": "sheer-drop",
+         "name": "Sheer drop",
+         "road_miles": 1686,
+         "mode": "foot",
+         "story": "A sheer drop opens beside the road."
+        },
+        {
+         "id": "side-path-into-gorgoroth",
+         "name": "Side path into Gorgoroth",
+         "road_miles": 1689,
+         "mode": "foot",
+         "story": "A side path runs south toward the main road."
+        },
+        {
+         "id": "orc-company",
+         "name": "Orc company",
+         "road_miles": 1692,
+         "mode": "foot",
+         "story": "An orc company takes them for deserters and drives them along in its ranks."
+        },
+        {
+         "id": "forced-march",
+         "name": "Forced march",
+         "road_miles": 1694,
+         "mode": "foot",
+         "story": "Frodo staggers under the whip."
+        },
+        {
+         "id": "long-slope-to-the-plain",
+         "name": "Long slope to the plain",
+         "road_miles": 1696,
+         "mode": "foot",
+         "story": "The road runs down a long slope into the plain."
+        },
+        {
+         "id": "isenmouthe",
+         "name": "Isenmouthe",
+         "road_miles": 1698,
+         "mode": "foot",
+         "story": "They near the Isenmouthe where roads meet."
+        },
+        {
+         "id": "escape-into-a-pit",
+         "name": "Escape into a pit",
+         "road_miles": 1700,
+         "mode": "foot",
+         "story": "In the jostle of companies Sam drags Frodo over the road's edge into a shallow pit."
+        }
+       ]
+      },
+      {
+       "title": "Mount Doom",
+       "leg": "The Isenmouthe to the Crack of Doom",
+       "waypoints": [
+        {
+         "id": "pitted-plain",
+         "name": "Pitted plain",
+         "road_miles": 1702,
+         "mode": "foot",
+         "story": "Gorgoroth is pitted with great holes; they crawl from hollow to hollow."
+        },
+        {
+         "id": "back-toward-the-road",
+         "name": "Back toward the road",
+         "road_miles": 1704,
+         "mode": "foot",
+         "story": "Sam decides they must go back to the road."
+        },
+        {
+         "id": "onto-the-causeway",
+         "name": "Onto the causeway",
+         "road_miles": 1705,
+         "mode": "foot",
+         "story": "They climb onto the causeway."
+        },
+        {
+         "id": "along-the-ash-mountains",
+         "name": "Along the Ash Mountains",
+         "road_miles": 1707,
+         "mode": "foot",
+         "story": "They walk east along the road under the Ash Mountains and see no one."
+        },
+        {
+         "id": "camp-off-the-road",
+         "name": "Camp off the road",
+         "road_miles": 1710,
+         "mode": "foot",
+         "story": "They sleep just off the road."
+        },
+        {
+         "id": "trudging-east",
+         "name": "Trudging east",
+         "road_miles": 1714,
+         "mode": "foot",
+         "story": "They trudge on east."
+        },
+        {
+         "id": "weight-of-the-ring",
+         "name": "Weight of the Ring",
+         "road_miles": 1716,
+         "mode": "foot",
+         "story": "The Ring bows Frodo lower every hour."
+        },
+        {
+         "id": "empty-cistern",
+         "name": "Empty cistern",
+         "road_miles": 1718,
+         "mode": "foot",
+         "story": "They find a cistern, but it is dry. They eat and rest."
+        },
+        {
+         "id": "grey-road",
+         "name": "Grey road",
+         "road_miles": 1720,
+         "mode": "foot",
+         "story": "The grey road stretches on."
+        },
+        {
+         "id": "midday-rest",
+         "name": "Midday rest",
+         "road_miles": 1722,
+         "mode": "foot",
+         "story": "A rest by the road."
+        },
+        {
+         "id": "troops-at-night",
+         "name": "Troops at night",
+         "road_miles": 1725,
+         "mode": "foot",
+         "story": "They camp off the road and hear troops pass in the dark."
+        },
+        {
+         "id": "stumbling-on",
+         "name": "Stumbling on",
+         "road_miles": 1727,
+         "mode": "foot",
+         "story": "Frodo stumbles but will not stop."
+        },
+        {
+         "id": "morning-rest",
+         "name": "Morning rest",
+         "road_miles": 1729,
+         "mode": "foot",
+         "story": "A morning halt."
+        },
+        {
+         "id": "dust-and-ash",
+         "name": "Dust and ash",
+         "road_miles": 1731,
+         "mode": "foot",
+         "story": "Dust and ash coat everything."
+        },
+        {
+         "id": "muddy-cistern",
+         "name": "Muddy cistern",
+         "road_miles": 1733,
+         "mode": "foot",
+         "story": "A cistern with muddy water: they drink and fill the bottle."
+        },
+        {
+         "id": "thirsty-miles",
+         "name": "Thirsty miles",
+         "road_miles": 1735,
+         "mode": "foot",
+         "story": "Every mile makes them thirstier."
+        },
+        {
+         "id": "afternoon-rest",
+         "name": "Afternoon rest",
+         "road_miles": 1737,
+         "mode": "foot",
+         "story": "Another rest by the road."
+        },
+        {
+         "id": "the-night-messenger",
+         "name": "The night messenger",
+         "road_miles": 1740,
+         "mode": "foot",
+         "story": "They camp and hear a messenger gallop past in the night."
+        },
+        {
+         "id": "silent-frodo",
+         "name": "Silent Frodo",
+         "road_miles": 1742,
+         "mode": "foot",
+         "story": "Frodo has stopped speaking."
+        },
+        {
+         "id": "last-road-rest",
+         "name": "Last road rest",
+         "road_miles": 1744,
+         "mode": "foot",
+         "story": "One more halt on the road."
+        },
+        {
+         "id": "turning-to-the-mountain",
+         "name": "Turning to the mountain",
+         "road_miles": 1747,
+         "mode": "foot",
+         "story": "Mount Doom stands due south. They leave the road and turn toward it."
+        },
+        {
+         "id": "open-ground",
+         "name": "Open ground",
+         "road_miles": 1749,
+         "mode": "foot",
+         "story": "They cross open ground with no cover."
+        },
+        {
+         "id": "rest-on-the-plain",
+         "name": "Rest on the plain",
+         "road_miles": 1751,
+         "mode": "foot",
+         "story": "A rest on the bare plain."
+        },
+        {
+         "id": "half-a-bottle",
+         "name": "Half a bottle",
+         "road_miles": 1753,
+         "mode": "foot",
+         "story": "Only half a bottle of water left."
+        },
+        {
+         "id": "the-dreadful-nightfall",
+         "name": "The dreadful nightfall",
+         "road_miles": 1755,
+         "mode": "foot",
+         "story": "Frodo sleeps fitfully. At dawn they throw away everything they do not need."
+        },
+        {
+         "id": "no-concealment",
+         "name": "No concealment",
+         "road_miles": 1757,
+         "mode": "foot",
+         "story": "They make no effort to hide."
+        },
+        {
+         "id": "faster-than-hoped",
+         "name": "Faster than hoped",
+         "road_miles": 1759,
+         "mode": "foot",
+         "story": "Frodo goes faster than Sam dared hope."
+        },
+        {
+         "id": "rest-in-the-fumes",
+         "name": "Rest in the fumes",
+         "road_miles": 1762,
+         "mode": "foot",
+         "story": "Another rest under the reeking sky."
+        },
+        {
+         "id": "last-strength",
+         "name": "Last strength",
+         "road_miles": 1765,
+         "mode": "foot",
+         "story": "The effort spends Frodo's last strength; Sam argues with himself and the ground trembles."
+        },
+        {
+         "id": "no-water",
+         "name": "No water",
+         "road_miles": 1768,
+         "mode": "foot",
+         "story": "They go on with no water left."
+        },
+        {
+         "id": "choking-fumes",
+         "name": "Choking fumes",
+         "road_miles": 1770,
+         "mode": "foot",
+         "story": "The fumes grow worse."
+        },
+        {
+         "id": "near-the-mountain",
+         "name": "Near the mountain",
+         "road_miles": 1772,
+         "mode": "foot",
+         "story": "A rest near the mountain's foot."
+        },
+        {
+         "id": "foot-of-mount-doom",
+         "name": "Foot of Mount Doom",
+         "road_miles": 1775,
+         "mode": "foot",
+         "story": "At the foot of the mountain Sam tries to warm Frodo as he sleeps."
+        },
+        {
+         "id": "up-the-mountains-base",
+         "name": "Up the mountain's base",
+         "road_miles": 1776,
+         "mode": "carried",
+         "story": "Frodo falls and cannot rise. Sam lifts him onto his back and climbs."
+        },
+        {
+         "id": "saurons-road",
+         "name": "Sauron's Road",
+         "road_miles": 1777,
+         "mode": "foot",
+         "story": "They crawl up to Sauron's road; Frodo sees the Eye and falls."
+        },
+        {
+         "id": "gollum-attacks",
+         "name": "Gollum attacks",
+         "road_miles": 1778,
+         "mode": "carried",
+         "story": "Sam carries Frodo again until Gollum springs at them. Sam holds him off while Frodo goes on."
+        },
+        {
+         "id": "door-of-sammath-naur",
+         "name": "Door of Sammath Naur",
+         "road_miles": 1778.5,
+         "mode": "foot",
+         "story": "Frodo enters the door in the mountain's side."
+        },
+        {
+         "id": "the-crack-of-doom",
+         "name": "The Crack of Doom",
+         "road_miles": 1779,
+         "mode": "foot",
+         "story": "At the brink Frodo claims the Ring. Gollum bites it from his finger and falls into the fire, and the Ring is unmade."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

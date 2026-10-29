@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Stepper Quests
+Comment=Counts stepper steps and walks Frodo's road
+Exec=@REPO@/bin/stepper-quests
+Icon=@REPO@/stepper_quests/data/icon.svg
+Terminal=false
+X-GNOME-Autostart-enabled=true
+Hidden=false
+NoDisplay=false
+StartupNotify=false

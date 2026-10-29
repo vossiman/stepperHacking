@@ -1,0 +1,16 @@
+# local environment and caches
+.venv/
+__pycache__/
+.pytest_cache/
+
+# recorded walks, databases, logs, deliverables (never for the repo)
+/data/
+out/
+*.db
+*.db-wal
+*.db-shm
+*.log
+
+# agent scratch
+.superpowers/
+.claude/

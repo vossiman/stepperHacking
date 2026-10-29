@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Start the Stepper Quests tray app detached from the calling terminal.
+# Output goes to the app's log so autostart runs can be inspected too.
+cd "$(dirname "$(readlink -f "$0")")/.." || exit 1
+log_dir="${STEPPER_QUESTS_HOME:-$HOME/.local/share/stepper-quests}"
+mkdir -p "$log_dir"
+exec setsid .venv/bin/python -m stepper_quests "$@" >> "$log_dir/app.log" 2>&1 < /dev/null
