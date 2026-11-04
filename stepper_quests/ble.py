@@ -22,6 +22,13 @@ BACKOFF: tuple[float, ...] = (1, 2, 4, 8, 15)  # the last delay repeats forever
 SETTLE_DELAY = 1.0
 INIT_GAP = 0.25
 FRAME_TIMEOUT = 10.0  # seconds without a metrics frame before the link counts as dead
+# The console resets its link about every 98 minutes; reconnecting within
+# seconds of such a drop has hung its firmware (all segments lit, battery pull
+# needed, 2026-11-01). Leave it alone for a while before listening again.
+LINK_DROP_COOLDOWN = 30.0
+# Polling keeps the console awake. Drop the link after this long without
+# cadence so it can sleep; it advertises again when stepped on.
+IDLE_DISCONNECT = 300.0
 
 
 async def _until_stopped(aw: Awaitable, stop_event: asyncio.Event):
@@ -63,7 +70,9 @@ async def wait_for_advertisement(address: str, stop_event: asyncio.Event):
     return found
 
 
-async def _session(client_factory, handle_frame, on_connected, frame_age, stop_event, sleep):
+async def _session(client_factory, handle_frame, on_connected, frame_age, idle_age,
+                   idle_disconnect, stop_event, sleep):
+    """Run one link until stopped or dropped; return why when the app ended it."""
     async with client_factory() as client:
         await sleep(SETTLE_DELAY)
         await client.start_notify(NOTIFY_UUID, handle_frame)
@@ -77,6 +86,8 @@ async def _session(client_factory, handle_frame, on_connected, frame_age, stop_e
                 await sleep(POLL_INTERVAL)
                 if frame_age() > FRAME_TIMEOUT:
                     raise TimeoutError(f"no metrics frame for {FRAME_TIMEOUT:g} s")
+                if idle_age() > idle_disconnect:
+                    return f"idle for {idle_disconnect:g} s, letting the console sleep"
         finally:
             if client.is_connected:
                 with contextlib.suppress(Exception):
@@ -90,6 +101,8 @@ async def run_session(
     stop_event: asyncio.Event,
     *,
     backoff: Sequence[float] | None = None,
+    cooldown: float = LINK_DROP_COOLDOWN,
+    idle_disconnect: float = IDLE_DISCONNECT,
     sleep: Callable[[float], Awaitable] = asyncio.sleep,
     on_frame: Callable[[float, bytes], None] | None = None,
     on_log: Callable[[str], None] | None = None,
@@ -105,7 +118,9 @@ async def run_session(
     after a wake are counted. Any failure, including a connect that fails
     right after the advertisement, sleeps the backoff before waiting again.
     A link that stays up but sends no metrics frame for FRAME_TIMEOUT seconds
-    is treated as dead.
+    is treated as dead. After a link that was up ends for any reason, the
+    next listen waits `cooldown` seconds instead of the backoff, and a link
+    with no cadence for `idle_disconnect` seconds is closed by the app.
     """
     # Looked up per call, not bound as a default, so tests can swap the scanner.
     wait = wait_for_device or wait_for_advertisement
@@ -113,7 +128,9 @@ async def run_session(
     attempt = 0
     state = None
     got_frame = False
+    was_connected = False
     last_metrics = 0.0
+    last_active = 0.0
     frame_log_failed = False
 
     def set_state(new: str) -> None:
@@ -127,18 +144,21 @@ async def run_session(
             on_log(msg)
 
     def on_connected() -> None:
-        nonlocal last_metrics
-        last_metrics = clock()
+        nonlocal last_metrics, last_active, was_connected
+        last_metrics = last_active = clock()
+        was_connected = True
         set_state("connected")
 
     def handle_frame(_sender, data: bytearray) -> None:
-        nonlocal got_frame, last_metrics, frame_log_failed
+        nonlocal got_frame, last_metrics, last_active, frame_log_failed
         got_frame = True
         frame = bytes(data)
         t = time.time()
         spm = parse_cadence(frame)
         if spm is not None:
             last_metrics = clock()
+            if spm > 0:
+                last_active = clock()
             on_cadence(spm, t)
         if on_frame is not None:
             # Raw logging is a debugging aid; a full disk must not stop counting.
@@ -153,6 +173,7 @@ async def run_session(
     while not stop_event.is_set():
         set_state("disconnected")
         got_frame = False
+        was_connected = False
         try:
             log(f"waiting for {address or 'the stepper'} to advertise")
             device = await _until_stopped(wait(address, stop_event), stop_event)
@@ -160,12 +181,12 @@ async def run_session(
                 break
             log(f"{address or 'stepper'} seen, connecting")
             set_state("connecting")
-            await _until_stopped(
+            reason = await _until_stopped(
                 _session(lambda: client_factory(device), handle_frame, on_connected,
-                         lambda: clock() - last_metrics, stop_event, sleep),
+                         lambda: clock() - last_metrics, lambda: clock() - last_active,
+                         idle_disconnect, stop_event, sleep),
                 stop_event,
-            )
-            reason = "link closed"
+            ) or "link closed"
         except Exception as exc:  # noqa: BLE001 - any BLE failure means retry
             reason = f"{type(exc).__name__}: {exc}"
         set_state("disconnected")
@@ -173,9 +194,12 @@ async def run_session(
             break
         if got_frame:
             attempt = 0
-        delay = delays[min(attempt, len(delays) - 1)]
-        attempt += 1
-        log(f"disconnected ({reason}), retrying in {delay:g} s")
+        if was_connected:
+            delay = cooldown
+        else:
+            delay = delays[min(attempt, len(delays) - 1)]
+            attempt += 1
+        log(f"disconnected ({reason}), listening again in {delay:g} s")
         await _until_stopped(sleep(delay), stop_event)
 
 

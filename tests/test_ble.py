@@ -180,6 +180,7 @@ def test_exception_leads_to_disconnected_and_retry():
             states.append,
             stop,
             backoff=[10, 20, 40],
+            cooldown=30,
             sleep=make_sleep(sleeps),
         )
 
@@ -187,7 +188,8 @@ def test_exception_leads_to_disconnected_and_retry():
 
     assert len(made) == 2
     assert states == ["disconnected"] + ["connecting", "connected", "disconnected"] * 2
-    assert [d for d in sleeps if d >= 10] == [10]
+    # A link that was up gets the cool-down, not the connect backoff.
+    assert [d for d in sleeps if d >= 10] == [30]
 
 
 def test_backoff_sequence():
@@ -230,12 +232,96 @@ def test_backoff_resets_after_session_with_frames():
             lambda s: None,
             stop,
             backoff=[10, 20, 40],
+            cooldown=30,
             sleep=make_sleep(sleeps, stop, stop_after_backoffs=4),
         )
 
     run(main())
 
-    assert [d for d in sleeps if d >= 10] == [10, 20, 10, 20]
+    assert [d for d in sleeps if d >= 10] == [10, 20, 30, 10]
+
+
+def test_clean_link_drop_cools_down_before_listening_again():
+    events, states, sleeps, logs = [], [], [], []
+    made = []
+
+    async def main():
+        stop = asyncio.Event()
+        clients = [
+            FakeClient(events, frames=[b2(50)] * 5, fail_on_poll=2),
+            FakeClient(events, frames=[b2(70)], stop_on_poll=1, stop_event=stop),
+        ]
+
+        def factory(_device):
+            made.append(1)
+            return clients[len(made) - 1]
+
+        await run_session(
+            factory,
+            lambda spm, t: None,
+            states.append,
+            stop,
+            backoff=[5, 6],
+            cooldown=30,
+            sleep=make_sleep(sleeps),
+            on_log=logs.append,
+        )
+
+    run(main())
+
+    assert [d for d in sleeps if d >= 5] == [30]
+    assert any("30 s" in line for line in logs)
+
+
+def test_default_cooldown_outlasts_first_backoffs():
+    assert ble.LINK_DROP_COOLDOWN >= 20
+    assert ble.IDLE_DISCONNECT > ble.FRAME_TIMEOUT
+
+
+def test_idle_link_is_dropped_so_the_console_can_sleep():
+    events, states, logs = [], [], []
+    made = []
+    now = [0.0]
+
+    async def clock_sleep(delay):
+        now[0] += delay
+        await asyncio.sleep(0)
+
+    async def main():
+        stop = asyncio.Event()
+        # One stepping frame, then the console reports idle for a long time.
+        idle = FakeClient(events, frames=[b2(60)] + [b2(0)] * 100)
+        second = FakeClient(events, frames=[b2(70)], stop_on_poll=1, stop_event=stop)
+        clients = [idle, second]
+
+        def factory(_device):
+            made.append(1)
+            return clients[len(made) - 1]
+
+        await run_session(
+            factory,
+            lambda spm, t: None,
+            states.append,
+            stop,
+            backoff=[1],
+            cooldown=30,
+            idle_disconnect=5,
+            sleep=clock_sleep,
+            clock=lambda: now[0],
+            on_log=logs.append,
+        )
+        return idle
+
+    idle = run(main())
+
+    assert len(made) == 2
+    assert states == ["disconnected"] + ["connecting", "connected", "disconnected"] * 2
+    # About idle_disconnect / POLL_INTERVAL polls after the last stepping frame.
+    expected = 1 + 5 / ble.POLL_INTERVAL
+    assert expected - 1 <= idle.polls <= expected + 1
+    assert ("exit",) in events
+    assert any("idle" in line for line in logs)
+    assert not any("Error" in line for line in logs)
 
 
 def test_stop_interrupts_backoff_sleep():
@@ -339,6 +425,7 @@ def test_silent_link_times_out_and_reconnects():
             states.append,
             stop,
             backoff=[100],
+            cooldown=100,
             sleep=clock_sleep,
             clock=lambda: now[0],
         )
@@ -426,6 +513,7 @@ def test_waits_for_advertisement_before_each_connect():
             stop,
             address="AA:BB",
             backoff=[10],
+            cooldown=10,
             sleep=recording_sleep,
             wait_for_device=wait,
         )

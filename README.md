@@ -113,6 +113,13 @@ connects on the first advertisement, so the first steps are counted. If that
 connect fails, it waits a short backoff (1, 2, 4, 8, then 15 seconds) and
 goes back to listening.
 
+Two rules protect the console. Polling keeps it awake, so after five minutes
+without cadence the app closes the link itself and lets it sleep. And after
+any link that was up ends, by the console (it resets the link about every 98
+minutes) or by the app, the app waits 30 seconds before listening again:
+reconnecting within seconds of such a drop once hung the console's firmware
+(all display segments lit, cured only by pulling the batteries).
+
 ## Command-line counter
 
 ```bash
