@@ -273,6 +273,42 @@ def test_clean_link_drop_cools_down_before_listening_again():
     assert any("30 s" in line for line in logs)
 
 
+def test_link_that_dies_during_setup_also_cools_down():
+    events, states, sleeps = [], [], []
+    made = []
+
+    class NotifyRefused(FakeClient):
+        async def start_notify(self, uuid, callback):
+            raise OSError("GATT Protocol Error: Unlikely Error")
+
+    async def main():
+        stop = asyncio.Event()
+        clients = [
+            NotifyRefused(events),
+            FakeClient(events, frames=[b2(70)], stop_on_poll=1, stop_event=stop),
+        ]
+
+        def factory(_device):
+            made.append(1)
+            return clients[len(made) - 1]
+
+        await run_session(
+            factory,
+            lambda spm, t: None,
+            states.append,
+            stop,
+            backoff=[5, 6],
+            cooldown=30,
+            sleep=make_sleep(sleeps),
+        )
+
+    run(main())
+
+    assert states == ["disconnected", "connecting", "disconnected",
+                      "connecting", "connected", "disconnected"]
+    assert [d for d in sleeps if d >= 5] == [30]
+
+
 def test_default_cooldown_outlasts_first_backoffs():
     assert ble.LINK_DROP_COOLDOWN >= 20
     assert ble.IDLE_DISCONNECT > ble.FRAME_TIMEOUT

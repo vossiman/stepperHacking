@@ -70,10 +70,11 @@ async def wait_for_advertisement(address: str, stop_event: asyncio.Event):
     return found
 
 
-async def _session(client_factory, handle_frame, on_connected, frame_age, idle_age,
-                   idle_disconnect, stop_event, sleep):
+async def _session(client_factory, handle_frame, on_link_up, on_connected, frame_age,
+                   idle_age, idle_disconnect, stop_event, sleep):
     """Run one link until stopped or dropped; return why when the app ended it."""
     async with client_factory() as client:
+        on_link_up()
         await sleep(SETTLE_DELAY)
         await client.start_notify(NOTIFY_UUID, handle_frame)
         try:
@@ -143,10 +144,15 @@ async def run_session(
         if on_log is not None:
             on_log(msg)
 
-    def on_connected() -> None:
-        nonlocal last_metrics, last_active, was_connected
-        last_metrics = last_active = clock()
+    def on_link_up() -> None:
+        # The cool-down protects any link the console had up, even one that
+        # dies during notify enable or init, before the app calls it connected.
+        nonlocal was_connected
         was_connected = True
+
+    def on_connected() -> None:
+        nonlocal last_metrics, last_active
+        last_metrics = last_active = clock()
         set_state("connected")
 
     def handle_frame(_sender, data: bytearray) -> None:
@@ -182,8 +188,8 @@ async def run_session(
             log(f"{address or 'stepper'} seen, connecting")
             set_state("connecting")
             reason = await _until_stopped(
-                _session(lambda: client_factory(device), handle_frame, on_connected,
-                         lambda: clock() - last_metrics, lambda: clock() - last_active,
+                _session(lambda: client_factory(device), handle_frame, on_link_up,
+                         on_connected, lambda: clock() - last_metrics, lambda: clock() - last_active,
                          idle_disconnect, stop_event, sleep),
                 stop_event,
             ) or "link closed"
