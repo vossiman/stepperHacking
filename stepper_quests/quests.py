@@ -1,10 +1,14 @@
 import json
+import math
 from bisect import bisect_right
 from dataclasses import dataclass, field
 from pathlib import Path
 
 METRES_PER_MILE = 1609.344
 DEFAULT_METRES_PER_STEP = 0.7
+MARKER_SPACING = 0.2
+MARKER_HIDE_RADIUS = 0.05
+_MARKER_EPS = 1e-9
 
 
 def steps_to_miles(steps: float, metres_per_step: float = DEFAULT_METRES_PER_STEP) -> float:
@@ -13,6 +17,19 @@ def steps_to_miles(steps: float, metres_per_step: float = DEFAULT_METRES_PER_STE
 
 def miles_to_steps(miles: float, metres_per_step: float = DEFAULT_METRES_PER_STEP) -> float:
     return miles * METRES_PER_MILE / metres_per_step
+
+
+def markers_between(start: float, end: float) -> list[float]:
+    k = math.floor(start / MARKER_SPACING + _MARKER_EPS) + 1
+    found: list[float] = []
+    while (m := k * MARKER_SPACING) <= end + _MARKER_EPS:
+        found.append(m)
+        k += 1
+    return found
+
+
+def markers_passed(start: float, end: float) -> int:
+    return len(markers_between(start, end))
 
 
 @dataclass(eq=False)
@@ -122,6 +139,13 @@ class Quest:
             chapter_fraction=self._span_fraction(nxt.chapter, x),
             part_fraction=self._span_fraction(nxt.part, x),
         )
+
+    def drawn_markers(self, start: float, end: float) -> list[float]:
+        return [
+            m
+            for m in markers_between(start, end)
+            if all(abs(m - w) > MARKER_HIDE_RADIUS for w in self._miles)
+        ]
 
     def _span_fraction(self, owner, x: float) -> float:
         start, end = self._spans[id(owner)]
