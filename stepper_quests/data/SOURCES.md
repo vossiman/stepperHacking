@@ -45,3 +45,30 @@ http://web.archive.org/cdx/search/cdx?url=home.insightbb.com/~eowynchallenge/*
   Gebir, which are `foot`; Sam carrying Frodo on Mount Doom is `carried`;
   everything else is `foot`.
 - Story text is original wording; Tolkien's chapter titles are used as given.
+
+## Waypoints added 2026-11-17
+
+Added so that no gap between consecutive waypoints is longer than 3.0
+walkable miles. Each sits between its neighbours' `road_miles`, takes the
+mode of the waypoint that ends its gap, and paraphrases the chapter named
+below. Where the book gives few events (the days on the Anduin, the long
+foot stretches after Weathertop), the entry describes country or travel the
+chapter itself mentions.
+
+- `through-the-dark-fields`: Three is Company
+- `packs-on-again`: Three is Company
+- `the-road-climbs`: Three is Company
+- `no-path-under-the-trees`: A Knife in the Dark
+- `single-file`: A Knife in the Dark
+- `lonely-country`: A Knife in the Dark
+- `strider-names-weathertop`: A Knife in the Dark
+- `going-slowly`: Flight to the Ford
+- `heavy-packs`: Flight to the Ford
+- `the-valley-floor`: Flight to the Ford
+- `clear-of-the-road`: Flight to the Ford
+- `grey-slopes`: Flight to the Ford
+- `grey-afternoon`: Flight to the Ford
+- `steepening-slopes`: Flight to the Ford
+- `frodo-grows-quiet`: Flight to the Ford
+- `land-falling-east`: Flight to the Ford
+- `looking-for-cover`: Flight to the Ford

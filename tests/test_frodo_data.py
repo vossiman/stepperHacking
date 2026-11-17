@@ -31,7 +31,7 @@ def test_loads(quest):
         ("The Return of the King", ["Part 2 (Frodo and Sam)"]),
     ]
     assert quest.waypoints[0].road_miles == 0
-    assert 400 <= len(quest.waypoints) <= 650
+    assert 400 <= len(quest.waypoints) <= 800
 
 
 def test_miles_monotonic(raw):
@@ -102,3 +102,9 @@ def test_ridden_and_boat_gaps_at_most_ten_walkable_miles(quest):
     assert gaps
     too_long = {k: v for k, v in gaps.items() if v > 10}
     assert too_long == {}
+
+
+def test_ids_unique(quest):
+    ids = [w.id for w in quest.waypoints]
+    assert len(ids) == len(set(ids))
+

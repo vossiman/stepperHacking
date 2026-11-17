@@ -75,6 +75,13 @@
          "story": "About three hours out they stop for a small supper under the stars."
         },
         {
+         "id": "through-the-dark-fields",
+         "name": "Through the dark fields",
+         "road_miles": 12.5,
+         "mode": "foot",
+         "story": "They go on through the darkness, with the stars bright overhead and the fields black and silent."
+        },
+        {
          "id": "the-stock-road",
          "name": "The Stock road",
          "road_miles": 14.5,
@@ -110,6 +117,13 @@
          "story": "Breakfast is late, with water fetched from a stream that tumbles over a ledge of grey stone at the foot of the hill."
         },
         {
+         "id": "packs-on-again",
+         "name": "Packs on again",
+         "road_miles": 21,
+         "mode": "foot",
+         "story": "With their packs shouldered again they set off east along the road."
+        },
+        {
          "id": "the-rolling-road",
          "name": "The rolling road",
          "road_miles": 22.5,
@@ -122,6 +136,13 @@
          "road_miles": 25.5,
          "mode": "foot",
          "story": "Fields and copses slide past as they walk on in no great hurry."
+        },
+        {
+         "id": "the-road-climbs",
+         "name": "The road climbs",
+         "road_miles": 27.5,
+         "mode": "foot",
+         "story": "The road begins to climb as it nears the eastern edge of the hills."
         },
         {
          "id": "the-steep-bank",
@@ -586,6 +607,13 @@
          "story": "The ground drops slowly eastward; the woods are quiet and peaceful."
         },
         {
+         "id": "no-path-under-the-trees",
+         "name": "No path under the trees",
+         "road_miles": 152,
+         "mode": "foot",
+         "story": "There is no path to see, but Strider leads them on through the trees without hesitation."
+        },
+        {
          "id": "dappled-glades",
          "name": "Dappled glades",
          "road_miles": 153.5,
@@ -598,6 +626,13 @@
          "road_miles": 156.5,
          "mode": "foot",
          "story": "Strider doubles and turns to leave no clear trail behind them."
+        },
+        {
+         "id": "single-file",
+         "name": "Single file",
+         "road_miles": 158.5,
+         "mode": "foot",
+         "story": "They walk in single file behind Strider through the quiet trees."
         },
         {
          "id": "eastern-chetwood",
@@ -712,11 +747,25 @@
          "story": "The land starts to rise, dry and very barren, with only a few birds."
         },
         {
+         "id": "lonely-country",
+         "name": "Lonely country",
+         "road_miles": 203,
+         "mode": "foot",
+         "story": "No living thing moves on the empty land, which rises in long slow swells toward the east."
+        },
+        {
          "id": "barren-stretches",
          "name": "Barren stretches",
          "road_miles": 204.5,
          "mode": "foot",
          "story": "Wide empty stretches of scrub, with nothing to break the wind."
+        },
+        {
+         "id": "strider-names-weathertop",
+         "name": "Strider names Weathertop",
+         "road_miles": 206,
+         "mode": "foot",
+         "story": "Strider points out the tallest hill ahead, standing a little apart from the rest: that is Weathertop."
         },
         {
          "id": "weather-hills-in-view",
@@ -879,6 +928,13 @@
          "story": "The cold creeps from Frodo's shoulder into his arm."
         },
         {
+         "id": "going-slowly",
+         "name": "Going slowly",
+         "road_miles": 264.5,
+         "mode": "foot",
+         "story": "They go slowly for Frodo's sake, through bare and lonely country."
+        },
+        {
          "id": "wild-lone-lands",
          "name": "Wild lone-lands",
          "road_miles": 266.5,
@@ -898,6 +954,13 @@
          "road_miles": 272.5,
          "mode": "foot",
          "story": "Strider bends their course to throw off pursuit."
+        },
+        {
+         "id": "heavy-packs",
+         "name": "Heavy packs",
+         "road_miles": 274.5,
+         "mode": "foot",
+         "story": "With Frodo on the pony, the rest of the baggage is shared out and the walkers' packs weigh heavily."
         },
         {
          "id": "scrub-and-stone",
@@ -921,6 +984,13 @@
          "story": "They find a wide shallow valley curving away to the east and follow it."
         },
         {
+         "id": "the-valley-floor",
+         "name": "The valley floor",
+         "road_miles": 284,
+         "mode": "foot",
+         "story": "They keep to the floor of the valley, out of sight of any watcher on the heights."
+        },
+        {
          "id": "following-the-valley",
          "name": "Following the valley",
          "road_miles": 285.5,
@@ -940,6 +1010,13 @@
          "road_miles": 291.5,
          "mode": "foot",
          "story": "Strider ranges ahead and comes back with no news, which is good news."
+        },
+        {
+         "id": "clear-of-the-road",
+         "name": "Clear of the Road",
+         "road_miles": 293.5,
+         "mode": "foot",
+         "story": "Strider keeps them well away from the Road, which he fears the Riders are watching."
         },
         {
          "id": "valley-bend",
@@ -963,6 +1040,13 @@
          "story": "Low slopes rise on either hand as they go on down the valley."
         },
         {
+         "id": "grey-slopes",
+         "name": "Grey slopes",
+         "road_miles": 303,
+         "mode": "foot",
+         "story": "Grey, empty slopes roll by on either side of the valley."
+        },
+        {
          "id": "frodos-shadows",
          "name": "Frodo's shadows",
          "road_miles": 304.5,
@@ -982,6 +1066,13 @@
          "road_miles": 310.5,
          "mode": "foot",
          "story": "A thin stream gives them fresh water."
+        },
+        {
+         "id": "grey-afternoon",
+         "name": "Grey afternoon",
+         "road_miles": 312.5,
+         "mode": "foot",
+         "story": "They follow the valley down through a long grey afternoon."
         },
         {
          "id": "valley-evening",
@@ -1005,6 +1096,13 @@
          "story": "The land starts to rise ahead of them."
         },
         {
+         "id": "steepening-slopes",
+         "name": "Steepening slopes",
+         "road_miles": 322,
+         "mode": "foot",
+         "story": "The going grows harder as the slopes steepen under their feet."
+        },
+        {
          "id": "huddle-of-hills",
          "name": "Huddle of hills",
          "road_miles": 323.5,
@@ -1024,6 +1122,13 @@
          "road_miles": 329.5,
          "mode": "foot",
          "story": "They climb slowly toward the hills."
+        },
+        {
+         "id": "frodo-grows-quiet",
+         "name": "Frodo grows quiet",
+         "road_miles": 331.5,
+         "mode": "foot",
+         "story": "Frodo, riding the pony, grows quieter as the cold from his wound spreads."
         },
         {
          "id": "thin-rations",
@@ -1047,6 +1152,13 @@
          "story": "From a height they see far ahead to the east."
         },
         {
+         "id": "land-falling-east",
+         "name": "Land falling east",
+         "road_miles": 341,
+         "mode": "foot",
+         "story": "Below them the land falls away eastward toward a broad river valley."
+        },
+        {
          "id": "a-glint-of-water",
          "name": "A glint of water",
          "road_miles": 342.5,
@@ -1066,6 +1178,13 @@
          "road_miles": 348.5,
          "mode": "foot",
          "story": "Strider brings them toward the Road where it meets the river."
+        },
+        {
+         "id": "looking-for-cover",
+         "name": "Looking for cover",
+         "road_miles": 350.5,
+         "mode": "foot",
+         "story": "They keep clear of the Road and look for somewhere hidden to rest."
         },
         {
          "id": "hidden-hollow",
