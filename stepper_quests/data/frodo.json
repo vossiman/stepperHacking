@@ -3244,6 +3244,13 @@
          "story": "At dusk they hide behind boulders near the cliff and see the glint of Gollum's eyes behind them."
         },
         {
+         "id": "sheer-drops",
+         "name": "Sheer drops",
+         "road_miles": 1321,
+         "mode": "foot",
+         "story": "They follow the cliff edge, but every way down ends in a sheer drop."
+        },
+        {
          "id": "the-gully",
          "name": "The gully",
          "road_miles": 1323,
@@ -3509,11 +3516,25 @@
        "leg": "The gully to the slag-hills of the Morannon",
        "waypoints": [
         {
+         "id": "gollum-slinks-back",
+         "name": "Gollum slinks back",
+         "road_miles": 1395,
+         "mode": "foot",
+         "story": "Sam wakes to find Gollum gone, but he slinks back before they set out again."
+        },
+        {
          "id": "shallowing-gully",
          "name": "Shallowing gully",
          "road_miles": 1397,
          "mode": "foot",
          "story": "Setting out at dark, they follow the gully as it grows shallower."
+        },
+        {
+         "id": "sinking-walls",
+         "name": "Sinking walls",
+         "road_miles": 1399,
+         "mode": "foot",
+         "story": "The rocky walls sink lower on either side as the gully opens out."
         },
         {
          "id": "muddier-ground",
@@ -3787,11 +3808,25 @@
          "story": "They walk southwest beside the newly repaired road between mountains and moors."
         },
         {
+         "id": "in-the-shadows",
+         "name": "In the shadows",
+         "road_miles": 1479,
+         "mode": "foot",
+         "story": "Gollum leads them on through the night, keeping to the shadows beside the road."
+        },
+        {
          "id": "trench-like-valley",
          "name": "Trench-like valley",
          "road_miles": 1480.5,
          "mode": "foot",
          "story": "The road runs in a trench along the foot of the mountains."
+        },
+        {
+         "id": "mounds-of-slag",
+         "name": "Mounds of slag",
+         "road_miles": 1482,
+         "mode": "foot",
+         "story": "Mounds of slag and broken stone line the way under the dark hills."
         },
         {
          "id": "end-of-the-slag-heaps",
@@ -4273,6 +4308,13 @@
          "story": "A choking stench fills the tunnel."
         },
         {
+         "id": "blind-dark",
+         "name": "Blind dark",
+         "road_miles": 1610,
+         "mode": "foot",
+         "story": "The dark is so deep that even their thoughts seem blinded, and they feel their way forward."
+        },
+        {
          "id": "shelobs-pit",
          "name": "Shelob's pit",
          "road_miles": 1611.5,
@@ -4655,6 +4697,13 @@
          "road_miles": 1710,
          "mode": "foot",
          "story": "They sleep just off the road."
+        },
+        {
+         "id": "sams-new-strength",
+         "name": "Sam's new strength",
+         "road_miles": 1712,
+         "mode": "foot",
+         "story": "Sam's hope fades, but in its place comes a hard, stubborn will to go on."
         },
         {
          "id": "trudging-east",

@@ -105,3 +105,10 @@ chapter itself mentions.
 - `rapids-somewhere-below`: The Great River
 - `below-the-rapids`: The Great River
 - `tol-brandir`: The Great River
+- `sheer-drops`: The Taming of Smeagol
+- `gollum-slinks-back`: The Passage of the Marshes
+- `sinking-walls`: The Passage of the Marshes
+- `in-the-shadows`: Of Herbs and Stewed Rabbit
+- `mounds-of-slag`: Of Herbs and Stewed Rabbit
+- `blind-dark`: Shelob's Lair
+- `sams-new-strength`: Mount Doom

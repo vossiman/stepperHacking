@@ -108,3 +108,9 @@ def test_ids_unique(quest):
     ids = [w.id for w in quest.waypoints]
     assert len(ids) == len(set(ids))
 
+
+
+def test_no_gap_over_three_walkable_miles(quest):
+    gaps = [(b.walkable_miles - a.walkable_miles, b.id)
+            for a, b in zip(quest.waypoints, quest.waypoints[1:])]
+    assert max(gaps)[0] <= 3.0, max(gaps)
