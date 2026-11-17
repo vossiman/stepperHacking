@@ -281,7 +281,8 @@ def test_demo_runs_use_a_temp_home(argv, env, temp):
 
 def test_progress_refresh_is_throttled(app):
     refreshed = []
-    app._journey = type("W", (), {"isVisible": lambda s: True, "refresh": lambda s: refreshed.append(now[0])})()
+    app._journey = type("W", (), {"isVisible": lambda s: True, "refresh": lambda s: refreshed.append(now[0]),
+                                  "set_walking": lambda s, walking: None})()
     now = [0.0]
     app._clock = lambda: now[0]
     progress_times = []

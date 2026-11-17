@@ -286,11 +286,8 @@ class App(QObject):
             self._refresh_journey()
 
     def _set_journey_walking(self, walking: bool) -> None:
-        # A hidden window does not animate; open_journey syncs it when shown.
-        # The getattr tolerates the throttle test's minimal window stub.
-        setter = getattr(self._journey, "set_walking", None)
-        if setter is not None and self._journey.isVisible():
-            setter(walking)
+        if self._journey is not None:
+            self._journey.set_walking(walking)
 
     def _refresh_journey(self) -> None:
         if self._journey is not None and self._journey.isVisible():

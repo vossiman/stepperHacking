@@ -13,9 +13,9 @@ from PySide6.QtWidgets import (
 from . import journey_model as jm
 from .bars_widget import BarsWidget
 from .copy import format_steps
+from .overview_widget import OverviewBar
 from .progress import ACHIEVEMENTS, HOBBITS_PACE_DAYS, RANGERS_DAYS
 from .quests import miles_to_steps, steps_to_miles
-from .overview_widget import OverviewBar
 from .route_widget import RouteWidget
 from .tab_bar import TabBar
 
