@@ -338,9 +338,12 @@ class JourneyWindow(QDialog):
         pace = jm.pace_steps_per_day(self.store, today)
         self.sub.setText(jm.projection_line(self.quest, position, mps, pace if walked else None))
 
-        first = part.chapters[0].waypoints[0]
-        self.route.set_part(part, position, miles,
-                            start_miles=jm.stretch_start(self.quest, first))
+        span = jm.closeup_span(self.quest, position)
+        steps_to_next = None
+        if position.next is not None:
+            steps_to_next = f"{format_steps(miles_to_steps(position.miles_to_next, mps))} steps"
+        self.route.set_span(span, position, miles,
+                            self.quest.drawn_markers(span.start, span.end), steps_to_next)
 
         self._fill_walk(position, today, mps)
         self._fill_today(today)
