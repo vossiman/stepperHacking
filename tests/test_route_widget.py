@@ -1,11 +1,12 @@
 from pathlib import Path
 
 import pytest
-from PySide6.QtWidgets import QWidget
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QVBoxLayout, QWidget
 
 from stepper_quests import journey_model as jm
 from stepper_quests.quests import load_quest
-from stepper_quests.route_widget import RouteWidget
+from stepper_quests.route_widget import PHASE_STEP, RouteWidget
 
 FIXTURE = Path(__file__).parent / "fixtures" / "mini_quest.json"
 
@@ -53,8 +54,10 @@ def test_timer_runs_only_when_walking_and_visible(qapp):
 
 def test_timer_tick_does_not_call_parent_refresh(quest, qapp):
     class Parent(QWidget):
+        refreshes = 0
+
         def refresh(self):
-            raise AssertionError("tick must not refresh the parent")
+            self.refreshes += 1
 
     parent = Parent()
     w = RouteWidget(parent)
@@ -62,3 +65,19 @@ def test_timer_tick_does_not_call_parent_refresh(quest, qapp):
     w.set_span(jm.closeup_span(quest, pos), pos, 5.0, [], "1 steps")
     w._timer.timeout.emit()
     w._timer.timeout.emit()
+    assert parent.refreshes == 0
+    assert w._phase == pytest.approx(2 * PHASE_STEP)
+
+
+def test_timer_stops_while_window_minimized(qapp):
+    window = QWidget()
+    w = RouteWidget()
+    QVBoxLayout(window).addWidget(w)
+    w.set_walking(True)
+    window.show()
+    assert w.is_animating()
+    window.setWindowState(Qt.WindowMinimized)
+    assert not w.is_animating()
+    window.setWindowState(Qt.WindowNoState)
+    assert w.is_animating()
+    window.close()

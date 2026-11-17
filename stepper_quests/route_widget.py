@@ -2,7 +2,7 @@
 
 import math
 
-from PySide6.QtCore import QPointF, QRectF, Qt, QTimer
+from PySide6.QtCore import QEvent, QPointF, QRectF, Qt, QTimer
 from PySide6.QtGui import (
     QColor, QFont, QFontMetrics, QPainter, QPainterPath, QPainterPathStroker, QPen, QPolygonF,
 )
@@ -48,6 +48,7 @@ class RouteWidget(QWidget):
         self._labelled_names: list[str] = []
         self._walking = False
         self._phase = 0.0
+        self._watched = None
         self._timer = QTimer(self)
         self._timer.setInterval(WALK_FRAME_MS)
         self._timer.timeout.connect(self._tick)
@@ -80,14 +81,26 @@ class RouteWidget(QWidget):
 
     def showEvent(self, event) -> None:
         super().showEvent(event)
+        # Only the top-level window receives WindowStateChange, so watch it there.
+        window = self.window()
+        if window is not self._watched:
+            if self._watched is not None:
+                self._watched.removeEventFilter(self)
+            window.installEventFilter(self)
+            self._watched = window
         self._sync_timer()
+
+    def eventFilter(self, obj, event) -> bool:
+        if obj is self._watched and event.type() == QEvent.WindowStateChange:
+            self._sync_timer()
+        return super().eventFilter(obj, event)
 
     def hideEvent(self, event) -> None:
         super().hideEvent(event)
         self._sync_timer()
 
     def _sync_timer(self) -> None:
-        if self._walking and self.isVisible():
+        if self._walking and self.isVisible() and not self.window().isMinimized():
             if not self._timer.isActive():
                 self._timer.start()
         else:
