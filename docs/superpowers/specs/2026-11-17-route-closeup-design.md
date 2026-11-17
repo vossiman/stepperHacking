@@ -62,7 +62,7 @@ arrives every few walks.
   that (10 exceed 5, all river legs, the longest 10.0, Field of Celebrant to
   North Undeep). Expect roughly 60 to 90 new entries.
 - Same schema as existing entries: `id` (unique kebab-case), `name`,
-  `road_miles`, `mode`, `story` (one or two sentences, past tense, same
+  `road_miles`, `mode`, `story` (one or two sentences, present tense, same
   voice as today's entries). `mode` matches the leg it sits in.
 - `road_miles` must keep the list sorted; placement inside a gap is by the
   book's description of that day where available, else even spacing.

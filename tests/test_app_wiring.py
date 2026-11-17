@@ -364,3 +364,22 @@ def test_animation_stops_on_session_end(app):
     assert app._journey.route.is_animating()
     app._handle(app.tracker.tick(start + 120 + 600))
     assert not app._journey.route.is_animating()
+
+
+def test_stride_change_rebuilds_the_closeup(app):
+    app.store.upsert_session(None, t0(), t0() + 60, 23000.0, 60, 60.0, 60.0)
+    app.open_journey(None)
+    route = app._journey.route
+    assert route._start > 0.0
+    app.settings.metres_per_step = 0.5
+    app.apply_settings()
+    assert route._start == 0.0
+    assert all(route._start <= m <= route._end for m in route._markers)
+
+
+def test_reopening_journey_while_walking_animates(app):
+    app.open_journey(None)
+    app._journey.close()
+    app.on_cadence(60, t0())
+    app.open_journey(None)
+    assert app._journey.route.is_animating()
