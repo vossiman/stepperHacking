@@ -1695,11 +1695,25 @@
          "story": "They camp in a thicket of thorn bushes."
         },
         {
+         "id": "marching-at-dusk",
+         "name": "Marching at dusk",
+         "road_miles": 542,
+         "mode": "foot",
+         "story": "At dusk they set off again, marching by night as they have done since Rivendell."
+        },
+        {
          "id": "toward-the-cliff",
          "name": "Toward the cliff",
          "road_miles": 544,
          "mode": "foot",
          "story": "Strange broken country ahead in the dark."
+        },
+        {
+         "id": "gullies-in-the-dark",
+         "name": "Gullies in the dark",
+         "road_miles": 546,
+         "mode": "foot",
+         "story": "The ground grows rougher, cut by gullies they must scramble through in the dark."
         },
         {
          "id": "the-cliff-top-path",
@@ -2254,11 +2268,25 @@
          "story": "They turn west from the pass road as the crebain return."
         },
         {
+         "id": "the-long-way-down",
+         "name": "The long way down",
+         "road_miles": 756,
+         "mode": "foot",
+         "story": "The path down is long, and they go slowly, worn out by the night in the snow."
+        },
+        {
          "id": "weary-retreat",
          "name": "Weary retreat",
          "road_miles": 757.5,
          "mode": "foot",
          "story": "A weary march down from the mountain."
+        },
+        {
+         "id": "below-the-snow",
+         "name": "Below the snow",
+         "road_miles": 759,
+         "mode": "foot",
+         "story": "Below the snow the wind drops, but they are cold and tired to the bone."
         },
         {
          "id": "western-foothills",
@@ -2268,11 +2296,25 @@
          "story": "They trudge along the western foothills."
         },
         {
+         "id": "a-halt-to-decide",
+         "name": "A halt to decide",
+         "road_miles": 763,
+         "mode": "foot",
+         "story": "They halt on the lower slopes to rest and to decide what to do next."
+        },
+        {
          "id": "gandalfs-choice",
          "name": "Gandalf's choice",
          "road_miles": 764.5,
          "mode": "foot",
          "story": "Gandalf speaks of the dark road under the mountains."
+        },
+        {
+         "id": "boromir-objects",
+         "name": "Boromir objects",
+         "road_miles": 766,
+         "mode": "foot",
+         "story": "Boromir would rather go round by the Gap of Rohan than under the mountains, and Aragorn too is unwilling to enter Moria."
         },
         {
          "id": "round-the-silvertine",
@@ -2282,6 +2324,13 @@
          "story": "They bend southwest around the foothills of the Silvertine."
         },
         {
+         "id": "frodo-asks-to-wait",
+         "name": "Frodo asks to wait",
+         "road_miles": 770,
+         "mode": "foot",
+         "story": "Frodo will not refuse Gandalf's advice, but asks that they sleep on it before deciding."
+        },
+        {
          "id": "grey-evening",
          "name": "Grey evening",
          "road_miles": 771.5,
@@ -2289,11 +2338,25 @@
          "story": "Evening falls grey and cold."
         },
         {
+         "id": "dusk-on-the-hillside",
+         "name": "Dusk on the hillside",
+         "road_miles": 773,
+         "mode": "foot",
+         "story": "Darkness gathers on the hillside as the wind rises."
+        },
+        {
          "id": "wolf-howls",
          "name": "Wolf-howls",
          "road_miles": 774.5,
          "mode": "foot",
          "story": "Far off they hear the howling of wolves."
+        },
+        {
+         "id": "wargs-west-of-the-mountains",
+         "name": "Wargs west of the mountains",
+         "road_miles": 776,
+         "mode": "foot",
+         "story": "Gandalf hears wolf-voices in the wind: the Wargs have come west of the mountains."
         },
         {
          "id": "ring-of-stones",
@@ -2808,6 +2871,20 @@
          "road_miles": 934,
          "mode": "boat",
          "story": "The boats slip out of the Silverlode onto the Great River, and soon the high banks hide the light of Lorien."
+        },
+        {
+         "id": "gimlis-grief",
+         "name": "Gimli's grief",
+         "road_miles": 943.5,
+         "mode": "boat",
+         "story": "Gimli weeps openly in the boat he shares with Legolas, grieving that he has looked his last on what was fairest."
+        },
+        {
+         "id": "the-swift-grey-river",
+         "name": "The swift grey river",
+         "road_miles": 953,
+         "mode": "boat",
+         "story": "The swift current bears them on between dark, silent woods, and little is said as the light fails."
         }
        ]
       },
@@ -2823,11 +2900,39 @@
          "story": "They draw the boats up under the west bank for the night, with the grey woods of Lorien already far behind."
         },
         {
+         "id": "grey-woods-on-the-banks",
+         "name": "Grey woods on the banks",
+         "road_miles": 972,
+         "mode": "boat",
+         "story": "Through the morning the river runs between grey woods, with the trees still crowding down to the water."
+        },
+        {
+         "id": "drifting-with-the-stream",
+         "name": "Drifting with the stream",
+         "road_miles": 982,
+         "mode": "boat",
+         "story": "Aragorn lets the boats drift with the stream, glad to put off the choice of where to leave the river."
+        },
+        {
          "id": "long-day-on-the-water",
          "name": "A long day on the water",
          "road_miles": 991.5,
          "mode": "boat",
          "story": "Day after day of paddling on cold grey water; the trees thin and the banks grow bare and lonely."
+        },
+        {
+         "id": "black-swans",
+         "name": "Black swans",
+         "road_miles": 1001,
+         "mode": "boat",
+         "story": "A great flight of swans streams overhead with a rush of wings, and Aragorn says they are black swans."
+        },
+        {
+         "id": "forests-of-reeds",
+         "name": "Forests of reeds",
+         "road_miles": 1010.5,
+         "mode": "boat",
+         "story": "Tall reeds line the west bank, hissing as the boats rustle past, with glimpses of meadows and far hills through the gaps."
         },
         {
          "id": "edge-of-the-brown-lands",
@@ -2844,6 +2949,27 @@
          "story": "They camp on the flats north of the Field of Celebrant."
         },
         {
+         "id": "wide-and-mournful",
+         "name": "Wide and mournful",
+         "road_miles": 1033,
+         "mode": "boat",
+         "story": "Frodo finds the country wide, empty and mournful; Aragorn reminds him that it is still winter and they are far from the sea."
+        },
+        {
+         "id": "the-withered-east-bank",
+         "name": "The withered east bank",
+         "road_miles": 1043,
+         "mode": "boat",
+         "story": "On the east bank the Brown Lands stretch away in long withered slopes without a tree or a stone."
+        },
+        {
+         "id": "birds-in-the-reeds",
+         "name": "Birds in the reeds",
+         "road_miles": 1053,
+         "mode": "boat",
+         "story": "Nothing moves on either bank but birds, piping unseen among the reeds."
+        },
+        {
          "id": "north-undeep",
          "name": "North Undeep",
          "road_miles": 1063,
@@ -2858,11 +2984,32 @@
          "story": "The Limlight flows in from the west."
         },
         {
+         "id": "the-last-southern-mountains",
+         "name": "The last southern mountains",
+         "road_miles": 1076.5,
+         "mode": "boat",
+         "story": "Through gaps in the reeds Frodo sees rolling meadows, and far off a dark line where the southernmost Misty Mountains end."
+        },
+        {
          "id": "the-wold",
          "name": "The Wold",
          "road_miles": 1083,
          "mode": "boat",
          "story": "Along the Wold of Rohan Sam spots a log with pale eyes paddling after them, and that night Gollum creeps close to the camp during Frodo's watch."
+        },
+        {
+         "id": "paddling-hard",
+         "name": "Paddling hard",
+         "road_miles": 1093,
+         "mode": "boat",
+         "story": "Hoping to leave Gollum behind, they take to their paddles and drive the boats on harder."
+        },
+        {
+         "id": "chill-air-from-the-east",
+         "name": "Chill air from the East",
+         "road_miles": 1103,
+         "mode": "boat",
+         "story": "A chill air flows over the river from the East, and the days grow colder."
         },
         {
          "id": "travelling-by-night",
@@ -2872,11 +3019,39 @@
          "story": "Wary of eyes on the east shore, they now hide under the bank by day and let the river carry them through the dark."
         },
         {
+         "id": "boromir-restless",
+         "name": "Boromir restless",
+         "road_miles": 1122.5,
+         "mode": "boat",
+         "story": "Boromir sits muttering and biting his nails, and Frodo catches a strange gleam in his eyes."
+        },
+        {
+         "id": "the-dark-river",
+         "name": "The dark river",
+         "road_miles": 1132.5,
+         "mode": "boat",
+         "story": "The boats slide on through the night, the river broad and black between unseen banks."
+        },
+        {
          "id": "south-undeep",
          "name": "South Undeep",
          "road_miles": 1142,
          "mode": "boat",
          "story": "In the dark they pass the western loop of the South Undeep."
+        },
+        {
+         "id": "downs-of-withered-grass",
+         "name": "Downs of withered grass",
+         "road_miles": 1152,
+         "mode": "boat",
+         "story": "On the west side the meadows give way to rolling downs of withered grass among fens and tussocks."
+        },
+        {
+         "id": "a-new-moon",
+         "name": "A new moon",
+         "road_miles": 1162,
+         "mode": "boat",
+         "story": "Sam puzzles over a new moon as thin as a nail-paring, as if no time had passed in Lorien, and Frodo and Legolas talk of how time runs there."
         },
         {
          "id": "gollum-following-on-the-log",
@@ -2886,6 +3061,20 @@
          "story": "Night after night the log drifts behind them, and Aragorn tells Frodo he has known since Moria that Gollum is on their trail."
         },
         {
+         "id": "bleak-wolds",
+         "name": "Bleak wolds",
+         "road_miles": 1183,
+         "mode": "boat",
+         "story": "On the east bank the Brown Lands rise into bleak wolds."
+        },
+        {
+         "id": "stony-banks",
+         "name": "Stony banks",
+         "road_miles": 1193,
+         "mode": "boat",
+         "story": "Stony shelves and boulders begin to show along both banks."
+        },
+        {
          "id": "lowlands-before-the-emyn-muil",
          "name": "Lowlands before the Emyn Muil",
          "road_miles": 1203.5,
@@ -2893,11 +3082,39 @@
          "story": "The flat lands on either bank start to rise and the river quickens as the first rough hills of the Emyn Muil come into view."
         },
         {
+         "id": "grey-hills-ahead",
+         "name": "Grey hills ahead",
+         "road_miles": 1213.5,
+         "mode": "boat",
+         "story": "Grey hills grow on the southern sky ahead."
+        },
+        {
+         "id": "steepening-banks",
+         "name": "Steepening banks",
+         "road_miles": 1224,
+         "mode": "boat",
+         "story": "The banks grow steep and stony, and the river runs faster between them."
+        },
+        {
          "id": "the-emyn-muil",
          "name": "The Emyn Muil",
          "road_miles": 1234,
          "mode": "boat",
          "story": "Low cliffs and grey chimneys rise as the river enters the higher Emyn Muil."
+        },
+        {
+         "id": "among-the-hills",
+         "name": "Among the hills",
+         "road_miles": 1245,
+         "mode": "boat",
+         "story": "Hills crowd in on both banks, and the river runs grey and swift through the Emyn Muil."
+        },
+        {
+         "id": "rapids-somewhere-below",
+         "name": "Rapids somewhere below",
+         "road_miles": 1256,
+         "mode": "boat",
+         "story": "Aragorn watches the water ahead, knowing that the rapids of Sarn Gebir lie somewhere below."
         },
         {
          "id": "sarn-gebir",
@@ -2914,6 +3131,13 @@
          "story": "In the fog they carry boats and packs down an old portage path to the foot of the rapids."
         },
         {
+         "id": "below-the-rapids",
+         "name": "Below the rapids",
+         "road_miles": 1278.5,
+         "mode": "boat",
+         "story": "Back on the water below Sarn Gebir, the boats run swiftly south as the cliffs close in on both banks."
+        },
+        {
          "id": "the-argonath",
          "name": "The Argonath",
          "road_miles": 1288,
@@ -2926,6 +3150,13 @@
          "road_miles": 1290,
          "mode": "boat",
          "story": "They pass out of the chasm onto the wide lake of Nen Hithoel."
+        },
+        {
+         "id": "tol-brandir",
+         "name": "Tol Brandir",
+         "road_miles": 1299.5,
+         "mode": "boat",
+         "story": "Ahead the island of Tol Brandir rises sheer from the lake, with Amon Lhaw and Amon Hen on either shore."
         },
         {
          "id": "parth-galen",

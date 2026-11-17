@@ -72,3 +72,36 @@ chapter itself mentions.
 - `frodo-grows-quiet`: Flight to the Ford
 - `land-falling-east`: Flight to the Ford
 - `looking-for-cover`: Flight to the Ford
+- `marching-at-dusk`: The Ring Goes South
+- `gullies-in-the-dark`: The Ring Goes South
+- `the-long-way-down`: A Journey in the Dark
+- `below-the-snow`: A Journey in the Dark
+- `a-halt-to-decide`: A Journey in the Dark
+- `boromir-objects`: A Journey in the Dark
+- `frodo-asks-to-wait`: A Journey in the Dark
+- `dusk-on-the-hillside`: A Journey in the Dark
+- `wargs-west-of-the-mountains`: A Journey in the Dark
+- `gimlis-grief`: Farewell to Lorien
+- `the-swift-grey-river`: Farewell to Lorien
+- `grey-woods-on-the-banks`: The Great River
+- `drifting-with-the-stream`: The Great River
+- `black-swans`: The Great River
+- `forests-of-reeds`: The Great River
+- `wide-and-mournful`: The Great River
+- `the-withered-east-bank`: The Great River
+- `birds-in-the-reeds`: The Great River
+- `the-last-southern-mountains`: The Great River
+- `paddling-hard`: The Great River
+- `chill-air-from-the-east`: The Great River
+- `boromir-restless`: The Great River
+- `the-dark-river`: The Great River
+- `downs-of-withered-grass`: The Great River
+- `a-new-moon`: The Great River
+- `bleak-wolds`: The Great River
+- `stony-banks`: The Great River
+- `grey-hills-ahead`: The Great River
+- `steepening-banks`: The Great River
+- `among-the-hills`: The Great River
+- `rapids-somewhere-below`: The Great River
+- `below-the-rapids`: The Great River
+- `tol-brandir`: The Great River
