@@ -317,3 +317,20 @@ def test_no_mac_means_no_worker_and_a_hint(tmp_path, db_path):
     finally:
         app.quit()
         app.deleteLater()
+
+
+def test_rest_stop_toast_counts_markers(app, monkeypatch):
+    toasts = []
+    monkeypatch.setattr(app, "_toast", lambda *a: toasts.append(a))
+    walk(app, 60, t0(), 600)
+    app._tick()
+    [rest] = [t for t in toasts if t[0] == "Rest stop"]
+    assert "road marker" in rest[1]
+
+
+def test_discarded_session_has_no_rest_stop_toast(app, monkeypatch):
+    toasts = []
+    monkeypatch.setattr(app, "_toast", lambda *a: toasts.append(a))
+    walk(app, 60, t0(), 5)
+    app._tick()
+    assert [t for t in toasts if t[0] == "Rest stop"] == []

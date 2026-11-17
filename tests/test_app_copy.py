@@ -59,3 +59,15 @@ def test_tooltip_variants():
     assert tooltip("stepping", 62, 1812.0) == "stepping, 62 spm, 1,812 today"
     assert tooltip("idle", 0, 0.0) == "idle, 0 today"
     assert tooltip("reconnecting", 0, 500.0) == "reconnecting"
+
+
+def test_end_message_counts_markers(quest):
+    session = Session(start=1000.0, end=1000.0 + 9 * 60, steps=560.0)
+    msg = end_message(session, quest.position(5.0), MPS, markers=1)
+    assert msg == "560 steps in 9 min. 1 road marker passed. Hobbiton is 11,495 steps away."
+
+
+def test_end_message_plural_and_zero(quest):
+    session = Session(start=1000.0, end=1600.0, steps=1200.0)
+    assert "3 road markers passed." in end_message(session, quest.position(5.0), MPS, markers=3)
+    assert "marker" not in end_message(session, quest.position(5.0), MPS, markers=0)

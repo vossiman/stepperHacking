@@ -22,7 +22,7 @@ from .icons import STATES, make_icon
 from .journey_window import JourneyWindow
 from .progress import Notice, Progress, notices_from_json, notices_to_json
 from .protocol import STEPPER_MAC
-from .quests import Quest, load_quest, steps_to_miles
+from .quests import Quest, load_quest, markers_passed, steps_to_miles
 from .settings_dialog import SettingsDialog
 from .store import Store
 from .toast import ToastManager
@@ -268,7 +268,10 @@ class App(QObject):
                 pending = notices_from_json(self.store.get_setting(PENDING_NOTICES)) + notices
                 self.store.set_setting(PENDING_NOTICES, notices_to_json(pending))
             return
-        body = copy.end_message(session, self._position(), self.settings.metres_per_step)
+        mps = self.settings.metres_per_step
+        end = steps_to_miles(self.store.lifetime_steps(), mps)
+        start = end - steps_to_miles(session.steps, mps)
+        body = copy.end_message(session, self._position(), mps, markers_passed(start, end))
         self._toast("Rest stop", body, SESSION_TOAST_S, "route")
         self._notify(notices)
         self._refresh_journey()

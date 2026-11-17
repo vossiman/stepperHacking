@@ -19,10 +19,15 @@ def start_message(position: Position, metres_per_step: float) -> str:
     return f"{leaving} {_steps_to_next(position, metres_per_step)} steps to {position.next.name}."
 
 
-def end_message(session: Session, position: Position, metres_per_step: float) -> str:
+def end_message(
+    session: Session, position: Position, metres_per_step: float, markers: int = 0
+) -> str:
     end = session.end if session.end is not None else session.start
     minutes = max(1, round((end - session.start) / 60))
     walked = f"{format_steps(session.steps)} steps in {minutes} min."
+    if markers:
+        noun = "road marker" if markers == 1 else "road markers"
+        walked += f" {markers} {noun} passed."
     if position.next is None:
         return f"{walked} The road ends at {position.reached.name}."
     return (
