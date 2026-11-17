@@ -448,3 +448,18 @@ def test_overview_span_at_real_part_boundary():
     pos = quest.position(rivendell.walkable_miles + 0.5)
     assert jm.overview_span(quest, pos.part).start == rivendell.walkable_miles
     assert pos.part_fraction > 0
+
+
+def test_closeup_real_data_holds_several_waypoints():
+    quest = load_quest(Quest.default_path())
+    s = jm.closeup_span(quest, quest.position(0.5))
+    assert len(s.waypoints) > 2
+    assert s.end - s.start >= jm.CLOSEUP_MILES
+    assert s.end in [w.walkable_miles for w in quest.waypoints]
+
+
+def test_part_label_ends_uses_previous_waypoint_at_part_start():
+    quest = load_quest(Quest.default_path())
+    rivendell = next(w for w in quest.waypoints if w.id == "rivendell")
+    part = quest.position(rivendell.walkable_miles + 0.5).part
+    assert jm.part_label_ends(quest, part)[0] == "Rivendell"
