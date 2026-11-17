@@ -751,7 +751,7 @@
          "name": "Lonely country",
          "road_miles": 203,
          "mode": "foot",
-         "story": "No living thing moves on the empty land, which rises in long slow swells toward the east."
+         "story": "Little moves on the empty land, which rises in long slow swells toward the east."
         },
         {
          "id": "barren-stretches",
@@ -2921,18 +2921,18 @@
          "story": "Day after day of paddling on cold grey water; the trees thin and the banks grow bare and lonely."
         },
         {
-         "id": "black-swans",
-         "name": "Black swans",
+         "id": "thinning-trees",
+         "name": "Thinning trees",
          "road_miles": 1001,
          "mode": "boat",
-         "story": "A great flight of swans streams overhead with a rush of wings, and Aragorn says they are black swans."
+         "story": "Fewer and fewer trees stand along the banks as the boats go south."
         },
         {
-         "id": "forests-of-reeds",
-         "name": "Forests of reeds",
+         "id": "bare-banks",
+         "name": "Bare banks",
          "road_miles": 1010.5,
          "mode": "boat",
-         "story": "Tall reeds line the west bank, hissing as the boats rustle past, with glimpses of meadows and far hills through the gaps."
+         "story": "The banks grow low and bare, with little shelter on either side."
         },
         {
          "id": "edge-of-the-brown-lands",
@@ -2949,25 +2949,25 @@
          "story": "They camp on the flats north of the Field of Celebrant."
         },
         {
-         "id": "wide-and-mournful",
-         "name": "Wide and mournful",
-         "road_miles": 1033,
-         "mode": "boat",
-         "story": "Frodo finds the country wide, empty and mournful; Aragorn reminds him that it is still winter and they are far from the sea."
-        },
-        {
          "id": "the-withered-east-bank",
          "name": "The withered east bank",
-         "road_miles": 1043,
+         "road_miles": 1033,
          "mode": "boat",
          "story": "On the east bank the Brown Lands stretch away in long withered slopes without a tree or a stone."
         },
         {
-         "id": "birds-in-the-reeds",
-         "name": "Birds in the reeds",
+         "id": "forests-of-reeds",
+         "name": "Forests of reeds",
+         "road_miles": 1043,
+         "mode": "boat",
+         "story": "Tall reeds line the west bank, hissing as the boats rustle past. Through the gaps Frodo glimpses meadows, far hills and a dark line where the southernmost Misty Mountains end."
+        },
+        {
+         "id": "black-swans",
+         "name": "Black swans",
          "road_miles": 1053,
          "mode": "boat",
-         "story": "Nothing moves on either bank but birds, piping unseen among the reeds."
+         "story": "A great flight of black swans streams overhead. Frodo finds the country wide, empty and mournful; Aragorn reminds him it is still winter, and they are far from the sea."
         },
         {
          "id": "north-undeep",
@@ -2984,11 +2984,11 @@
          "story": "The Limlight flows in from the west."
         },
         {
-         "id": "the-last-southern-mountains",
-         "name": "The last southern mountains",
+         "id": "birds-in-the-reeds",
+         "name": "Birds in the reeds",
          "road_miles": 1076.5,
          "mode": "boat",
-         "story": "Through gaps in the reeds Frodo sees rolling meadows, and far off a dark line where the southernmost Misty Mountains end."
+         "story": "Nothing moves on either bank but birds, piping unseen among the reeds."
         },
         {
          "id": "the-wold",
@@ -3005,11 +3005,11 @@
          "story": "Hoping to leave Gollum behind, they take to their paddles and drive the boats on harder."
         },
         {
-         "id": "chill-air-from-the-east",
-         "name": "Chill air from the East",
+         "id": "into-the-dusk",
+         "name": "Into the dusk",
          "road_miles": 1103,
          "mode": "boat",
-         "story": "A chill air flows over the river from the East, and the days grow colder."
+         "story": "The boats run on into the dusk, the banks fading to dark shapes on either side."
         },
         {
          "id": "travelling-by-night",
@@ -3065,7 +3065,7 @@
          "name": "Bleak wolds",
          "road_miles": 1183,
          "mode": "boat",
-         "story": "On the east bank the Brown Lands rise into bleak wolds."
+         "story": "Along the east bank the barren land climbs into high, cheerless downs, and a cold wind blows off them from the east."
         },
         {
          "id": "stony-banks",
@@ -4312,7 +4312,7 @@
          "name": "Blind dark",
          "road_miles": 1610,
          "mode": "foot",
-         "story": "The dark is so deep that even their thoughts seem blinded, and they feel their way forward."
+         "story": "The blackness is total, pressing on their minds as well as their eyes, and they grope forward by touch."
         },
         {
          "id": "shelobs-pit",
