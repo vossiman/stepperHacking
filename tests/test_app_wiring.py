@@ -281,7 +281,8 @@ def test_demo_runs_use_a_temp_home(argv, env, temp):
 
 def test_progress_refresh_is_throttled(app):
     refreshed = []
-    app._journey = type("W", (), {"isVisible": lambda s: True, "refresh": lambda s: refreshed.append(now[0])})()
+    app._journey = type("W", (), {"isVisible": lambda s: True, "refresh": lambda s: refreshed.append(now[0]),
+                                  "set_walking": lambda s, walking: None})()
     now = [0.0]
     app._clock = lambda: now[0]
     progress_times = []
@@ -317,3 +318,68 @@ def test_no_mac_means_no_worker_and_a_hint(tmp_path, db_path):
     finally:
         app.quit()
         app.deleteLater()
+
+
+def test_rest_stop_toast_counts_markers(app, monkeypatch):
+    toasts = []
+    monkeypatch.setattr(app, "_toast", lambda *a: toasts.append(a))
+    walk(app, 60, t0(), 600)
+    app._tick()
+    [rest] = [t for t in toasts if t[0] == "Rest stop"]
+    assert "road marker" in rest[1]
+
+
+def test_discarded_session_has_no_rest_stop_toast(app, monkeypatch):
+    toasts = []
+    monkeypatch.setattr(app, "_toast", lambda *a: toasts.append(a))
+    walk(app, 60, t0(), 5)
+    app._tick()
+    assert [t for t in toasts if t[0] == "Rest stop"] == []
+
+
+def test_journey_animates_while_walking(app):
+    app.open_journey(None)
+    app.on_cadence(60, t0())
+    assert app._journey.route.is_animating()
+
+
+def test_opening_journey_mid_walk_animates(app):
+    app.on_cadence(60, t0())
+    app.open_journey(None)
+    assert app._journey.route.is_animating()
+
+
+def test_animation_stops_on_discarded_session(app):
+    app.open_journey(None)
+    start = t0()
+    app.on_cadence(60, start)
+    app._handle(app.tracker.tick(start + 600))
+    assert not app._journey.route.is_animating()
+
+
+def test_animation_stops_on_session_end(app):
+    app.open_journey(None)
+    start = t0()
+    walk(app, 60, start, 120)
+    assert app._journey.route.is_animating()
+    app._handle(app.tracker.tick(start + 120 + 600))
+    assert not app._journey.route.is_animating()
+
+
+def test_stride_change_rebuilds_the_closeup(app):
+    app.store.upsert_session(None, t0(), t0() + 60, 23000.0, 60, 60.0, 60.0)
+    app.open_journey(None)
+    route = app._journey.route
+    assert route._start > 0.0
+    app.settings.metres_per_step = 0.5
+    app.apply_settings()
+    assert route._start == 0.0
+    assert all(route._start <= m <= route._end for m in route._markers)
+
+
+def test_reopening_journey_while_walking_animates(app):
+    app.open_journey(None)
+    app._journey.close()
+    app.on_cadence(60, t0())
+    app.open_journey(None)
+    assert app._journey.route.is_animating()

@@ -6,11 +6,12 @@ from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 
 from .copy import format_steps
-from .quests import Chapter, Position, Quest, Waypoint, miles_to_steps
+from .quests import Chapter, Part, Position, Quest, Waypoint, miles_to_steps
 from .store import Store
 
 DEFAULT_PACE = 1740
 PACE_DAYS = 30
+CLOSEUP_MILES = 4.0
 
 
 def pace_steps_per_day(store: Store, today: date) -> float:
@@ -22,6 +23,49 @@ def stretch_start(quest: Quest, waypoint: Waypoint) -> float:
     """Walkable miles where the stretch ending at ``waypoint`` begins."""
     index = quest.waypoints.index(waypoint)
     return quest.waypoints[index - 1].walkable_miles if index else 0.0
+
+
+@dataclass(frozen=True)
+class Span:
+    start: float
+    end: float
+    waypoints: list[Waypoint]
+
+
+def _span(quest: Quest, start: float, end: float, waypoints: list[Waypoint] | None = None) -> Span:
+    if waypoints is None:
+        waypoints = [w for w in quest.waypoints if start <= w.walkable_miles <= end]
+    return Span(start, end, waypoints)
+
+
+def _part_waypoints(part: Part) -> list[Waypoint]:
+    return [w for c in part.chapters for w in c.waypoints]
+
+
+def closeup_span(quest: Quest, position: Position) -> Span:
+    if position.next is None:
+        return _span(quest, stretch_start(quest, position.reached),
+                     position.reached.walkable_miles)
+    start = position.reached.walkable_miles
+    part_end = _part_waypoints(position.part)[-1].walkable_miles
+    target = next((w.walkable_miles for w in quest.waypoints
+                   if w.walkable_miles >= start + CLOSEUP_MILES), part_end)
+    end = max(min(target, part_end), position.next.walkable_miles)
+    return _span(quest, start, end)
+
+
+def overview_span(quest: Quest, part: Part) -> Span:
+    waypoints = _part_waypoints(part)
+    start = stretch_start(quest, waypoints[0])
+    ticks = [c.waypoints[-1] for c in part.chapters]
+    return _span(quest, start, waypoints[-1].walkable_miles, ticks)
+
+
+def part_label_ends(quest: Quest, part: Part) -> tuple[str, str]:
+    waypoints = _part_waypoints(part)
+    index = quest.waypoints.index(waypoints[0])
+    first = quest.waypoints[index - 1] if index else waypoints[0]
+    return first.name, waypoints[-1].name
 
 
 def chapter_miles(quest: Quest, chapter: Chapter) -> float:

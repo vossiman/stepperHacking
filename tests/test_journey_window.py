@@ -107,3 +107,9 @@ def test_walk_panel_caps_reached_names(store, quest, settings):
     names = [w.name for w in quest.waypoints[:5]]
     assert "and 2 more" in text
     assert sum(name in text for name in names) == 3
+
+
+def test_route_shows_closeup_and_overview(store, quest, settings):
+    w = JourneyWindow(store, quest, settings)
+    w.refresh()
+    assert w.overview.percent_text().endswith("%")

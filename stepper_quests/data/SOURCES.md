@@ -45,3 +45,70 @@ http://web.archive.org/cdx/search/cdx?url=home.insightbb.com/~eowynchallenge/*
   Gebir, which are `foot`; Sam carrying Frodo on Mount Doom is `carried`;
   everything else is `foot`.
 - Story text is original wording; Tolkien's chapter titles are used as given.
+
+## Waypoints added 2026-11-17
+
+Added so that no gap between consecutive waypoints is longer than 3.0
+walkable miles. Each sits between its neighbours' `road_miles`, takes the
+mode of the waypoint that ends its gap, and paraphrases the chapter named
+below. Where the book gives few events (the days on the Anduin, the long
+foot stretches after Weathertop), the entry describes country or travel the
+chapter itself mentions.
+
+- `through-the-dark-fields`: Three is Company
+- `packs-on-again`: Three is Company
+- `the-road-climbs`: Three is Company
+- `no-path-under-the-trees`: A Knife in the Dark
+- `single-file`: A Knife in the Dark
+- `lonely-country`: A Knife in the Dark
+- `strider-names-weathertop`: A Knife in the Dark
+- `going-slowly`: Flight to the Ford
+- `heavy-packs`: Flight to the Ford
+- `the-valley-floor`: Flight to the Ford
+- `clear-of-the-road`: Flight to the Ford
+- `grey-slopes`: Flight to the Ford
+- `grey-afternoon`: Flight to the Ford
+- `steepening-slopes`: Flight to the Ford
+- `frodo-grows-quiet`: Flight to the Ford
+- `land-falling-east`: Flight to the Ford
+- `looking-for-cover`: Flight to the Ford
+- `marching-at-dusk`: The Ring Goes South
+- `gullies-in-the-dark`: The Ring Goes South
+- `the-long-way-down`: A Journey in the Dark
+- `below-the-snow`: A Journey in the Dark
+- `a-halt-to-decide`: A Journey in the Dark
+- `boromir-objects`: A Journey in the Dark
+- `frodo-asks-to-wait`: A Journey in the Dark
+- `dusk-on-the-hillside`: A Journey in the Dark
+- `wargs-west-of-the-mountains`: A Journey in the Dark
+- `gimlis-grief`: Farewell to Lorien
+- `the-swift-grey-river`: Farewell to Lorien
+- `grey-woods-on-the-banks`: The Great River
+- `drifting-with-the-stream`: The Great River
+- `thinning-trees`: The Great River
+- `bare-banks`: The Great River
+- `the-withered-east-bank`: The Great River
+- `forests-of-reeds`: The Great River
+- `black-swans`: The Great River
+- `birds-in-the-reeds`: The Great River
+- `paddling-hard`: The Great River
+- `into-the-dusk`: The Great River
+- `boromir-restless`: The Great River
+- `the-dark-river`: The Great River
+- `downs-of-withered-grass`: The Great River
+- `a-new-moon`: The Great River
+- `bleak-wolds`: The Great River
+- `stony-banks`: The Great River
+- `grey-hills-ahead`: The Great River
+- `steepening-banks`: The Great River
+- `among-the-hills`: The Great River
+- `rapids-somewhere-below`: The Great River
+- `below-the-rapids`: The Great River
+- `tol-brandir`: The Great River
+- `sheer-drops`: The Taming of Smeagol
+- `gollum-slinks-back`: The Passage of the Marshes
+- `sinking-walls`: The Passage of the Marshes
+- `in-the-shadows`: Of Herbs and Stewed Rabbit
+- `mounds-of-slag`: Of Herbs and Stewed Rabbit
+- `blind-dark`: Shelob's Lair
+- `sams-new-strength`: Mount Doom

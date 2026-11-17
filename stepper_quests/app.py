@@ -22,7 +22,7 @@ from .icons import STATES, make_icon
 from .journey_window import JourneyWindow
 from .progress import Notice, Progress, notices_from_json, notices_to_json
 from .protocol import STEPPER_MAC
-from .quests import Quest, load_quest, steps_to_miles
+from .quests import Quest, load_quest, markers_passed, steps_to_miles
 from .settings_dialog import SettingsDialog
 from .store import Store
 from .toast import ToastManager
@@ -232,6 +232,7 @@ class App(QObject):
             self.frame_log.open_session()
         self._session_id = self.store.upsert_session(None, session.start, None, 0.0, 0, 0.0, 0.0)
         self._persisted_steps = 0.0
+        self._set_journey_walking(True)
         body = copy.start_message(self._position(), self.settings.metres_per_step)
         self._toast("On the road", body, SESSION_TOAST_S, "route")
 
@@ -253,6 +254,7 @@ class App(QObject):
         if self._frame_log is not None:
             self._frame_log.close()
         self._spm = 0
+        self._set_journey_walking(False)
         if self._session_id is not None:
             if discarded:
                 self.store.delete_session(self._session_id)
@@ -268,7 +270,10 @@ class App(QObject):
                 pending = notices_from_json(self.store.get_setting(PENDING_NOTICES)) + notices
                 self.store.set_setting(PENDING_NOTICES, notices_to_json(pending))
             return
-        body = copy.end_message(session, self._position(), self.settings.metres_per_step)
+        mps = self.settings.metres_per_step
+        end = steps_to_miles(self.store.lifetime_steps(), mps)
+        start = end - steps_to_miles(session.steps, mps)
+        body = copy.end_message(session, self._position(), mps, markers_passed(start, end))
         self._toast("Rest stop", body, SESSION_TOAST_S, "route")
         self._notify(notices)
         self._refresh_journey()
@@ -279,6 +284,10 @@ class App(QObject):
             self._toast(notice.title, notice.body, NOTICE_TOAST_S, section)
         if notices:
             self._refresh_journey()
+
+    def _set_journey_walking(self, walking: bool) -> None:
+        if self._journey is not None:
+            self._journey.set_walking(walking)
 
     def _refresh_journey(self) -> None:
         if self._journey is not None and self._journey.isVisible():
@@ -297,6 +306,7 @@ class App(QObject):
         if self._journey is None:
             self._journey = JourneyWindow(self.store, self.quest, self.settings)
         self._save_running()
+        self._journey.set_walking(self.tracker.current is not None)
         self._journey.refresh()
         if section is not None:
             self._journey.show_section(section)

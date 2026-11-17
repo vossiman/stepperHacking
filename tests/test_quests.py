@@ -6,6 +6,8 @@ import pytest
 from stepper_quests.quests import (
     Quest,
     load_quest,
+    markers_between,
+    markers_passed,
     miles_to_steps,
     steps_to_miles,
 )
@@ -139,3 +141,20 @@ def test_unknown_mode_rejected(tmp_path):
     path = write_variant(tmp_path, lambda d: wp(d, 3).update(mode="eagle"))
     with pytest.raises(ValueError, match="unknown mode 'eagle' at 'far-bank'"):
         load_quest(path)
+
+
+def test_markers_between_is_half_open_grid():
+    assert markers_between(0.0, 0.6) == pytest.approx([0.2, 0.4, 0.6])
+    assert markers_between(0.2, 0.39) == []
+
+
+def test_markers_passed_typical_walk_passes_one():
+    # 560 steps at 0.7 m = 0.2436 walkable miles
+    assert markers_passed(0.9, 0.9 + 0.2436) == 1
+
+
+def test_marker_near_waypoint_counts_but_is_not_drawn(quest):
+    # mini quest: Hobbiton at 10.0 walkable miles
+    assert 10.0 == pytest.approx(markers_between(9.9, 10.1)[0])
+    assert quest.drawn_markers(9.9, 10.1) == []
+    assert quest.drawn_markers(9.5, 9.7) == pytest.approx([9.6])
