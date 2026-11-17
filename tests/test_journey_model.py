@@ -5,7 +5,7 @@ import pytest
 
 from stepper_quests import journey_model as jm
 from stepper_quests.progress import ACHIEVEMENTS
-from stepper_quests.quests import load_quest, miles_to_steps
+from stepper_quests.quests import Quest, load_quest, miles_to_steps
 from stepper_quests.store import Store
 
 FIXTURE = Path(__file__).parent / "fixtures" / "mini_quest.json"
@@ -409,3 +409,42 @@ def test_walking_days_text():
     rows = [jm.DayRow(date(2026, 10, d), s, 1 if s else 0, 0, 0, [])
             for d, s in ((28, 600), (27, 0), (26, 10))]
     assert jm.walking_days_text(rows) == "Last 30 days. Walking days 2 of 3."
+
+
+def test_closeup_starts_at_reached_and_reaches_next(quest):
+    s = jm.closeup_span(quest, quest.position(5.0))
+    assert (s.start, s.end) == (0.0, 10.0)
+    assert [w.name for w in s.waypoints] == ["Bag End", "Hobbiton"]
+
+
+def test_closeup_reanchors_after_waypoint(quest):
+    s = jm.closeup_span(quest, quest.position(10.5))
+    assert (s.start, s.end) == (10.0, 20.0)
+
+
+def test_closeup_after_stride_change_moves_back(quest):
+    assert jm.closeup_span(quest, quest.position(9.0)).start == 0.0
+
+
+def test_closeup_at_end_of_road_has_length(quest):
+    s = jm.closeup_span(quest, quest.position(1000.0))
+    assert s.end > s.start
+
+
+def test_overview_span_starts_at_stretch_start(quest):
+    part = quest.volumes[0].parts[0]
+    s = jm.overview_span(quest, part)
+    assert (s.start, s.end) == (0.0, 50.0)
+
+
+def test_part_label_ends(quest):
+    part = quest.volumes[0].parts[0]
+    assert jm.part_label_ends(quest, part) == ("Bag End", "Bree")
+
+
+def test_overview_span_at_real_part_boundary():
+    quest = load_quest(Quest.default_path())
+    rivendell = next(w for w in quest.waypoints if w.id == "rivendell")
+    pos = quest.position(rivendell.walkable_miles + 0.5)
+    assert jm.overview_span(quest, pos.part).start == rivendell.walkable_miles
+    assert pos.part_fraction > 0
