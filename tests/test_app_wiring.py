@@ -334,3 +334,32 @@ def test_discarded_session_has_no_rest_stop_toast(app, monkeypatch):
     walk(app, 60, t0(), 5)
     app._tick()
     assert [t for t in toasts if t[0] == "Rest stop"] == []
+
+
+def test_journey_animates_while_walking(app):
+    app.open_journey(None)
+    app.on_cadence(60, t0())
+    assert app._journey.route.is_animating()
+
+
+def test_opening_journey_mid_walk_animates(app):
+    app.on_cadence(60, t0())
+    app.open_journey(None)
+    assert app._journey.route.is_animating()
+
+
+def test_animation_stops_on_discarded_session(app):
+    app.open_journey(None)
+    start = t0()
+    app.on_cadence(60, start)
+    app._handle(app.tracker.tick(start + 600))
+    assert not app._journey.route.is_animating()
+
+
+def test_animation_stops_on_session_end(app):
+    app.open_journey(None)
+    start = t0()
+    walk(app, 60, start, 120)
+    assert app._journey.route.is_animating()
+    app._handle(app.tracker.tick(start + 120 + 600))
+    assert not app._journey.route.is_animating()

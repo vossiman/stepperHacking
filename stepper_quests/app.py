@@ -232,6 +232,7 @@ class App(QObject):
             self.frame_log.open_session()
         self._session_id = self.store.upsert_session(None, session.start, None, 0.0, 0, 0.0, 0.0)
         self._persisted_steps = 0.0
+        self._set_journey_walking(True)
         body = copy.start_message(self._position(), self.settings.metres_per_step)
         self._toast("On the road", body, SESSION_TOAST_S, "route")
 
@@ -253,6 +254,7 @@ class App(QObject):
         if self._frame_log is not None:
             self._frame_log.close()
         self._spm = 0
+        self._set_journey_walking(False)
         if self._session_id is not None:
             if discarded:
                 self.store.delete_session(self._session_id)
@@ -283,6 +285,13 @@ class App(QObject):
         if notices:
             self._refresh_journey()
 
+    def _set_journey_walking(self, walking: bool) -> None:
+        # A hidden window does not animate; open_journey syncs it when shown.
+        # The getattr tolerates the throttle test's minimal window stub.
+        setter = getattr(self._journey, "set_walking", None)
+        if setter is not None and self._journey.isVisible():
+            setter(walking)
+
     def _refresh_journey(self) -> None:
         if self._journey is not None and self._journey.isVisible():
             self._save_running()
@@ -300,6 +309,7 @@ class App(QObject):
         if self._journey is None:
             self._journey = JourneyWindow(self.store, self.quest, self.settings)
         self._save_running()
+        self._journey.set_walking(self.tracker.current is not None)
         self._journey.refresh()
         if section is not None:
             self._journey.show_section(section)

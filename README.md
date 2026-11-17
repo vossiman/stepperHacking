@@ -46,7 +46,9 @@ The icon shows grey footprints when idle, brass ones while stepping, and
 dashed outlines while the BLE link is down.
 
 The journey window opens on one screen: the chapter you are walking and the
-steps to the next waypoint, the route strip, a panel for the walk in
+steps to the next waypoint, a close-up of the road ahead with a marker every
+0.2 walkable miles and a hobbit who walks while you do, an overview bar of
+the whole part, a panel for the walk in
 progress (or the last one) and a panel for today with the last seven days.
 Below that, tabs hold the detail: Journey (the chapter tree), Achievements,
 Records (records, totals and pace projections) and History (the last 30

@@ -15,6 +15,7 @@ from .bars_widget import BarsWidget
 from .copy import format_steps
 from .progress import ACHIEVEMENTS, HOBBITS_PACE_DAYS, RANGERS_DAYS
 from .quests import miles_to_steps, steps_to_miles
+from .overview_widget import OverviewBar
 from .route_widget import RouteWidget
 from .tab_bar import TabBar
 
@@ -169,7 +170,9 @@ class JourneyWindow(QDialog):
         route_panel.setObjectName("panel")
         route_box = QVBoxLayout(route_panel)
         route_box.setContentsMargins(8, 8, 8, 8)
+        self.overview = OverviewBar()
         self.route = RouteWidget()
+        route_box.addWidget(self.overview)
         route_box.addWidget(self.route)
         layout.addWidget(route_panel)
 
@@ -317,6 +320,9 @@ class JourneyWindow(QDialog):
         box.addStretch(1)
         return scroll
 
+    def set_walking(self, walking: bool) -> None:
+        self.route.set_walking(walking)
+
     # data
 
     def refresh(self) -> None:
@@ -344,6 +350,9 @@ class JourneyWindow(QDialog):
             steps_to_next = f"{format_steps(miles_to_steps(position.miles_to_next, mps))} steps"
         self.route.set_span(span, position, miles,
                             self.quest.drawn_markers(span.start, span.end), steps_to_next)
+        self.overview.set_overview(jm.overview_span(self.quest, part),
+                                   jm.part_label_ends(self.quest, part), miles,
+                                   position.part_fraction)
 
         self._fill_walk(position, today, mps)
         self._fill_today(today)
