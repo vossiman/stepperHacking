@@ -29,6 +29,8 @@ LINK_DROP_COOLDOWN = 30.0
 # Polling keeps the console awake. Drop the link after this long without
 # cadence so it can sleep; it advertises again when stepped on.
 IDLE_DISCONNECT = 300.0
+# Upper bound on how long a scan BlueZ silently ended can go unnoticed.
+SCAN_WINDOW = 30.0
 
 
 async def _until_stopped(aw: Awaitable, stop_event: asyncio.Event):
@@ -48,11 +50,14 @@ async def _until_stopped(aw: Awaitable, stop_event: asyncio.Event):
     return task.result()
 
 
-async def wait_for_advertisement(address: str, stop_event: asyncio.Event):
+async def wait_for_advertisement(address: str, stop_event: asyncio.Event,
+                                 window: float = SCAN_WINDOW):
     """Scan until `address` advertises; return its BLEDevice, or None if stopped.
 
-    There is no timeout: the console only advertises while awake, so this
-    waits as long as it sleeps. Bleak prefers a BLEDevice over an address for
+    There is no overall timeout: the console only advertises while awake, so
+    this waits as long as it sleeps. The scan is restarted every `window`
+    seconds, because BlueZ can end a scan without Bleak noticing (seen
+    2026-11-22 after a day of uptime with game controllers in use). Bleak prefers a BLEDevice over an address for
     BleakClient, since an address makes connect() run its own discovery first.
     """
     target = address.upper()
@@ -65,8 +70,10 @@ async def wait_for_advertisement(address: str, stop_event: asyncio.Event):
             found = device
             seen.set()
 
-    async with BleakScanner(detection_callback=on_advertisement):
-        await _until_stopped(seen.wait(), stop_event)
+    while found is None and not stop_event.is_set():
+        async with BleakScanner(detection_callback=on_advertisement):
+            with contextlib.suppress(asyncio.TimeoutError):
+                await _until_stopped(asyncio.wait_for(seen.wait(), window), stop_event)
     return found
 
 

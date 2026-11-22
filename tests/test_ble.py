@@ -705,3 +705,23 @@ def test_default_wait_returns_none_on_stop(monkeypatch):
 
     assert run(main()) is None
     assert not FakeScanner.instances[0].running
+
+
+def test_default_wait_restarts_the_scan_each_window(monkeypatch):
+    # BlueZ can end a scan without telling Bleak; a fresh scanner recovers it.
+    FakeScanner.instances = []
+    monkeypatch.setattr(ble, "BleakScanner", FakeScanner)
+    target = FakeDevice("AA:BB")
+
+    async def main():
+        stop = asyncio.Event()
+        task = asyncio.ensure_future(real_wait("AA:BB", stop, window=0.02))
+        await asyncio.sleep(0.07)
+        assert len(FakeScanner.instances) >= 3
+        assert not any(s.running for s in FakeScanner.instances[:-1])
+        latest = FakeScanner.instances[-1]
+        latest.callback(target, None)
+        return await task
+
+    assert run(main()) is target
+    assert not any(s.running for s in FakeScanner.instances)
