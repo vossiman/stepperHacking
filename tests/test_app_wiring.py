@@ -383,3 +383,37 @@ def test_reopening_journey_while_walking_animates(app):
     app.on_cadence(60, t0())
     app.open_journey(None)
     assert app._journey.route.is_animating()
+
+
+def test_tray_reshown_until_registered(app):
+    answers = iter([False, False, True])
+    app._registration_probe = lambda: next(answers)
+    app._verify_tray()
+    app._verify_tray()
+    assert app._tray_attempts == 2
+    assert app._tray_verify_timer.isActive()
+    app._tray_verify_timer.stop()
+    app._verify_tray()
+    assert app._tray_attempts == 0
+    assert not app._tray_verify_timer.isActive()
+
+
+def test_tray_check_gives_up_then_rearms_on_schedule(app):
+    from stepper_quests.app import TRAY_VERIFY_MAX_ATTEMPTS
+
+    app._registration_probe = lambda: False
+    for _ in range(TRAY_VERIFY_MAX_ATTEMPTS + 1):
+        app._verify_tray()
+    assert app._tray_gave_up
+    app._tray_verify_timer.stop()
+    app.schedule_tray_check(10)
+    assert not app._tray_gave_up and app._tray_attempts == 0
+    assert app._tray_verify_timer.isActive()
+
+
+def test_tray_check_skipped_when_unverifiable(app):
+    app._tray_verify_timer.stop()
+    app._registration_probe = lambda: None
+    app._verify_tray()
+    assert app._tray_attempts == 0
+    assert not app._tray_verify_timer.isActive()
