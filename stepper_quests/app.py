@@ -26,6 +26,7 @@ from .quests import Quest, load_quest, markers_passed, steps_to_miles
 from .settings_dialog import SettingsDialog
 from .store import Store
 from .toast import ToastManager
+from .tray_watchdog import tray_registration_ok, watch_prefix_disconnects, watch_watcher_restarts
 
 log = logging.getLogger("stepper_quests")
 
@@ -41,6 +42,9 @@ NOTICE_TOAST_S = 8
 DEMO_FRAME_S = 0.5
 DEMO_WALK_S = 30.0
 DEMO_SPM = 60
+TRAY_VERIFY_MAX_ATTEMPTS = 5
+TRAY_VERIFY_MS = 5000
+TRAY_DROP_RECHECK_MS = 1000
 
 
 @dataclass
@@ -89,6 +93,15 @@ class App(QObject):
         self._settings_dialog: SettingsDialog | None = None
         self._quitting = False
         self.toasts = ToastManager()
+        # show() can "succeed" during a login race with the StatusNotifier
+        # watcher while the icon never registers; verify and re-show.
+        self._registration_probe = lambda: tray_registration_ok(os.getpid())
+        self._tray_attempts = 0
+        self._tray_gave_up = False
+        self._tray_bus_watches: list[QObject | None] = []
+        self._tray_verify_timer = QTimer(self)
+        self._tray_verify_timer.setSingleShot(True)
+        self._tray_verify_timer.timeout.connect(self._verify_tray)
 
         if frame_log is not None:
             # Raw frames are kept per walking session, not for idle hours.
@@ -146,6 +159,57 @@ class App(QObject):
         self.tray.setContextMenu(menu)
         self.tray.activated.connect(self._on_tray_activated)
         self.tray.show()
+        self._tray_verify_timer.start(TRAY_VERIFY_MS)
+
+    def watch_tray_host(self, qapp: QApplication) -> None:
+        """Re-verify the tray on monitor changes, watcher restarts and xapp's
+        prefix-drop bug. Run path only: it touches the session bus."""
+        qapp.screenAdded.connect(lambda *_: self.schedule_tray_check())
+        qapp.screenRemoved.connect(lambda *_: self.schedule_tray_check())
+        self._tray_bus_watches = [
+            watch_watcher_restarts(self._on_watcher_restart, self),
+            watch_prefix_disconnects(self._on_prefix_disconnect, self),
+        ]
+
+    def _on_watcher_restart(self) -> None:
+        log.info("tray: StatusNotifierWatcher (re)registered, re-checking icon")
+        self.schedule_tray_check()
+
+    def _on_prefix_disconnect(self, name: str) -> None:
+        log.info("tray: bus client %s left; xapp-sn-watcher may have dropped the icon", name)
+        self.schedule_tray_check(TRAY_DROP_RECHECK_MS)
+
+    def schedule_tray_check(self, delay_ms: int = TRAY_VERIFY_MS) -> None:
+        if self._quitting:
+            return
+        self._tray_attempts = 0
+        self._tray_gave_up = False
+        self._tray_verify_timer.start(delay_ms)
+
+    def _verify_tray(self) -> None:
+        if self._quitting:
+            return
+        registered = self._registration_probe()
+        if registered is None:
+            return
+        if registered:
+            if self._tray_attempts:
+                log.warning("tray: icon recovered after %d re-show(s)", self._tray_attempts)
+            self._tray_attempts = 0
+            return
+        if self._tray_attempts >= TRAY_VERIFY_MAX_ATTEMPTS:
+            if not self._tray_gave_up:
+                log.error("tray: icon still not registered after %d re-shows; "
+                          "retrying on the next watcher restart or monitor change",
+                          TRAY_VERIFY_MAX_ATTEMPTS)
+                self._tray_gave_up = True
+            return
+        self._tray_attempts += 1
+        log.warning("tray: icon not registered with StatusNotifierWatcher, "
+                    "re-showing (attempt %d/%d)", self._tray_attempts, TRAY_VERIFY_MAX_ATTEMPTS)
+        self.tray.hide()
+        self.tray.show()
+        self._tray_verify_timer.start(TRAY_VERIFY_MS)
 
     def _on_tray_activated(self, reason) -> None:
         if reason == QSystemTrayIcon.Trigger:
@@ -350,6 +414,7 @@ class App(QObject):
         log.info("quitting")
         self._tick_timer.stop()
         self._save_timer.stop()
+        self._tray_verify_timer.stop()
         # Save first: a slow BLE disconnect must not cost the walk at logout.
         for event in self.tracker.finish():
             self._session_ended(event.session, event.discarded, announce=False)
@@ -466,6 +531,7 @@ def main(args) -> int:
     app = App(store, quest, settings, use_ble=use_ble,
               frame_log=FrameLog(FrameLog.default_dir()))
     qapp.aboutToQuit.connect(app.quit)
+    app.watch_tray_host(qapp)
 
     def on_second_instance() -> None:
         socket = server.nextPendingConnection()
